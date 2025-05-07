@@ -128,3 +128,9 @@
 	fill: var(--tw-gray-500);
 	color: var(--tw-gray-500);
 }
+
+
+.CourseList .active{
+	background-color: var(--tw-primary) !important;
+	color: var(--tw-gray-100) !important;
+}
