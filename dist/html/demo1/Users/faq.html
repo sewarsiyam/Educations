@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html class="h-full" data-theme="true" data-theme-mode="light" lang="en">
+
+<head>
+  <base href="../../../">
+  <title>
+    user Dashboard
+  </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet" />
+  <link href="assets/css/styles.css" rel="stylesheet" />
+
+
+  <style>
+    .right_side_drawer .drawer-end {
+      top: 24px;
+      bottom: 23px;
+      right: 68px;
+      left: auto;
+      border-radius: 25px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body class="flex h-full demo1 sidebar-fixed header-fixed bg-[#f0f0f0] dark:bg-coal-500">
+  <script>
+    const defaultThemeMode = 'light';
+    let themeMode;
+
+    if (document.documentElement) {
+      if (localStorage.getItem('theme')) {
+        themeMode = localStorage.getItem('theme');
+      } else if (document.documentElement.hasAttribute('data-theme-mode')) {
+        themeMode = document.documentElement.getAttribute('data-theme-mode');
+      } else {
+        themeMode = defaultThemeMode;
+      }
+
+      if (themeMode === 'system') {
+        themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+
+      document.documentElement.classList.add(themeMode);
+    }
+  </script>
+
+
+  <div class="flex grow">
+    <div
+      class="sidebar dark:bg-primary bg-primary fixed top-0 bottom-0 z-20 hidden lg:flex flex-col items-stretch shrink-0 rounded-r-3xl"
+      data-drawer="true" data-drawer-class="drawer drawer-start top-0 bottom-0" data-drawer-enable="true|lg:false"
+      id="sidebar">
+      <div class="sidebar-header hidden lg:flex items-center relative justify-between px-3 lg:px-6 shrink-0"
+        id="sidebar_header">
+        <a class="dark:hidden" href="html/demo1.html">
+          <img class="default-logo min-h-[22px] max-w-none" src="assets/media/app/default-logo-dark.svg" />
+          <img class="small-logo min-h-[22px] max-w-none" src="assets/media/app/mini-logo.svg" />
+        </a>
+        <a class="hidden dark:block" href="html/demo1.html">
+          <img class="default-logo min-h-[22px] max-w-none" src="assets/media/app/default-logo-dark.svg" />
+          <img class="small-logo min-h-[22px] max-w-none" src="assets/media/app/mini-logo.svg" />
+        </a>
+      </div>
+      <div class="sidebar-content flex grow shrink-0 py-5 pr-2" id="sidebar_content">
+        <div class="scrollable-y-hover grow shrink-0 flex pl-2 lg:pl-5 pr-1 lg:pr-3" data-scrollable="true"
+          data-scrollable-dependencies="#sidebar_header" data-scrollable-height="auto" data-scrollable-offset="0px"
+          data-scrollable-wrappers="#sidebar_content" id="sidebar_scrollable">
+          <div class="menu flex flex-col grow gap-1" data-menu="true" data-menu-accordion-expand-all="false"
+            id="sidebar_menu">
+            <div class="menu-item active">
+              <div
+                class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                tabindex="0">
+                <span
+                  class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                  <i class="ki-filled ki-category text-lg"></i>
+                </span>
+                <span
+                  class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                  Dashboards
+                </span>
+              </div>
+            </div>
+            <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+              <div
+                class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                tabindex="0">
+                <span
+                  class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g id="vuesax_outline_teacher" data-name="vuesax/outline/teacher" transform="translate(-172 -252)">
+                      <g id="teacher">
+                        <path id="Vector"
+                          d="M10.19,15.751a4.475,4.475,0,0,1-2.38-.65l-6.02-3.93a3.937,3.937,0,0,1,0-6.6L7.82.651a4.644,4.644,0,0,1,4.76.01l5.99,3.93a3.93,3.93,0,0,1,0,6.58L12.58,15.1A4.4,4.4,0,0,1,10.19,15.751Zm0-14.25a2.8,2.8,0,0,0-1.55.41L2.62,5.831a2.43,2.43,0,0,0,0,4.08l6.02,3.93a3.207,3.207,0,0,0,3.12,0l5.99-3.93a2.442,2.442,0,0,0,0-4.08L11.76,1.9A3.052,3.052,0,0,0,10.19,1.5Z"
+                          transform="translate(173.82 253.249)" fill="currentColor" />
+                        <path id="Vector-2" data-name="Vector"
+                          d="M7.13,10.42a4.1,4.1,0,0,1-1.25-.18L2.69,9.18A4.133,4.133,0,0,1,0,5.44L.01.75A.755.755,0,0,1,.76,0a.755.755,0,0,1,.75.75L1.5,5.44A2.69,2.69,0,0,0,3.17,7.76L6.36,8.82a3.089,3.089,0,0,0,1.54,0l3.19-1.06a2.688,2.688,0,0,0,1.67-2.31V.81a.75.75,0,0,1,1.5,0V5.45a4.159,4.159,0,0,1-2.69,3.74L8.38,10.25A4.445,4.445,0,0,1,7.13,10.42Z"
+                          transform="translate(176.87 264.33)" fill="currentColor" />
+                        <path id="Vector-3" data-name="Vector"
+                          d="M.75,7.5A.755.755,0,0,1,0,6.75v-6A.755.755,0,0,1,.75,0,.755.755,0,0,1,1.5.75v6A.755.755,0,0,1,.75,7.5Z"
+                          transform="translate(192.65 260.25)" fill="currentColor" />
+                        <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(172 252)"
+                          fill="none" opacity="0" />
+                      </g>
+                    </g>
+                  </svg>
+
+                </span>
+                <span
+                  class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                  My Educations
+                </span>
+                <span class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                  <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                  </i>
+                  <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                  </i>
+                </span>
+              </div>
+              <div
+                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                <div class="menu-item">
+                  <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                    href="html/demo1/public-profile/network.html" tabindex="0">
+                    <span
+                      class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                    </span>
+                    <span
+                      class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                      show Educations
+                    </span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                    href="html/demo1/public-profile/activity.html" tabindex="0">
+                    <span
+                      class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                    </span>
+                    <span
+                      class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                      Create Educations
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+              <div
+                class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                tabindex="0">
+                <span
+                  class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g id="vuesax_linear_clipboard-text" data-name="vuesax/linear/clipboard-text"
+                      transform="translate(-108 -252)">
+                      <g id="clipboard-text">
+                        <path id="Vector" d="M0,0H7" transform="translate(116 264.2)" fill="none" stroke="currentColor"
+                          stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                        <path id="Vector-2" data-name="Vector" d="M0,0H4.38" transform="translate(116 268.2)"
+                          fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="1.5" />
+                        <path id="Vector-3" data-name="Vector" d="M2,4H6C8,4,8,3,8,2,8,0,7,0,6,0H2C1,0,0,0,0,2S1,4,2,4Z"
+                          transform="translate(116 254)" fill="none" stroke="currentColor" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="1.5" />
+                        <path id="Vector-4" data-name="Vector"
+                          d="M13,0c3.33.18,5,1.41,5,5.98v6c0,4-1,6-6,6H6c-5,0-6-2-6-6v-6C0,1.42,1.67.18,5,0"
+                          transform="translate(111 256.02)" fill="none" stroke="currentColor" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="1.5" />
+                        <path id="Vector-5" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(108 252)"
+                          fill="none" opacity="0" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span
+                  class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                  Wish List
+                </span>
+                <span class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                  <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                  </i>
+                  <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                  </i>
+                </span>
+              </div>
+              <div
+                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                <div class="menu-item">
+                  <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                    href="html/demo1/public-profile/network.html" tabindex="0">
+                    <span
+                      class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                    </span>
+                    <span
+                      class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                      one
+                    </span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                    href="html/demo1/public-profile/activity.html" tabindex="0">
+                    <span
+                      class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                    </span>
+                    <span
+                      class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                      tow
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+              <div
+                class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                tabindex="0">
+                <span
+                  class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g id="vuesax_bold_clipboard-text" data-name="vuesax/bold/clipboard-text"
+                      transform="translate(-108 -252)">
+                      <g id="clipboard-text">
+                        <path id="Vector"
+                          d="M6.59,0H1.89A1.886,1.886,0,0,0,0,1.88v.94A1.878,1.878,0,0,0,1.88,4.7H6.59A1.878,1.878,0,0,0,8.47,2.82V1.88A1.871,1.871,0,0,0,6.59,0Z"
+                          transform="translate(115.76 254)" fill="currentColor" />
+                        <path id="Vector-2" data-name="Vector"
+                          d="M13.95.737a2.9,2.9,0,0,1-2.89,2.89H6.36A2.9,2.9,0,0,1,3.47.737a.747.747,0,0,0-1.1-.65A4.472,4.472,0,0,0,0,4.037v9.41a4.481,4.481,0,0,0,4.47,4.47h8.48a4.481,4.481,0,0,0,4.47-4.47V4.037A4.472,4.472,0,0,0,15.05.087.747.747,0,0,0,13.95.737ZM9.09,12.867H4.71a.75.75,0,0,1,0-1.5H9.09a.75.75,0,0,1,0,1.5Zm2.62-4h-7a.75.75,0,0,1,0-1.5h7a.75.75,0,0,1,0,1.5Z"
+                          transform="translate(111.29 256.083)" fill="currentColor" />
+                        <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z"
+                          transform="translate(132 276) rotate(180)" fill="none" opacity="0" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span
+                  class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                  Complete Educations
+                </span>
+                <span class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                  <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                  </i>
+                  <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                  </i>
+                </span>
+              </div>
+              <div
+                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                <div class="menu-item">
+                  <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                    href="html/demo1/public-profile/network.html" tabindex="0">
+                    <span
+                      class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                    </span>
+                    <span
+                      class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                      one
+                    </span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                    href="html/demo1/public-profile/activity.html" tabindex="0">
+                    <span
+                      class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                    </span>
+                    <span
+                      class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                      tow
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+              <div
+                class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                tabindex="0">
+                <span
+                  class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g id="user-cirlce-add" transform="translate(-684 -188)">
+                      <path id="Vector" d="M0,0H24V24H0Z" transform="translate(684 188)" fill="none" opacity="0" />
+                      <path id="Vector-2" data-name="Vector"
+                        d="M6.97,1.33A3.944,3.944,0,0,0,4,0,4,4,0,0,0,1.13,1.21,3.945,3.945,0,0,0,.2,2.74,4.054,4.054,0,0,0,0,4,3.921,3.921,0,0,0,.58,6.06a3.684,3.684,0,0,0,.76.91A3.921,3.921,0,0,0,4,8a3.686,3.686,0,0,0,1.25-.21A3.9,3.9,0,0,0,7.42,6.06a3.734,3.734,0,0,0,.46-1.13A3.594,3.594,0,0,0,8,4,3.984,3.984,0,0,0,6.97,1.33ZM5.49,4.73H4.75v.78a.75.75,0,0,1-1.5,0V4.73H2.51a.75.75,0,0,1,0-1.5h.74V2.52a.75.75,0,1,1,1.5,0v.71h.74a.75.75,0,0,1,0,1.5Z"
+                        transform="translate(699 189)" fill="currentColor" />
+                      <path id="Vector-3" data-name="Vector"
+                        d="M20,10a9.821,9.821,0,0,0-.72-3.72,3.81,3.81,0,0,1-1.03.51,3.374,3.374,0,0,1-.34.1,8.48,8.48,0,0,1-1.87,9.08,4.628,4.628,0,0,0-1.1-1,9.622,9.622,0,0,0-9.88,0,4.829,4.829,0,0,0-1.1,1A8.491,8.491,0,0,1,13.1,2.09c.03-.12.06-.23.1-.35A3.512,3.512,0,0,1,13.72.72,9.82,9.82,0,0,0,10,0,9.986,9.986,0,0,0,3.23,17.34c0,.01,0,.01-.01.02.1.1.22.18.32.27a2.1,2.1,0,0,0,.17.14c.18.15.38.29.57.43l.2.14a5.953,5.953,0,0,0,.6.36c.07.04.15.09.22.13a6.093,6.093,0,0,0,.63.3,2.557,2.557,0,0,0,.24.11q.33.135.66.24a2.25,2.25,0,0,0,.24.08c.24.07.48.13.72.19a1.419,1.419,0,0,0,.22.05,7.914,7.914,0,0,0,.85.13.5.5,0,0,1,.12.02c.34.03.68.05,1.02.05s.68-.02,1.01-.05a.5.5,0,0,0,.12-.02,7.914,7.914,0,0,0,.85-.13c.07-.01.14-.04.22-.05.24-.06.49-.11.72-.19a2.25,2.25,0,0,1,.24-.08c.22-.08.45-.15.66-.24a2.557,2.557,0,0,0,.24-.11q.315-.135.63-.3c.08-.04.15-.09.22-.13.2-.12.4-.23.6-.36a2.426,2.426,0,0,0,.2-.14c.2-.14.39-.28.57-.43a2.1,2.1,0,0,1,.17-.14c.11-.09.22-.18.32-.27,0-.01,0-.01-.01-.02A9.946,9.946,0,0,0,20,10Z"
+                        transform="translate(686 190)" fill="currentColor" />
+                      <path id="Vector-4" data-name="Vector"
+                        d="M3.75,0A3.745,3.745,0,0,0,3.7,7.49h.18A3.746,3.746,0,0,0,3.75,0Z"
+                        transform="translate(692.25 194.93)" fill="currentColor" />
+                    </g>
+                  </svg>
+
+                </span>
+                <span
+                  class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                  Contact Us
+                </span>
+                <span class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                  <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                  </i>
+                  <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                  </i>
+                </span>
+              </div>
+              <div
+                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                <div class="menu-item">
+                  <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                    href="html/demo1/public-profile/network.html" tabindex="0">
+                    <span
+                      class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                    </span>
+                    <span
+                      class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                      one
+                    </span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                    href="html/demo1/public-profile/activity.html" tabindex="0">
+                    <span
+                      class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                    </span>
+                    <span
+                      class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                      tow
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-label border border-transparent gap-[10px] pl-[10px] pr-[10px] py-[6px]" href=""
+                tabindex="0">
+                <span class="menu-icon items-start text-white dark:text-gray-900 w-[20px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g id="vuesax_outline_info-circle" data-name="vuesax/outline/info-circle"
+                      transform="translate(-364 -252)">
+                      <g id="info-circle">
+                        <path id="Vector"
+                          d="M10.75,21.5A10.75,10.75,0,1,1,21.5,10.75,10.759,10.759,0,0,1,10.75,21.5Zm0-20A9.25,9.25,0,1,0,20,10.75,9.261,9.261,0,0,0,10.75,1.5Z"
+                          transform="translate(365.25 253.25)" fill="currentColor" />
+                        <path id="Vector-2" data-name="Vector"
+                          d="M.75,6.5A.755.755,0,0,1,0,5.75v-5A.755.755,0,0,1,.75,0,.755.755,0,0,1,1.5.75v5A.755.755,0,0,1,.75,6.5Z"
+                          transform="translate(375.25 259.25)" fill="currentColor" />
+                        <path id="Vector-3" data-name="Vector"
+                          d="M1,2a1,1,0,0,1-.38-.08A1.155,1.155,0,0,1,.29,1.7a1.032,1.032,0,0,1-.21-.33A1,1,0,0,1,0,1,1,1,0,0,1,.08.615,1.155,1.155,0,0,1,.29.285,1.155,1.155,0,0,1,.62.075a1,1,0,0,1,.76,0,1.155,1.155,0,0,1,.33.21,1.155,1.155,0,0,1,.21.33A1,1,0,0,1,2,1a1,1,0,0,1-.08.38,1.032,1.032,0,0,1-.21.33,1.155,1.155,0,0,1-.33.21A1,1,0,0,1,1,2Z"
+                          transform="translate(375 267.005)" fill="currentColor" />
+                        <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(364 252)"
+                          fill="none" opacity="0" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="menu-title text-sm font-semibold text-white">
+                  Faq
+                </span>
+              </div>
+            </div>
+            <div class="menu-item">
+              <div class="menu-label border border-transparent gap-[10px] pl-[10px] pr-[10px] py-[6px]" href=""
+                tabindex="0">
+                <span class="menu-icon items-start text-white dark:text-gray-900 w-[20px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g id="vuesax_outline_login" data-name="vuesax/outline/login" transform="translate(-684 -444)">
+                      <g id="login">
+                        <path id="Vector"
+                          d="M7.092,20.54h-.13c-4.44,0-6.58-1.75-6.95-5.67a.753.753,0,1,1,1.5-.14c.29,3.14,1.77,4.31,5.46,4.31H7.1c4.07,0,5.51-1.44,5.51-5.51V7.01c0-4.07-1.44-5.51-5.51-5.51h-.13c-3.71,0-5.19,1.19-5.46,4.39a.753.753,0,0,1-.82.68A.751.751,0,0,1,0,5.76C.342,1.78,2.492,0,6.962,0h.13C12,0,14.1,2.1,14.1,7.01v6.52C14.1,18.44,12,20.54,7.092,20.54Z"
+                          transform="translate(692.148 445.73)" fill="currentColor" />
+                        <path id="Vector-2" data-name="Vector"
+                          d="M13.63,1.5H.75A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0H13.63a.75.75,0,0,1,0,1.5Z"
+                          transform="translate(685.25 455.25)" fill="currentColor" />
+                        <path id="Vector-3" data-name="Vector"
+                          d="M.747,8.2a.742.742,0,0,1-.53-.22.754.754,0,0,1,0-1.06L3.037,4.1.218,1.278A.75.75,0,0,1,1.278.218l3.35,3.35a.754.754,0,0,1,0,1.06l-3.35,3.35A.742.742,0,0,1,.747,8.2Z"
+                          transform="translate(695.903 451.902)" fill="currentColor" />
+                        <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(684 444)"
+                          fill="none" opacity="0" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="menu-title text-sm font-semibold text-white">
+                  Log Out
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper flex grow flex-col">
+      <header
+        class="header bg-[#f0f0f0]  dark:bg-coal-500 fixed top-0 z-10 left-0 right-0 flex items-stretch shrink-0 justify-center lg:mr-16 border-b border-b-gray-300"
+        data-sticky="true" data-sticky-class="shadow-sm dark:border-b dark:border-b-coal-100" data-sticky-name="header"
+        id="header">
+        <div class="container-fixed flex justify-between items-stretch lg:gap-4" id="header_container">
+          <div class="flex gap-1 lg:hidden items-center -ml-1">
+            <a class="shrink-0" href="html/demo1.html">
+              <img class="max-h-[25px] w-full" src="assets/media/app/mini-logo.svg" />
+            </a>
+            <div class="flex items-center">
+              <button class="btn btn-icon btn-light btn-clear btn-sm" data-drawer-toggle="#sidebar">
+                <i class="ki-filled ki-menu">
+                </i>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-stretch" id="megamenu_container">
+            <div class="flex items-stretch" data-reparent="true" data-reparent-mode="prepend|lg:prepend"
+              data-reparent-target="body|lg:#megamenu_container">
+              <div class="hidden lg:flex lg:items-stretch" data-drawer="true"
+                data-drawer-class="drawer drawer-start fixed z-10 top-0 bottom-0 w-full mr-5 max-w-[250px] p-5 lg:p-0 overflow-auto"
+                data-drawer-enable="true|lg:false" id="megamenu_wrapper">
+                <div class="menu flex-col lg:flex-row items-center gap-3" data-menu="true" id="megamenu">
+                  <button class="btn btn-icon btn-icon-md size-[30px] text-black dark:text-white toggle "
+                    data-toggle="body" data-toggle-class="sidebar-collapse" id="sidebar_toggle">
+                    <i class="ki-filled ki-burger-menu-6 toggle-active:rotate-180 transition-all duration-300"></i>
+                  </button>
+                  <div class="menu-item active">
+                    <a class="menu-link text-nowrap text-sm text-gray-700 font-medium menu-item-hover:text-primary menu-item-active:text-gray-900 menu-item-active:font-semibold"
+                      href="html/demo1/layout.html">
+                      <span class="menu-title font-bold text-lg text-nowrap">
+                        My Educations
+                      </span>
+                    </a>
+                    <!-- <span class="text-sm text-gray-600">Dashboard - Courses</span> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 lg:gap-3.5">
+            <div>
+              <input data-element="theme-toggle" data-theme-toggle="true" data-theme-state="dark" style="display: none;"
+                id="theme-toggle-hidden" />
+              <button class="btn btn-icon btn-outline dark:hidden text-gray-900 dark:text-gray-800"
+                onclick="document.getElementById('theme-toggle-hidden').click()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-sun">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <path d="M12 2v2"></path>
+                  <path d="M12 20v2"></path>
+                  <path d="m4.93 4.93 1.41 1.41"></path>
+                  <path d="m17.66 17.66 1.41 1.41"></path>
+                  <path d="M2 12h2"></path>
+                  <path d="M20 12h2"></path>
+                  <path d="m6.34 17.66-1.41 1.41"></path>
+                  <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
+              </button>
+              <button class="btn btn-icon btn-outline hidden dark:inline-flex text-gray-900 dark:text-gray-800"
+                onclick="document.getElementById('theme-toggle-hidden').click()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-moon">
+                  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="flex items-center rounded-lg px-3 bg-white">
+              <i class="ki-filled ki-magnifier text-gray-700 text-xl">
+              </i>
+              <input class="input px-0 border-none bg-transparent shadow-none ml-2.5" name="query"
+                placeholder="Search here..." type="text" value="" />
+            </div>
+
+            <div class="flex lg:hidden items-center ">
+              <button class="btn btn-icon btn-light btn-clear btn-sm" data-drawer-toggle="#menu-right">
+                <i class="ki-filled ki-burger-menu-6">
+                </i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="grow content pt-5 lg:mr-16" id="content" role="content">
+        <div class="container-fixed">
+
+          <div class="flex items-center justify-around bg-white rounded-lg shadow-md p-6">
+            <div class="w-full">
+              <h2 class="text-xl font-semibold text-gray-700 mb-4">Frequently Question</h2>
+              <div class="mb-4">
+                <input type="text" placeholder="Search question here..." class="w-full p-2 border rounded-lg">
+              </div>
+              <div data-accordion="true" data-accordion-expand-all="true">
+                <div class="accordion-item [&:not(:last-child)]:border-b border-b-gray-200" data-accordion-item="true">
+                  <button class="accordion-toggle py-4 w-full text-left" data-accordion-toggle="#faq_1_content">
+                    <span class="text-base text-gray-900 font-medium">Varför Kan Inte Se Om Jag Har Varat Rätt Eller Fel?</span>
+                    <i class="ki-filled ki-plus text-gray-600 text-sm accordion-active:hidden block float-right"></i>
+                    <i class="ki-filled ki-minus text-gray-600 text-sm accordion-active:block hidden float-right"></i>
+                  </button>
+                  <div class="accordion-content hidden" id="faq_1_content">
+                    <div class="text-gray-700 text-md pb-4">
+                      Om du är inne via mobil eller läsplatta så måste du klicka på "oppnå under meny" för att se detta.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item [&:not(:last-child)]:border-b border-b-gray-200" data-accordion-item="true">
+                  <button class="accordion-toggle py-4 w-full text-left" data-accordion-toggle="#faq_2_content">
+                    <span class="text-base text-gray-900 font-medium">Varför Kan Inte Se Om Jag Har Varat Rätt Eller Fel?</span>
+                    <i class="ki-filled ki-plus text-gray-600 text-sm accordion-active:hidden block float-right"></i>
+                    <i class="ki-filled ki-minus text-gray-600 text-sm accordion-active:block hidden float-right"></i>
+                  </button>
+                  <div class="accordion-content hidden" id="faq_2_content">
+                    <div class="text-gray-700 text-md pb-4">
+                      Om du är inne via mobil eller läsplatta så måste du klicka på "oppnå under meny" för att se detta.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item [&:not(:last-child)]:border-b border-b-gray-200" data-accordion-item="true">
+                  <button class="accordion-toggle py-4 w-full text-left" data-accordion-toggle="#faq_3_content">
+                    <span class="text-base text-gray-900 font-medium">What Are The Support Terms & Conditions?</span>
+                    <i class="ki-filled ki-plus text-gray-600 text-sm accordion-active:hidden block float-right"></i>
+                    <i class="ki-filled ki-minus text-gray-600 text-sm accordion-active:block hidden float-right"></i>
+                  </button>
+                  <div class="accordion-content hidden" id="faq_3_content">
+                    <div class="text-gray-700 text-md pb-4">
+                      The support terms and conditions include provisions for assistance, response times, and coverage as outlined by the service provider.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hidden lg:flex items-center justify-center w-[30%]">
+              <img src="assets/media/images/FAQs-rafiki.png" class=" " />
+            </div>
+           
+          </div>
+
+
+<!-- 
+          <div class="lg:w-[75%] mx-auto bg-white dark:bg-coal-300 rounded-lg  overflow-hidden shadow-md">
+            <div data-accordion="true" data-accordion-expand-all="true">
+              <div class="accordion-item [&amp;:not(:last-child)]:border-b border-b-gray-200"
+                data-accordion-item="true">
+                <button class="accordion-toggle py-4" data-accordion-toggle="#faq_1_content">
+                  <span class="text-base text-gray-900 font-medium">
+                    How is pricing determined for each plan ?
+                  </span>
+                  <i class="ki-filled ki-plus text-gray-600 text-sm accordion-active:hidden block">
+                  </i>
+                  <i class="ki-filled ki-minus text-gray-600 text-sm accordion-active:block hidden">
+                  </i>
+                </button>
+                <div class="accordion-content hidden" id="faq_1_content">
+                  <div class="text-gray-700 text-md pb-4">
+                    Metronic embraces flexible licensing options that empower you to choose the perfect fit for your
+                    project's needs and budget.
+                    Understanding the factors influencing each plan's pricing helps you make an informed decision.
+                    Metronic embraces flexible licensing options that empower you to choose the perfect fit for your
+                    project's needs and budget.
+                    Understanding the factors influencing each plan's pricing helps you make an informed decision.
+                    Metronic embraces flexible licensing options that empower you to choose the perfect fit for your
+                    project's needs and budget.
+                    Understanding the factors influencing each plan's pricing helps you make an informed decision
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item [&amp;:not(:last-child)]:border-b border-b-gray-200"
+                data-accordion-item="true">
+                <button class="accordion-toggle py-4" data-accordion-toggle="#faq_2_content">
+                  <span class="text-base text-gray-900 font-medium">
+                    What payment methods are accepted for subscriptions ?
+                  </span>
+                  <i class="ki-filled ki-plus text-gray-600 text-sm accordion-active:hidden block">
+                  </i>
+                  <i class="ki-filled ki-minus text-gray-600 text-sm accordion-active:block hidden">
+                  </i>
+                </button>
+                <div class="accordion-content hidden" id="faq_2_content">
+                  <div class="text-gray-700 text-md pb-4">
+                    Metronic embraces flexible licensing options that empower you to choose the perfect fit for your
+                    project's needs and budget.
+                    Understanding the factors influencing each plan's pricing helps you make an informed decision
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item [&amp;:not(:last-child)]:border-b border-b-gray-200"
+                data-accordion-item="true">
+                <button class="accordion-toggle py-4" data-accordion-toggle="#faq_3_content">
+                  <span class="text-base text-gray-900 font-medium">
+                    Are there any hidden fees in the pricing ?
+                  </span>
+                  <i class="ki-filled ki-plus text-gray-600 text-sm accordion-active:hidden block">
+                  </i>
+                  <i class="ki-filled ki-minus text-gray-600 text-sm accordion-active:block hidden">
+                  </i>
+                </button>
+                <div class="accordion-content hidden" id="faq_3_content">
+                  <div class="text-gray-700 text-md pb-4">
+                    Metronic embraces flexible licensing options that empower you to choose the perfect fit for your
+                    project's needs and budget.
+                    Understanding the factors influencing each plan's pricing helps you make an informed decision
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item [&amp;:not(:last-child)]:border-b border-b-gray-200"
+                data-accordion-item="true">
+                <button class="accordion-toggle py-4" data-accordion-toggle="#faq_4_content">
+                  <span class="text-base text-gray-900 font-medium">
+                    Is there a discount for annual subscriptions ?
+                  </span>
+                  <i class="ki-filled ki-plus text-gray-600 text-sm accordion-active:hidden block">
+                  </i>
+                  <i class="ki-filled ki-minus text-gray-600 text-sm accordion-active:block hidden">
+                  </i>
+                </button>
+                <div class="accordion-content hidden" id="faq_4_content">
+                  <div class="text-gray-700 text-md pb-4">
+                    Metronic embraces flexible licensing options that empower you to choose the perfect fit for your
+                    project's needs and budget.
+                    Understanding the factors influencing each plan's pricing helps you make an informed decision
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item [&amp;:not(:last-child)]:border-b border-b-gray-200"
+                data-accordion-item="true">
+                <button class="accordion-toggle py-4" data-accordion-toggle="#faq_5_content">
+                  <span class="text-base text-gray-900 font-medium">
+                    Do you offer refunds on subscription cancellations ?
+                  </span>
+                  <i class="ki-filled ki-plus text-gray-600 text-sm accordion-active:hidden block">
+                  </i>
+                  <i class="ki-filled ki-minus text-gray-600 text-sm accordion-active:block hidden">
+                  </i>
+                </button>
+                <div class="accordion-content hidden" id="faq_5_content">
+                  <div class="text-gray-700 text-md pb-4">
+                    Metronic embraces flexible licensing options that empower you to choose the perfect fit for your
+                    project's needs and budget.
+                    Understanding the factors influencing each plan's pricing helps you make an informed decision
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item [&amp;:not(:last-child)]:border-b border-b-gray-200"
+                data-accordion-item="true">
+                <button class="accordion-toggle py-4" data-accordion-toggle="#faq_6_content">
+                  <span class="text-base text-gray-900 font-medium">
+                    Can I add extra features to my current plan ?
+                  </span>
+                  <i class="ki-filled ki-plus text-gray-600 text-sm accordion-active:hidden block">
+                  </i>
+                  <i class="ki-filled ki-minus text-gray-600 text-sm accordion-active:block hidden">
+                  </i>
+                </button>
+                <div class="accordion-content hidden" id="faq_6_content">
+                  <div class="text-gray-700 text-md pb-4">
+                    Metronic embraces flexible licensing options that empower you to choose the perfect fit for your
+                    project's needs and budget.
+                    Understanding the factors influencing each plan's pricing helps you make an informed decision
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+ -->
+
+
+
+
+        </div>
+      </main>
+    </div>
+
+    <div class=" z-20 bg-primary w-16 mt-5 mb-5 rounded-l-3xl " id="menu-right" data-drawer="true"
+      data-drawer-class="drawer drawer-end top-0 bottom-0" data-drawer-enable="true|lg:false">
+      <div class="flex flex-col h-full items-center py-5 justify-between">
+        <div class="menu" data-menu="true">
+          <div class="menu-item" data-menu-item-offset="-90px, 0px" data-menu-item-placement="bottom-start"
+            data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+            <div class="menu-toggle btn btn-icon rounded-full">
+              <img alt="" class="size-9 rounded-md border-2 border-success shrink-0"
+                src="assets/media/avatars/300-2.png">
+              </img>
+            </div>
+            <div class="menu-dropdown menu-default light:border-gray-300 w-full max-w-[180px]">
+              <div class="flex flex-col" data-menu-dismiss="true">
+                <div class="menu-item">
+                  <a class="menu-link" href="html/demo1/public-profile/profiles/default.html">
+                    <span class="menu-icon">
+                      <i class="ki-outline ki-user"></i>
+                    </span>
+                    <span class="menu-title">
+                      My Profile
+                    </span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a class="menu-link" href="html/demo1/account/home/user-profile.html">
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21.617" height="20.319"
+                        viewBox="0 0 21.617 20.319">
+                        <g id="vuesax_outline_sms" data-name="vuesax/outline/sms" transform="translate(-556 -252)">
+                          <g id="sms" transform="translate(556 252)">
+                            <path id="Vector"
+                              d="M14,14.819H5.113C1.867,14.819,0,13.137,0,10.213V4.606C0,1.682,1.867,0,5.113,0H14c3.245,0,5.113,1.682,5.113,4.606v5.607C19.117,13.137,17.25,14.819,14,14.819ZM5.113,1.2c-2.543,0-3.779,1.113-3.779,3.4v5.607c0,2.291,1.236,3.4,3.779,3.4H14c2.543,0,3.779-1.113,3.779-3.4V4.606c0-2.291-1.236-3.4-3.779-3.4Z"
+                              transform="translate(1.25 2.75)" fill="currentColor" />
+                            <path id="Vector-2" data-name="Vector"
+                              d="M4.555,4.245A2.693,2.693,0,0,1,2.7,3.52L.224,1.226a.763.763,0,0,1-.1-.964A.539.539,0,0,1,.96.152L3.439,2.447a1.684,1.684,0,0,0,2.225,0L8.142.152a.533.533,0,0,1,.831.11.752.752,0,0,1-.1.964L6.4,3.52A2.661,2.661,0,0,1,4.555,4.245Z"
+                              transform="translate(6.256 7.078)" fill="currentColor" />
+                            <path id="Vector-3" data-name="Vector" d="M0,0H21.617V20.319H0Z" fill="none" opacity="0" />
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="menu-title">
+                      Inbox
+                    </span>
+                  </a>
+                </div>
+                <div class="menu-item">
+                  <a class="menu-link" href="html/demo1/account/home/user-profile.html">
+                    <span class="menu-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <g id="vuesax_outline_login" data-name="vuesax/outline/login" transform="translate(-684 -444)">
+                          <g id="login">
+                            <path id="Vector"
+                              d="M7.092,20.54h-.13c-4.44,0-6.58-1.75-6.95-5.67a.753.753,0,1,1,1.5-.14c.29,3.14,1.77,4.31,5.46,4.31H7.1c4.07,0,5.51-1.44,5.51-5.51V7.01c0-4.07-1.44-5.51-5.51-5.51h-.13c-3.71,0-5.19,1.19-5.46,4.39a.753.753,0,0,1-.82.68A.751.751,0,0,1,0,5.76C.342,1.78,2.492,0,6.962,0h.13C12,0,14.1,2.1,14.1,7.01v6.52C14.1,18.44,12,20.54,7.092,20.54Z"
+                              transform="translate(692.148 445.73)" fill="currentColor">
+                            </path>
+                            <path id="Vector-2" data-name="Vector"
+                              d="M13.63,1.5H.75A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0H13.63a.75.75,0,0,1,0,1.5Z"
+                              transform="translate(685.25 455.25)" fill="currentColor">
+                            </path>
+                            <path id="Vector-3" data-name="Vector"
+                              d="M.747,8.2a.742.742,0,0,1-.53-.22.754.754,0,0,1,0-1.06L3.037,4.1.218,1.278A.75.75,0,0,1,1.278.218l3.35,3.35a.754.754,0,0,1,0,1.06l-3.35,3.35A.742.742,0,0,1,.747,8.2Z"
+                              transform="translate(695.903 451.902)" fill="currentColor">
+                            </path>
+                            <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(684 444)"
+                              fill="none" opacity="0">
+                            </path>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                    <span class="menu-title">
+                      Logout
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 items-center justify-center">
+          <div
+            class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-black text-primary text-lg cursor-pointer hover:bg-gray-100"
+            data-drawer-toggle="#settings">
+            <i class="ki-filled ki-setting-2"></i>
+          </div>
+          <div
+            class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-black text-primary text-lg cursor-pointer hover:bg-gray-100"
+            data-drawer-toggle="#email">
+            <i class="ki-filled ki-sms"></i>
+          </div>
+          <div
+            class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-black text-primary text-lg cursor-pointer hover:bg-gray-100"
+            data-drawer-toggle="#notification">
+            <i class="ki-filled ki-notification-on"></i>
+          </div>
+        </div>
+
+        <div class="menu" data-menu="true">
+          <div class="menu-item" data-menu-item-offset="20px, 10px" data-menu-item-placement="bottom-end"
+            data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+            <div class="menu-toggle btn btn-icon rounded-full flex-col-reverse gap-1">
+              <span class="text-white text-lg">Eng</span>
+              <img alt="" class="inline-block size-4 rounded-full" src="assets/media/flags/united-states.svg" />
+            </div>
+            <div class="menu-dropdown menu-default light:border-gray-300 w-full max-w-[150px]">
+              <div class="menu-item active">
+                <a class="menu-link h-10" href="#">
+                  <span class="menu-icon">
+                    <img alt="" class="inline-block size-4 rounded-full" src="assets/media/flags/united-states.svg" />
+                  </span>
+                  <span class="menu-title">
+                    English
+                  </span>
+                  <span class="menu-badge">
+                    <i class="ki-solid ki-check-circle text-success text-base">
+                    </i>
+                  </span>
+                </a>
+              </div>
+              <div class="menu-item">
+                <a class="menu-link h-10" href="html/demo1/layout.html">
+                  <span class="menu-icon">
+                    <img alt="" class="inline-block size-4 rounded-full" src="assets/media/flags/saudi-arabia.svg" />
+                  </span>
+                  <span class="menu-title">
+                    العربية
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="right_side_drawer">
+    <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="settings">
+      <div class="drawer-header">
+        <h3 class="drawer-title">settings</h3>
+        <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-x" aria-hidden="true">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="drawer-content scrollable">Drawer content</div>
+    </div>
+
+    <div class="drawer drawer-end hidden w-64" data-drawer="true" data-drawer-backdrop="false" id="email">
+      <div class="drawer-header p-1">
+        <button class="drawer-close bg-primary rounded-full w-8 h-8 flex items-center justify-center"
+          aria-label="Close drawer" data-drawer-dismiss="#alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#fff"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-x" aria-hidden="true">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="drawer-content scrollable p-3">
+        <div class="flex flex-col gap-5 lg:gap-6">
+          <div class="flex items-center gap-2">
+            <div class="flex items-center grow gap-2.5">
+              <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
+              <div class="flex flex-col">
+                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
+                  Dr sultads send you photo
+                </a>
+                <span class="text-xs font-semibold text-gray-600">
+                  29 July 2022 - 02:26 pm
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="flex items-center grow gap-2.5">
+              <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
+              <div class="flex flex-col">
+                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
+                  Dr sultads send you photo
+                </a>
+                <span class="text-xs font-semibold text-gray-600">
+                  29 July 2022 - 02:26 pm
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="flex items-center grow gap-2.5">
+              <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
+              <div class="flex flex-col">
+                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
+                  Dr sultads send you photo
+                </a>
+                <span class="text-xs font-semibold text-gray-600">
+                  29 July 2022 - 02:26 pm
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="flex items-center grow gap-2.5">
+              <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
+              <div class="flex flex-col">
+                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
+                  Dr sultads send you photo
+                </a>
+                <span class="text-xs font-semibold text-gray-600">
+                  29 July 2022 - 02:26 pm
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="notification">
+      <div class="drawer-header">
+        <h3 class="drawer-title">notification</h3>
+        <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-x" aria-hidden="true">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="drawer-content scrollable">Drawer content</div>
+    </div>
+
+  </div>
+
+
+  <div class="modal" data-modal="true" id="modalSyllabus">
+    <div class="modal-content rounded-xl max-w-[600px] top-[15%]">
+      <div class="modal-header bg-blue-100 dark:bg-coal-200 dark:text-white py-1 px-4 rounded-t-xl">
+        <p class="text-primary font-semibold">Course Name</p>
+        <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
+          <i class="ki-filled ki-cross">
+          </i>
+        </button>
+      </div>
+      <div class="modal-body p-4 pb-5">
+        <div class="scrollable-y-auto" data-scrollable="true" data-scrollable-max-height="auto"
+          data-scrollable-offset="300px">
+          <div class="rounded-xl shadow bg-white w-[70%] mx-auto grow  aspect-video flex items-center justify-center">
+            <img src="assets/media/images/2600x1200/bg-13.png" alt="Course Image" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4 flex gap-3 w-full">
+            <div class="bg-blue-50 dark:bg-coal-200 dark:text-white rounded-xl flex-1 p-2">
+              <p class="font-bold">Description</p>
+              <p>This Course is Top Seller</p>
+            </div>
+            <div class="flex-1">
+              <div class="bg-blue-50 dark:bg-coal-200 dark:text-white rounded-xl w-full p-2">
+                <p>Days: <span class="text-gray-700">40 Days</span></p>
+                <p>Course Price: <span class="text-gray-700">2500.00 SEK</span></p>
+              </div>
+              <div class="mt-2">
+                <p class="mb-1 text-yellow-600">License</p>
+                <div class="bg-blue-50 dark:bg-coal-200 dark:text-white rounded-xl w-full p-2">
+                  1
+                </div>
+              </div>
+              <div class="mt-4 text-end">
+                <button
+                  class="rounded-lg bg-primary text-base py-1.5 px-4 text-white hover:bg-blue-900 transition-colors"><i
+                    class="ki-solid ki-plus"></i> Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="assets/js/core.bundle.js"></script>
+  <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/js/widgets/general.js"></script>
+  <script src="assets/js/layouts/demo1.js"></script>
+</body>
+
+</html>

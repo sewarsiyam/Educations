@@ -4,24 +4,12 @@
 <head>
     <base href="../../../">
     <title>
-        user Dashboard
+        Educational Dashboard
     </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet" />
     <link href="assets/css/styles.css" rel="stylesheet" />
-
-
-    <style>
-        .right_side_drawer .drawer-end {
-            top: 24px;
-            bottom: 23px;
-            right: 68px;
-            left: auto;
-            border-radius: 25px;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-        }
-    </style>
 </head>
 
 <body class="flex h-full demo1 sidebar-fixed header-fixed bg-[#f0f0f0] dark:bg-coal-500">
@@ -68,11 +56,11 @@
                     data-scrollable-offset="0px" data-scrollable-wrappers="#sidebar_content" id="sidebar_scrollable">
                     <div class="menu flex flex-col grow gap-1" data-menu="true" data-menu-accordion-expand-all="false"
                         id="sidebar_menu">
-                        <div class="menu-item active">
+                        <div class="menu-item">
                             <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
                                 tabindex="0">
                                 <span
-                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    class="menu-icon items-start text-white menu-item-active:text-primary dark:text-gray-400 w-[20px]">
                                     <i class="ki-filled ki-category text-lg"></i>
                                 </span>
                                 <span
@@ -81,7 +69,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+                        <div class="menu-item show" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
                             <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
                                 tabindex="0">
                                 <span
@@ -108,7 +96,7 @@
                                 </span>
                                 <span
                                     class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
-                                    My Educations
+                                    Educations
                                 </span>
                                 <span
                                     class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
@@ -120,96 +108,27 @@
                             </div>
                             <div
                                 class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
-                                <div class="menu-item">
+                                <div class="menu-item active">
                                     <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
-                                        href="html/demo1/public-profile/network.html" tabindex="0">
+                                        href="html/demo1/courses.html" tabindex="0">
                                         <span
                                             class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
                                         </span>
                                         <span
                                             class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
-                                            show Educations
+                                            courses
                                         </span>
                                     </a>
                                 </div>
                                 <div class="menu-item">
                                     <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
-                                        href="html/demo1/public-profile/activity.html" tabindex="0">
+                                        href="html/demo1/create-courses.html" tabindex="0">
                                         <span
                                             class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
                                         </span>
                                         <span
                                             class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
-                                            Create Educations
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
-                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
-                                tabindex="0">
-                                <span
-                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <g id="vuesax_linear_clipboard-text" data-name="vuesax/linear/clipboard-text"
-                                            transform="translate(-108 -252)">
-                                            <g id="clipboard-text">
-                                                <path id="Vector" d="M0,0H7" transform="translate(116 264.2)"
-                                                    fill="none" stroke="currentColor" stroke-linecap="round"
-                                                    stroke-linejoin="round" stroke-width="1.5" />
-                                                <path id="Vector-2" data-name="Vector" d="M0,0H4.38"
-                                                    transform="translate(116 268.2)" fill="none" stroke="currentColor"
-                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                                <path id="Vector-3" data-name="Vector"
-                                                    d="M2,4H6C8,4,8,3,8,2,8,0,7,0,6,0H2C1,0,0,0,0,2S1,4,2,4Z"
-                                                    transform="translate(116 254)" fill="none" stroke="currentColor"
-                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                                <path id="Vector-4" data-name="Vector"
-                                                    d="M13,0c3.33.18,5,1.41,5,5.98v6c0,4-1,6-6,6H6c-5,0-6-2-6-6v-6C0,1.42,1.67.18,5,0"
-                                                    transform="translate(111 256.02)" fill="none" stroke="currentColor"
-                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
-                                                <path id="Vector-5" data-name="Vector" d="M0,0H24V24H0Z"
-                                                    transform="translate(108 252)" fill="none" opacity="0" />
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </span>
-                                <span
-                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
-                                    Wish List
-                                </span>
-                                <span
-                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
-                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
-                                    </i>
-                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
-                                    </i>
-                                </span>
-                            </div>
-                            <div
-                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
-                                <div class="menu-item">
-                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
-                                        href="html/demo1/public-profile/network.html" tabindex="0">
-                                        <span
-                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
-                                        </span>
-                                        <span
-                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
-                                            one
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
-                                        href="html/demo1/public-profile/activity.html" tabindex="0">
-                                        <span
-                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
-                                        </span>
-                                        <span
-                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
-                                            tow
+                                            Create courses
                                         </span>
                                     </a>
                                 </div>
@@ -221,88 +140,263 @@
                                 <span
                                     class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <g id="vuesax_bold_clipboard-text" data-name="vuesax/bold/clipboard-text"
-                                            transform="translate(-108 -252)">
-                                            <g id="clipboard-text">
-                                                <path id="Vector"
-                                                    d="M6.59,0H1.89A1.886,1.886,0,0,0,0,1.88v.94A1.878,1.878,0,0,0,1.88,4.7H6.59A1.878,1.878,0,0,0,8.47,2.82V1.88A1.871,1.871,0,0,0,6.59,0Z"
-                                                    transform="translate(115.76 254)" fill="currentColor" />
-                                                <path id="Vector-2" data-name="Vector"
-                                                    d="M13.95.737a2.9,2.9,0,0,1-2.89,2.89H6.36A2.9,2.9,0,0,1,3.47.737a.747.747,0,0,0-1.1-.65A4.472,4.472,0,0,0,0,4.037v9.41a4.481,4.481,0,0,0,4.47,4.47h8.48a4.481,4.481,0,0,0,4.47-4.47V4.037A4.472,4.472,0,0,0,15.05.087.747.747,0,0,0,13.95.737ZM9.09,12.867H4.71a.75.75,0,0,1,0-1.5H9.09a.75.75,0,0,1,0,1.5Zm2.62-4h-7a.75.75,0,0,1,0-1.5h7a.75.75,0,0,1,0,1.5Z"
-                                                    transform="translate(111.29 256.083)" fill="currentColor" />
-                                                <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z"
-                                                    transform="translate(132 276) rotate(180)" fill="none"
-                                                    opacity="0" />
-                                            </g>
-                                        </g>
-                                    </svg>
-                                </span>
-                                <span
-                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
-                                    Complete Educations
-                                </span>
-                                <span
-                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
-                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
-                                    </i>
-                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
-                                    </i>
-                                </span>
-                            </div>
-                            <div
-                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
-                                <div class="menu-item">
-                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
-                                        href="html/demo1/public-profile/network.html" tabindex="0">
-                                        <span
-                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
-                                        </span>
-                                        <span
-                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
-                                            one
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
-                                        href="html/demo1/public-profile/activity.html" tabindex="0">
-                                        <span
-                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
-                                        </span>
-                                        <span
-                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
-                                            tow
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
-                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
-                                tabindex="0">
-                                <span
-                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
-
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                        <g id="user-cirlce-add" transform="translate(-684 -188)">
-                                            <path id="Vector" d="M0,0H24V24H0Z" transform="translate(684 188)"
-                                                fill="none" opacity="0" />
+                                        <g id="profile-2user" transform="translate(-172 -252)">
+                                            <path id="Vector"
+                                                d="M5.35,10.37H5.27a.543.543,0,0,0-.18,0,5.145,5.145,0,1,1,.29,0ZM5.19,1.5a3.686,3.686,0,0,0-.14,7.37,1.665,1.665,0,0,1,.32,0A3.687,3.687,0,0,0,5.19,1.5Z"
+                                                transform="translate(175.81 253.25)" fill="currentColor" />
                                             <path id="Vector-2" data-name="Vector"
-                                                d="M6.97,1.33A3.944,3.944,0,0,0,4,0,4,4,0,0,0,1.13,1.21,3.945,3.945,0,0,0,.2,2.74,4.054,4.054,0,0,0,0,4,3.921,3.921,0,0,0,.58,6.06a3.684,3.684,0,0,0,.76.91A3.921,3.921,0,0,0,4,8a3.686,3.686,0,0,0,1.25-.21A3.9,3.9,0,0,0,7.42,6.06a3.734,3.734,0,0,0,.46-1.13A3.594,3.594,0,0,0,8,4,3.984,3.984,0,0,0,6.97,1.33ZM5.49,4.73H4.75v.78a.75.75,0,0,1-1.5,0V4.73H2.51a.75.75,0,0,1,0-1.5h.74V2.52a.75.75,0,1,1,1.5,0v.71h.74a.75.75,0,0,1,0,1.5Z"
-                                                transform="translate(699 189)" fill="currentColor" />
+                                                d="M.964,8.5a.277.277,0,0,1-.09-.01A.792.792,0,0,1,0,7.83.729.729,0,0,1,.624,7c.12-.01.25-.01.36-.01a2.752,2.752,0,0,0-.15-5.5A.741.741,0,0,1,.084.75.755.755,0,0,1,.834,0a4.259,4.259,0,0,1,4.25,4.25A4.241,4.241,0,0,1,.994,8.5Z"
+                                                transform="translate(187.576 255.25)" fill="currentColor" />
                                             <path id="Vector-3" data-name="Vector"
-                                                d="M20,10a9.821,9.821,0,0,0-.72-3.72,3.81,3.81,0,0,1-1.03.51,3.374,3.374,0,0,1-.34.1,8.48,8.48,0,0,1-1.87,9.08,4.628,4.628,0,0,0-1.1-1,9.622,9.622,0,0,0-9.88,0,4.829,4.829,0,0,0-1.1,1A8.491,8.491,0,0,1,13.1,2.09c.03-.12.06-.23.1-.35A3.512,3.512,0,0,1,13.72.72,9.82,9.82,0,0,0,10,0,9.986,9.986,0,0,0,3.23,17.34c0,.01,0,.01-.01.02.1.1.22.18.32.27a2.1,2.1,0,0,0,.17.14c.18.15.38.29.57.43l.2.14a5.953,5.953,0,0,0,.6.36c.07.04.15.09.22.13a6.093,6.093,0,0,0,.63.3,2.557,2.557,0,0,0,.24.11q.33.135.66.24a2.25,2.25,0,0,0,.24.08c.24.07.48.13.72.19a1.419,1.419,0,0,0,.22.05,7.914,7.914,0,0,0,.85.13.5.5,0,0,1,.12.02c.34.03.68.05,1.02.05s.68-.02,1.01-.05a.5.5,0,0,0,.12-.02,7.914,7.914,0,0,0,.85-.13c.07-.01.14-.04.22-.05.24-.06.49-.11.72-.19a2.25,2.25,0,0,1,.24-.08c.22-.08.45-.15.66-.24a2.557,2.557,0,0,0,.24-.11q.315-.135.63-.3c.08-.04.15-.09.22-.13.2-.12.4-.23.6-.36a2.426,2.426,0,0,0,.2-.14c.2-.14.39-.28.57-.43a2.1,2.1,0,0,1,.17-.14c.11-.09.22-.18.32-.27,0-.01,0-.01-.01-.02A9.946,9.946,0,0,0,20,10Z"
-                                                transform="translate(686 190)" fill="currentColor" />
-                                            <path id="Vector-4" data-name="Vector"
-                                                d="M3.75,0A3.745,3.745,0,0,0,3.7,7.49h.18A3.746,3.746,0,0,0,3.75,0Z"
-                                                transform="translate(692.25 194.93)" fill="currentColor" />
+                                                d="M7.57,10.112a9.878,9.878,0,0,1-5.42-1.5A4.291,4.291,0,0,1,0,5.062a4.336,4.336,0,0,1,2.15-3.57,10.588,10.588,0,0,1,10.84,0,4.314,4.314,0,0,1,2.15,3.55,4.336,4.336,0,0,1-2.15,3.57A9.9,9.9,0,0,1,7.57,10.112ZM2.98,2.752A2.876,2.876,0,0,0,1.5,5.072a2.869,2.869,0,0,0,1.48,2.3,9.037,9.037,0,0,0,9.18,0,2.876,2.876,0,0,0,1.48-2.32,2.869,2.869,0,0,0-1.48-2.3A9.084,9.084,0,0,0,2.98,2.752Z"
+                                                transform="translate(173.6 264.438)" fill="currentColor" />
+                                            <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                transform="translate(172 252)" fill="none" opacity="0" />
+                                            <path id="Vector-5" data-name="Vector"
+                                                d="M.744,7.508a.738.738,0,0,1-.73-.6.76.76,0,0,1,.58-.89,4.05,4.05,0,0,0,1.66-.73,1.956,1.956,0,0,0,.88-1.54,1.94,1.94,0,0,0-.87-1.53,4.187,4.187,0,0,0-1.64-.73A.753.753,0,1,1,.954.018a5.581,5.581,0,0,1,2.22,1,3.439,3.439,0,0,1,1.46,2.73,3.483,3.483,0,0,1-1.47,2.74,5.416,5.416,0,0,1-2.26,1A.468.468,0,0,1,.744,7.508Z"
+                                                transform="translate(189.596 265.242)" fill="currentColor" />
                                         </g>
                                     </svg>
-
                                 </span>
                                 <span
                                     class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
-                                    Contact Us
+                                    Users
+                                </span>
+                                <span
+                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                                    </i>
+                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                                    </i>
+                                </span>
+                            </div>
+                            <div
+                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/network.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            one
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/activity.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            tow
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="profile-2user" transform="translate(-172 -252)">
+                                            <path id="Vector"
+                                                d="M5.35,10.37H5.27a.543.543,0,0,0-.18,0,5.145,5.145,0,1,1,.29,0ZM5.19,1.5a3.686,3.686,0,0,0-.14,7.37,1.665,1.665,0,0,1,.32,0A3.687,3.687,0,0,0,5.19,1.5Z"
+                                                transform="translate(175.81 253.25)" fill="currentColor" />
+                                            <path id="Vector-2" data-name="Vector"
+                                                d="M.964,8.5a.277.277,0,0,1-.09-.01A.792.792,0,0,1,0,7.83.729.729,0,0,1,.624,7c.12-.01.25-.01.36-.01a2.752,2.752,0,0,0-.15-5.5A.741.741,0,0,1,.084.75.755.755,0,0,1,.834,0a4.259,4.259,0,0,1,4.25,4.25A4.241,4.241,0,0,1,.994,8.5Z"
+                                                transform="translate(187.576 255.25)" fill="currentColor" />
+                                            <path id="Vector-3" data-name="Vector"
+                                                d="M7.57,10.112a9.878,9.878,0,0,1-5.42-1.5A4.291,4.291,0,0,1,0,5.062a4.336,4.336,0,0,1,2.15-3.57,10.588,10.588,0,0,1,10.84,0,4.314,4.314,0,0,1,2.15,3.55,4.336,4.336,0,0,1-2.15,3.57A9.9,9.9,0,0,1,7.57,10.112ZM2.98,2.752A2.876,2.876,0,0,0,1.5,5.072a2.869,2.869,0,0,0,1.48,2.3,9.037,9.037,0,0,0,9.18,0,2.876,2.876,0,0,0,1.48-2.32,2.869,2.869,0,0,0-1.48-2.3A9.084,9.084,0,0,0,2.98,2.752Z"
+                                                transform="translate(173.6 264.438)" fill="currentColor" />
+                                            <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                transform="translate(172 252)" fill="none" opacity="0" />
+                                            <path id="Vector-5" data-name="Vector"
+                                                d="M.744,7.508a.738.738,0,0,1-.73-.6.76.76,0,0,1,.58-.89,4.05,4.05,0,0,0,1.66-.73,1.956,1.956,0,0,0,.88-1.54,1.94,1.94,0,0,0-.87-1.53,4.187,4.187,0,0,0-1.64-.73A.753.753,0,1,1,.954.018a5.581,5.581,0,0,1,2.22,1,3.439,3.439,0,0,1,1.46,2.73,3.483,3.483,0,0,1-1.47,2.74,5.416,5.416,0,0,1-2.26,1A.468.468,0,0,1,.744,7.508Z"
+                                                transform="translate(189.596 265.242)" fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Companys
+                                </span>
+                                <span
+                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                                    </i>
+                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                                    </i>
+                                </span>
+                            </div>
+                            <div
+                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/network.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            one
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/activity.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            tow
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path id="chart_donut_icon_136803"
+                                            d="M15.2,2.05V5.7a8.408,8.408,0,0,1,7.2,8.325,8.109,8.109,0,0,1-.6,3.056l3.144,1.841A12,12,0,0,0,15.2,2.05M14,22.441A8.417,8.417,0,0,1,12.8,5.7V2.05A12.028,12.028,0,1,0,23.66,21.13l-3.12-1.841A8.261,8.261,0,0,1,14,22.441Z"
+                                            transform="translate(-2 -2.05)" fill="currentColor" />
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Statistics
+                                </span>
+                                <span
+                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                                    </i>
+                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                                    </i>
+                                </span>
+                            </div>
+                            <div
+                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/network.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            one
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/activity.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            tow
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_outline_shop" data-name="vuesax/outline/shop"
+                                            transform="translate(-172 -252)">
+                                            <g id="shop">
+                                                <path id="Vector"
+                                                    d="M12.44,12.28H7.04C2.1,12.28,0,10.17,0,5.24V.75A.755.755,0,0,1,.75,0,.755.755,0,0,1,1.5.75V5.24c0,4.09,1.45,5.54,5.54,5.54h5.39c4.09,0,5.54-1.45,5.54-5.54V.75a.75.75,0,0,1,1.5,0V5.24C19.48,10.17,17.37,12.28,12.44,12.28Z"
+                                                    transform="translate(174.26 262.47)" fill="currentColor" />
+                                                <path id="Vector-2" data-name="Vector"
+                                                    d="M3.761,11.5A3.7,3.7,0,0,1,.021,7.36L.691.68A.758.758,0,0,1,1.441,0h4.67a.75.75,0,0,1,.75.68l.67,6.68a3.74,3.74,0,0,1-.93,2.92A3.832,3.832,0,0,1,3.761,11.5Zm-1.65-10-.6,6.01a2.236,2.236,0,0,0,.55,1.76,2.4,2.4,0,0,0,3.4,0,2.259,2.259,0,0,0,.55-1.76l-.6-6.01Z"
+                                                    transform="translate(180.239 253.25)" fill="currentColor" />
+                                                <path id="Vector-3" data-name="Vector"
+                                                    d="M4.753,11.5A4.163,4.163,0,0,1,.7,7.84L0,.83A.772.772,0,0,1,.193.25.735.735,0,0,1,.753,0H3.8c2.94,0,4.31,1.23,4.72,4.25L8.8,7.03a4.011,4.011,0,0,1-4.05,4.47Zm-3.17-10L2.2,7.69A2.658,2.658,0,0,0,4.753,10a2.5,2.5,0,0,0,2.56-2.82l-.28-2.75C6.723,2.17,5.993,1.5,3.8,1.5Z"
+                                                    transform="translate(185.557 253.25)" fill="currentColor" />
+                                                <path id="Vector-4" data-name="Vector"
+                                                    d="M4.073,11.5A4.011,4.011,0,0,1,.023,7.03l.27-2.75C.713,1.23,2.083,0,5.023,0h3.05a.767.767,0,0,1,.56.25.734.734,0,0,1,.19.58l-.7,7.01A4.163,4.163,0,0,1,4.073,11.5Zm.95-10c-2.19,0-2.92.66-3.24,2.95l-.27,2.73A2.5,2.5,0,0,0,4.073,10a2.65,2.65,0,0,0,2.55-2.31l.62-6.19Z"
+                                                    transform="translate(173.567 253.25)" fill="currentColor" />
+                                                <path id="Vector-5" data-name="Vector"
+                                                    d="M5.75,6.5h-5A.755.755,0,0,1,0,5.75V3.25A2.928,2.928,0,0,1,3.25,0,2.928,2.928,0,0,1,6.5,3.25v2.5A.755.755,0,0,1,5.75,6.5ZM1.5,5H5V3.25C5,1.99,4.51,1.5,3.25,1.5S1.5,1.99,1.5,3.25Z"
+                                                    transform="translate(180.75 268.25)" fill="currentColor" />
+                                                <path id="Vector-6" data-name="Vector" d="M0,0H24V24H0Z"
+                                                    transform="translate(172 252)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Order
+                                </span>
+                                <span
+                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                                    </i>
+                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                                    </i>
+                                </span>
+                            </div>
+                            <div
+                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/network.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            one
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/activity.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            tow
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path id="chart_donut_icon_136803"
+                                            d="M15.2,2.05V5.7a8.408,8.408,0,0,1,7.2,8.325,8.109,8.109,0,0,1-.6,3.056l3.144,1.841A12,12,0,0,0,15.2,2.05M14,22.441A8.417,8.417,0,0,1,12.8,5.7V2.05A12.028,12.028,0,1,0,23.66,21.13l-3.12-1.841A8.261,8.261,0,0,1,14,22.441Z"
+                                            transform="translate(-2 -2.05)" fill="currentColor" />
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Media
                                 </span>
                                 <span
                                     class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
@@ -435,11 +529,10 @@
                                         <a class="menu-link text-nowrap text-sm text-gray-700 font-medium menu-item-hover:text-primary menu-item-active:text-gray-900 menu-item-active:font-semibold"
                                             href="html/demo1/layout.html">
                                             <span class="menu-title font-bold text-lg text-nowrap">
-                                                Dashboard
+                                                Courses
                                             </span>
                                         </a>
-                                        <span class="text-sm text-gray-600">Dashboard - Educations - My
-                                            Educations</span>
+                                        <span class="text-sm text-gray-600">Educations - Courses</span>
                                     </div>
                                 </div>
                             </div>
@@ -493,350 +586,144 @@
             </header>
             <main class="grow content pt-5 lg:mr-16" id="content" role="content">
                 <div class="container-fixed">
-                    <div class="flex gap-4">
-
-                        <div class="bg-white dark:bg-coal-300 rounded-lg w-80 overflow-hidden shadow-md CourseList">
-                            <div class="text-white relative h-16">
-                                <span class="absolute -top-6 -left-28 w-full h-full ">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="468.192" height="166.678"
-                                        viewBox="0 0 468.192 166.678">
-                                        <path id="Path_103" data-name="Path 103"
-                                            d="M28.316,0h438.13c15.631,0-96.989,88.486-174.317,92.755s-163.216-13.742-211.67,0S.013,166.678.013,166.678c-.655,0,0-62.212,0-84.817V40.931C.013,18.325,12.685,0,28.316,0Z"
-                                            transform="translate(0.278)" fill="#c2c6de" />
-                                        <path id="Path_104" data-name="Path 104"
-                                            d="M28.316,0h438.13c15.631,0-96.989,79.857-174.317,83.71s-163.216-12.4-211.67,0S.013,150.424.013,150.424c-.655,0,0-56.145,0-76.546V36.939C.013,16.538,12.685,0,28.316,0Z"
-                                            transform="translate(0.278)" fill="#858ec4" />
-                                        <path id="Path_105" data-name="Path 105"
-                                            d="M28.316,0h438.13c15.631,0-96.989,70.8-174.317,74.212s-163.216-10.995-211.67,0S.013,133.356.013,133.356c-.655,0,0-49.775,0-67.861V32.748C.013,14.662,12.685,0,28.316,0Z"
-                                            transform="translate(0.278)" fill="#34459d" />
-                                        <path id="Path_106" data-name="Path 106"
-                                            d="M28.316,0h438.13c15.631,0-96.989,88.486-174.317,92.755s-163.216-13.742-211.67,0S.013,166.678.013,166.678c-.655,0,0-62.212,0-84.817V40.931C.013,18.325,12.685,0,28.316,0Z"
-                                            transform="translate(0.278)" fill="#c2c6de" />
-                                        <path id="Path_107" data-name="Path 107"
-                                            d="M28.316,0h438.13c15.631,0-96.989,79.857-174.317,83.71s-163.216-12.4-211.67,0S.013,150.424.013,150.424c-.655,0,0-56.145,0-76.546V36.939C.013,16.538,12.685,0,28.316,0Z"
-                                            transform="translate(0.278)" fill="#858ec4" />
-                                        <path id="Path_108" data-name="Path 108"
-                                            d="M28.316,0h438.13c15.631,0-96.989,70.8-174.317,74.212s-163.216-10.995-211.67,0S.013,133.356.013,133.356c-.655,0,0-49.775,0-67.861V32.748C.013,14.662,12.685,0,28.316,0Z"
-                                            transform="translate(0.278)" fill="#34459d" />
-                                    </svg>
-                                </span>
-                                <div class="flex items-center p-4 gap-1 relative z-10">
-                                    <h2 class="text-base font-semibold">Course Overview | </h2>
-                                    <span class="text-xs">24 Lessons (3/24)</span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 gap-5">
+                        <div class="card relative">
+                            <button
+                                class="absolute top-3 right-3 bg-primary text-white p-1.5 rounded-lg hover:bg-blue-900 transition-colors">
+                                <i class="ki-filled ki-copy"></i>
+                            </button>
+                            <div class="card-body grid gap-4 py-3 px-3">
+                                <div class="grid place-items-center gap-2">
+                                    <img src="assets/media/avatars/300-1.png" alt=""
+                                        class="rounded-3xl w-full aspect-square object-cover" />
                                 </div>
-                            </div>
-                            <div class="relative z-5 space-y-3 text-sm p-4 max-h-[80vh] overflow-y-auto">
-                                <div class="flex flex-col space-y-3" data-tabs="true">
-                                    <a href="#"
-                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3 active"
-                                        data-tab-toggle="#tab_introduction">
-                                        <div class="flex items-center">
-                                            <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-filled ki-youtube"></i>
-                                            </div>
-                                            <span>Introduction Video</span>
+                                <div class="flex items-center justify-between flex-wrap gap-2">
+                                    <span
+                                        class="text-lg font-semibold text-primary hover:text-primary-active">Hasan-Arnar</span>
+                                    <div class="rating flex gap-1">
+                                        <div class="rating-label checked">
+                                            <i
+                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
                                         </div>
-                                        <span class=" text-sm">8:23</span>
-                                    </a>
-                                    <a href="#"
-                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3"
-                                        data-tab-toggle="#tab_process_intro">
-                                        <div class="flex items-center">
-                                            <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-filled ki-youtube"></i>
-                                            </div>
-                                            <span>Process Overview</span>
+                                        <div class="rating-label checked">
+                                            <i
+                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
                                         </div>
-                                        <span class=" text-sm">8:23</span>
-                                    </a>
-                                    <a href="#"
-                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3"
-                                        data-tab-toggle="#tab_discovery">
-                                        <div class="flex items-center">
-                                            <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-solid ki-lock"></i>
-                                            </div>
-                                            <span>Course Discovery</span>
+                                        <div class="rating-label checked">
+                                            <i
+                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
                                         </div>
-                                        <span class=" text-sm">8:23</span>
-                                    </a>
-                                    <a href="#"
-                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3"
-                                        data-tab-toggle="#tab_quiz">
-                                        <div class="flex items-center">
-                                            <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-solid ki-lock"></i>
-                                            </div>
-                                            <span>Knowledge Quiz</span>
+                                        <div class="rating-label checked">
+                                            <i
+                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
                                         </div>
-                                        <span class=" text-sm">9 Q</span>
-                                    </a>
-                                    <a href="#"
-                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3"
-                                        data-tab-toggle="#tab_advanced_process">
-                                        <div class="flex items-center">
-                                            <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-solid ki-lock"></i>
-                                            </div>
-                                            <span>Advanced Process</span>
-                                        </div>
-                                        <span class=" text-sm">8:23</span>
-                                    </a>
-                                    <a href="#"
-                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3"
-                                        data-tab-toggle="#tab_final_exam">
-                                        <div class="flex items-center">
-                                            <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-solid ki-lock"></i>
-                                            </div>
-                                            <span>Final Assessment</span>
-                                        </div>
-                                        <span class=" text-sm">8:23</span>
-                                    </a>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-medium text-gray-600 uppercase">Price: 500 SEK</span>
+                                <div class="flex justify-between text-gray-600 flex-wrap gap-2">
+                                    <div class="flex items-center gap-1">
+                                        <i class="ki-filled ki-eye text-base"></i>
+                                        <span class="text-sm">5 Videos</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ki-filled ki-document text-base"></i>
+                                        <span class="text-sm">5 Lessons</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ki-outline ki-calendar text-base"></i>
+                                        <span class="text-sm">1 Day</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer flex justify-center items-center gap-2 pt-2 pb-0">
+                                    <select
+                                        class="select select-sm text-sm border-primary bg-[#EDF0F9] text-primary focus:border-primary">
+                                        <option>Select date</option>
+                                        <option>Active</option>
+                                        <option>Inactive</option>
+                                    </select>
+                                    <button
+                                        class="rounded-lg bg-blue-500 text-base py-1.5 px-2 text-white hover:opacity-90 transition-opacity">
+                                        Complete
+                                    </button>
+                                    <button
+                                        class="rounded-lg bg-[#2A3F9D] text-base py-1.5 px-2 text-white hover:opacity-90 transition-opacity">
+                                        <i class="ki-solid ki-printer"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
-
-                        <div
-                            class="lesson-content bg-white dark:bg-coal-300 rounded-lg flex-1 overflow-hidden shadow-md">
-                            <div>
-                                <!-- Tab 1 Content -->
-                                <div class="relative" id="tab_introduction">
-                                    <span class="absolute -top-2 -left-28 w-full h-full ">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="468.192" height="166.678"
-                                            viewBox="0 0 468.192 166.678">
-                                            <path id="Path_103" data-name="Path 103"
-                                                d="M28.316,0h438.13c15.631,0-96.989,88.486-174.317,92.755s-163.216-13.742-211.67,0S.013,166.678.013,166.678c-.655,0,0-62.212,0-84.817V40.931C.013,18.325,12.685,0,28.316,0Z"
-                                                transform="translate(0.278)" fill="#c2c6de" />
-                                            <path id="Path_104" data-name="Path 104"
-                                                d="M28.316,0h438.13c15.631,0-96.989,79.857-174.317,83.71s-163.216-12.4-211.67,0S.013,150.424.013,150.424c-.655,0,0-56.145,0-76.546V36.939C.013,16.538,12.685,0,28.316,0Z"
-                                                transform="translate(0.278)" fill="#858ec4" />
-                                            <path id="Path_105" data-name="Path 105"
-                                                d="M28.316,0h438.13c15.631,0-96.989,70.8-174.317,74.212s-163.216-10.995-211.67,0S.013,133.356.013,133.356c-.655,0,0-49.775,0-67.861V32.748C.013,14.662,12.685,0,28.316,0Z"
-                                                transform="translate(0.278)" fill="#34459d" />
-                                            <path id="Path_106" data-name="Path 106"
-                                                d="M28.316,0h438.13c15.631,0-96.989,88.486-174.317,92.755s-163.216-13.742-211.67,0S.013,166.678.013,166.678c-.655,0,0-62.212,0-84.817V40.931C.013,18.325,12.685,0,28.316,0Z"
-                                                transform="translate(0.278)" fill="#c2c6de" />
-                                            <path id="Path_107" data-name="Path 107"
-                                                d="M28.316,0h438.13c15.631,0-96.989,79.857-174.317,83.71s-163.216-12.4-211.67,0S.013,150.424.013,150.424c-.655,0,0-56.145,0-76.546V36.939C.013,16.538,12.685,0,28.316,0Z"
-                                                transform="translate(0.278)" fill="#858ec4" />
-                                            <path id="Path_108" data-name="Path 108"
-                                                d="M28.316,0h438.13c15.631,0-96.989,70.8-174.317,74.212s-163.216-10.995-211.67,0S.013,133.356.013,133.356c-.655,0,0-49.775,0-67.861V32.748C.013,14.662,12.685,0,28.316,0Z"
-                                                transform="translate(0.278)" fill="#34459d" />
-                                        </svg>
-                                    </span>
-                                    <div class="pt-28 p-5 space-y-2 text-dark dark:text-white">
-                                        <h3 class="text-primary font-bold mb-5s">Included in the training</h3>
-                                        <p>Many consumers today want oranic and sustainable food - even when
-                                            they eat out. a krav-cerified restaurant therefore attracts more guests.
-                                            in this training you will learn what a restaurant should know before
-                                            a krav certification. the training also applies to commercial kitchens
-                                            such as school kitchens, kitchens in care , catering kitchens and cafes.
-                                            the training video contains question between each section, and after
-                                            a successful final exam you will recive a course certificate. to get
-                                            your name on the course certificate, you must enter both first and last
-                                            name in your account details.
-                                        </p>
-                                        <hr />
-                                        <div class="flex space-x-4 gap-2">
-                                            <div class="flex items-center gap-1">
-                                                <i class="ki-filled ki-eye text-base"></i>
-                                                <span class="text-sm">5 Videos Courses</span>
-                                            </div>
-                                            <div class="flex items-center gap-1">
-                                                <i class="ki-filled ki-document text-base"></i>
-                                                <span class="text-sm">5 Sample</span>
-                                            </div>
-                                            <div class="flex items-center gap-1">
-                                                <i class="ki-outline ki-calendar text-base"></i>
-                                                <span class="text-sm">1 Final Exam</span>
-                                            </div>
+                        <div class="card relative">
+                            <button
+                                class="absolute top-3 right-3 bg-primary text-white p-1.5 rounded-lg hover:bg-blue-900 transition-colors">
+                                <i class="ki-filled ki-copy"></i>
+                            </button>
+                            <div class="card-body grid gap-4 py-3 px-3">
+                                <div class="grid place-items-center gap-2">
+                                    <img src="assets/media/avatars/300-1.png" alt=""
+                                        class="rounded-3xl w-full aspect-square object-cover" />
+                                </div>
+                                <div class="flex items-center justify-between flex-wrap gap-2">
+                                    <span
+                                        class="text-lg font-semibold text-primary hover:text-primary-active">Hasan-Arnar</span>
+                                    <div class="rating flex gap-1">
+                                        <div class="rating-label checked">
+                                            <i
+                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
                                         </div>
-                                        <div class=" text-end pt-4">
-                                            <a href=""
-                                                class="rounded-lg bg-primary gap-2 w-full text-center text-sm py-2 px-4 text-white hover:bg-blue-900 transition-colors">
-                                                <i class="ki-filled ki-arrow-down"></i>
-                                                Download Course Material
-                                            </a>
+                                        <div class="rating-label checked">
+                                            <i
+                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
+                                        </div>
+                                        <div class="rating-label checked">
+                                            <i
+                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
+                                        </div>
+                                        <div class="rating-label checked">
+                                            <i
+                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Tab 2 Content -->
-
-                                <div class="hidden p-5 space-y-5 text-dark dark:text-white" id="tab_process_intro">
-                                    <div class="relative">
-                                        <iframe class="w-full h-60 rounded-xl object-cover"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY?enablejsapi=1"
-                                            id="youtube-video">
-                                        </iframe>
+                                <span class="text-sm font-medium text-gray-600 uppercase">Price: 500 SEK</span>
+                                <div class="flex justify-between text-gray-600 flex-wrap gap-2">
+                                    <div class="flex items-center gap-1">
+                                        <i class="ki-filled ki-eye text-base"></i>
+                                        <span class="text-sm">5 Videos</span>
                                     </div>
-                                    <div class="card border rounded-xl ">
-                                        <div class="card-header bg-blue-50 ">
-                                            <h3 class="text-blue-700 font-semibold">Process Overview</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="font-medium">About This Course</h4>
-                                            <p class="text-gray-600 text-sm mt-1">
-                                                When an unknown printer took a galley of type and scrambled it to make a
-                                                type specimen book.
-                                            </p>
-                                        </div>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ki-filled ki-document text-base"></i>
+                                        <span class="text-sm">5 Lessons</span>
                                     </div>
-                                    <div class=" text-end">
-                                        <a href=""
-                                            class="rounded-lg bg-primary gap-2 w-full text-center text-sm py-2 px-4 text-white hover:bg-blue-900 transition-colors">
-                                            <i class="ki-filled ki-arrow-down"></i>
-                                            Download Course Material
-                                        </a>
+                                    <div class="flex items-center gap-1">
+                                        <i class="ki-outline ki-calendar text-base"></i>
+                                        <span class="text-sm">1 Day</span>
                                     </div>
                                 </div>
-
-                                <!-- Tab 3 Content (Visible by default) -->
-                                <div class="hidden p-5 space-y-5 text-dark dark:text-white" id="tab_discovery">
-                                    <div class="relative">
-                                        <iframe class="w-full h-60 rounded-xl object-cover"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY?enablejsapi=1"
-                                            id="youtube-video">
-                                        </iframe>
-                                    </div>
-                                    <div class="card border rounded-xl ">
-                                        <div class="card-header bg-blue-50 ">
-                                            <h3 class="text-blue-700 font-semibold">Process Overview</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="font-medium">About This Course</h4>
-                                            <p class="text-gray-600 text-sm mt-1">
-                                                When an unknown printer took a galley of type and scrambled it to make a
-                                                type specimen book.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class=" text-end">
-                                        <a href=""
-                                            class="rounded-lg bg-primary gap-2 w-full text-center text-sm py-2 px-4 text-white hover:bg-blue-900 transition-colors">
-                                            <i class="ki-filled ki-arrow-down"></i>
-                                            Download Course Material
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Tab 4 Content -->
-                                <div class="hidden p-5 space-y-5 text-dark dark:text-white" id="tab_quiz">
-                                    <div class="quiz-container p-6">
-                                        <h3 class="text-blue-700 font-semibold">Knowledge Quiz</h3>
-
-                                        <div class="mt-4">
-                                            <h4 class="font-medium">Test Your Knowledge</h4>
-                                            <p class="text-gray-600 text-sm mt-1">
-                                                This quiz contains 9 questions to test your understanding of the
-                                                material covered so far.
-                                            </p>
-
-                                            <div class="mt-6 space-y-4">
-                                                <div class="p-4 border rounded-lg">
-                                                    <p class="font-medium">Question 1 of 9</p>
-                                                    <p class="mt-2">What is the main purpose of this course?</p>
-                                                    <div class="mt-3 space-y-2">
-                                                        <div class="flex items-center">
-                                                            <input type="radio" name="q1" id="q1a" class="mr-2">
-                                                            <label for="q1a">To learn programming</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input type="radio" name="q1" id="q1b" class="mr-2">
-                                                            <label for="q1b">To understand design principles</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input type="radio" name="q1" id="q1c" class="mr-2">
-                                                            <label for="q1c">To create a portfolio</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="mt-8 flex justify-end">
-                                            <button class="bg-blue-700 text-white px-4 py-2 rounded">
-                                                Submit Quiz
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Tab 5 Content -->
-                                <div class="hidden p-5 space-y-5 text-dark dark:text-white" id="tab_advanced_process">
-                                    <div class="relative">
-                                        <iframe class="w-full h-60 rounded-xl object-cover"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY?enablejsapi=1"
-                                            id="youtube-video">
-                                        </iframe>
-                                    </div>
-                                    <div class="card border rounded-xl ">
-                                        <div class="card-header bg-blue-50 ">
-                                            <h3 class="text-blue-700 font-semibold">Process Overview</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="font-medium">About This Course</h4>
-                                            <p class="text-gray-600 text-sm mt-1">
-                                                When an unknown printer took a galley of type and scrambled it to make a
-                                                type specimen book.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class=" text-end">
-                                        <a href=""
-                                            class="rounded-lg bg-primary gap-2 w-full text-center text-sm py-2 px-4 text-white hover:bg-blue-900 transition-colors">
-                                            <i class="ki-filled ki-arrow-down"></i>
-                                            Download Course Material
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Tab 6 Content -->
-                                <div class="hidden  p-5 space-y-5 text-dark dark:text-white" id="tab_final_exam">
-                                    <div class="exam-container p-6">
-                                        <h3 class="text-blue-700 font-semibold">Final Assessment</h3>
-
-                                        <div class="mt-4">
-                                            <h4 class="font-medium">Complete Course Exam</h4>
-                                            <p class="text-gray-600 text-sm mt-1">
-                                                This final exam contains 9 questions that test your understanding of all
-                                                course materials.
-                                            </p>
-
-                                            <div class="mt-6">
-                                                <p class="font-medium">Instructions:</p>
-                                                <ul class="list-disc ml-6 mt-2 text-sm text-gray-600">
-                                                    <li>You have 60 minutes to complete this exam</li>
-                                                    <li>All questions are mandatory</li>
-                                                    <li>A passing score of 70% is required to receive your certificate
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="mt-8 flex justify-end">
-                                            <button class="bg-blue-700 text-white px-4 py-2 rounded">
-                                                Start Exam
-                                            </button>
-                                        </div>
-                                    </div>
+                                <div class="card-footer flex justify-center items-center gap-2 pt-2 pb-0">
+                                    <select
+                                        class="select select-sm text-sm border-primary bg-[#EDF0F9] text-primary focus:border-primary">
+                                        <option>Status</option>
+                                        <option>Active</option>
+                                        <option>Inactive</option>
+                                    </select>
+                                    <button
+                                        class="rounded-lg bg-primary text-base py-1.5 px-2 text-white hover:opacity-90 transition-opacity">
+                                        <i class="ki-filled ki-handcart"></i>
+                                    </button>
+                                    <button
+                                        class="rounded-lg bg-green-600 text-base py-1.5 px-2 text-white hover:opacity-90 transition-opacity">
+                                        <i class="ki-solid ki-printer"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </main>
         </div>
 
-        <div class=" z-20 bg-primary w-16 mt-5 mb-5 rounded-l-3xl " id="menu-right" data-drawer="true"
+
+        <div class="fixed right-0 h-[95%] z-20 bg-primary w-16 mt-5 rounded-l-3xl " id="menu-right" data-drawer="true"
             data-drawer-class="drawer drawer-end top-0 bottom-0" data-drawer-enable="true|lg:false">
             <div class="flex flex-col h-full items-center py-5 justify-between">
                 <div class="menu" data-menu="true">
@@ -979,109 +866,53 @@
     </div>
 
 
-    <div class="right_side_drawer">
-        <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="settings">
-            <div class="drawer-header">
-                <h3 class="drawer-title">settings</h3>
-                <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-x" aria-hidden="true">
-                        <path d="M18 6 6 18"></path>
-                        <path d="m6 6 12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="drawer-content scrollable">Drawer content</div>
+
+    <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="settings">
+        <div class="drawer-header">
+            <h3 class="drawer-title">settings</h3>
+            <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x" aria-hidden="true">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg>
+            </button>
         </div>
-
-        <div class="drawer drawer-end hidden w-64" data-drawer="true" data-drawer-backdrop="false" id="email">
-            <div class="drawer-header p-1">
-                <button class="drawer-close bg-primary rounded-full w-8 h-8 flex items-center justify-center"
-                    aria-label="Close drawer" data-drawer-dismiss="#alert">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#fff"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-x" aria-hidden="true">
-                        <path d="M18 6 6 18"></path>
-                        <path d="m6 6 12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="drawer-content scrollable p-3">
-                <div class="flex flex-col gap-5 lg:gap-6">
-                    <div class="flex items-center gap-2">
-                        <div class="flex items-center grow gap-2.5">
-                            <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
-                            <div class="flex flex-col">
-                                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
-                                    Dr sultads send you photo
-                                </a>
-                                <span class="text-xs font-semibold text-gray-600">
-                                    29 July 2022 - 02:26 pm
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <div class="flex items-center grow gap-2.5">
-                            <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
-                            <div class="flex flex-col">
-                                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
-                                    Dr sultads send you photo
-                                </a>
-                                <span class="text-xs font-semibold text-gray-600">
-                                    29 July 2022 - 02:26 pm
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <div class="flex items-center grow gap-2.5">
-                            <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
-                            <div class="flex flex-col">
-                                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
-                                    Dr sultads send you photo
-                                </a>
-                                <span class="text-xs font-semibold text-gray-600">
-                                    29 July 2022 - 02:26 pm
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <div class="flex items-center grow gap-2.5">
-                            <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
-                            <div class="flex flex-col">
-                                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
-                                    Dr sultads send you photo
-                                </a>
-                                <span class="text-xs font-semibold text-gray-600">
-                                    29 July 2022 - 02:26 pm
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="notification">
-            <div class="drawer-header">
-                <h3 class="drawer-title">notification</h3>
-                <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="lucide lucide-x" aria-hidden="true">
-                        <path d="M18 6 6 18"></path>
-                        <path d="m6 6 12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="drawer-content scrollable">Drawer content</div>
-        </div>
-
+        <div class="drawer-content scrollable">Drawer content</div>
     </div>
+
+    <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="email">
+        <div class="drawer-header">
+            <h3 class="drawer-title">email</h3>
+            <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x" aria-hidden="true">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="drawer-content scrollable">Drawer content</div>
+    </div>
+
+    <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="notification">
+        <div class="drawer-header">
+            <h3 class="drawer-title">notification</h3>
+            <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x" aria-hidden="true">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="drawer-content scrollable">Drawer content</div>
+    </div>
+
+
 
 
     <script src="assets/js/core.bundle.js"></script>

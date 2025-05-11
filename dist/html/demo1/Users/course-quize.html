@@ -528,76 +528,49 @@
                             <div class="relative z-5 space-y-3 text-sm p-4 max-h-[80vh] overflow-y-auto">
                                 <div class="flex flex-col space-y-3" data-tabs="true">
                                     <a href="#"
+                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3 "
+                                        data-tab-toggle="#question_1">
+                                        <div class="flex items-center">
+                                            <div
+                                                class="circle w-5 h-5 text-lg rounded-full flex items-center justify-center mr-2">
+                                                <i class="ki-solid ki-cross-circle"></i>
+                                            </div>
+                                            <span>Question 3</span>
+                                        </div>
+                                        <div
+                                            class="circle w-5 h-5 bg-white text-primary text-sm rounded-full flex items-center justify-center mr-2">
+                                            <i class="ki-solid ki-key"></i>
+                                        </div>
+                                    </a>
+                                    <a href="#"
+                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3"
+                                        data-tab-toggle="#question_2">
+                                        <div class="flex items-center">
+                                            <div
+                                                class="circle w-5 h-5 text-lg rounded-full flex items-center justify-center mr-2">
+                                                <i class="ki-solid ki-check-circle"></i>
+                                            </div>
+                                            <span>Question 2</span>
+                                        </div>
+                                        <div
+                                            class="circle w-5 h-5 bg-white text-primary text-sm rounded-full flex items-center justify-center mr-2">
+                                            <i class="ki-solid ki-key"></i>
+                                        </div>
+                                    </a>
+                                    <a href="#"
                                         class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3 active"
-                                        data-tab-toggle="#tab_introduction">
+                                        data-tab-toggle="#question_3">
                                         <div class="flex items-center">
                                             <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-filled ki-youtube"></i>
+                                                class="circle w-5 h-5 bg-primary text-white  rounded-full flex items-center justify-center mr-2">
+                                                <i class="ki-solid ki-tablet-text-down"></i>
                                             </div>
-                                            <span>Introduction Video</span>
+                                            <span>Question 3</span>
                                         </div>
-                                        <span class=" text-sm">8:23</span>
-                                    </a>
-                                    <a href="#"
-                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3"
-                                        data-tab-toggle="#tab_process_intro">
-                                        <div class="flex items-center">
-                                            <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-filled ki-youtube"></i>
-                                            </div>
-                                            <span>Process Overview</span>
+                                        <div
+                                            class="circle w-5 h-5 bg-white text-primary text-sm rounded-full flex items-center justify-center mr-2">
+                                            <i class="ki-solid ki-lock-2"></i>
                                         </div>
-                                        <span class=" text-sm">8:23</span>
-                                    </a>
-                                    <a href="#"
-                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3"
-                                        data-tab-toggle="#tab_discovery">
-                                        <div class="flex items-center">
-                                            <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-solid ki-lock"></i>
-                                            </div>
-                                            <span>Course Discovery</span>
-                                        </div>
-                                        <span class=" text-sm">8:23</span>
-                                    </a>
-                                    <a href="#"
-                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3"
-                                        data-tab-toggle="#tab_quiz">
-                                        <div class="flex items-center">
-                                            <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-solid ki-lock"></i>
-                                            </div>
-                                            <span>Knowledge Quiz</span>
-                                        </div>
-                                        <span class=" text-sm">9 Q</span>
-                                    </a>
-                                    <a href="#"
-                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3"
-                                        data-tab-toggle="#tab_advanced_process">
-                                        <div class="flex items-center">
-                                            <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-solid ki-lock"></i>
-                                            </div>
-                                            <span>Advanced Process</span>
-                                        </div>
-                                        <span class=" text-sm">8:23</span>
-                                    </a>
-                                    <a href="#"
-                                        class="lesson-item bg-indigo-100 rounded-lg text-primary flex items-center justify-between p-3"
-                                        data-tab-toggle="#tab_final_exam">
-                                        <div class="flex items-center">
-                                            <div
-                                                class="circle w-7 h-7 bg-white text-primary  rounded-full flex items-center justify-center mr-2">
-                                                <i class="ki-solid ki-lock"></i>
-                                            </div>
-                                            <span>Final Assessment</span>
-                                        </div>
-                                        <span class=" text-sm">8:23</span>
                                     </a>
                                 </div>
                             </div>
@@ -607,8 +580,8 @@
                             class="lesson-content bg-white dark:bg-coal-300 rounded-lg flex-1 overflow-hidden shadow-md">
                             <div>
                                 <!-- Tab 1 Content -->
-                                <div class="relative" id="tab_introduction">
-                                    <span class="absolute -top-2 -left-28 w-full h-full ">
+                                <div class="hidden relative" id="question_1">
+                                    <span class="absolute -top-2 -left-28">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="468.192" height="166.678"
                                             viewBox="0 0 468.192 166.678">
                                             <path id="Path_103" data-name="Path 103"
@@ -631,200 +604,163 @@
                                                 transform="translate(0.278)" fill="#34459d" />
                                         </svg>
                                     </span>
+                                    <span class="absolute top-5 right-5 rounded-lg bg-indigo-50 gap-2 text-center text-sm py-2 px-4 hover:bg-indigo-100 transition-colors">
+                                        Move On
+                                    </span>
                                     <div class="pt-28 p-5 space-y-2 text-dark dark:text-white">
-                                        <h3 class="text-primary font-bold mb-5s">Included in the training</h3>
-                                        <p>Many consumers today want oranic and sustainable food - even when
-                                            they eat out. a krav-cerified restaurant therefore attracts more guests.
-                                            in this training you will learn what a restaurant should know before
-                                            a krav certification. the training also applies to commercial kitchens
-                                            such as school kitchens, kitchens in care , catering kitchens and cafes.
-                                            the training video contains question between each section, and after
-                                            a successful final exam you will recive a course certificate. to get
-                                            your name on the course certificate, you must enter both first and last
-                                            name in your account details.
-                                        </p>
-                                        <hr />
-                                        <div class="flex space-x-4 gap-2">
-                                            <div class="flex items-center gap-1">
-                                                <i class="ki-filled ki-eye text-base"></i>
-                                                <span class="text-sm">5 Videos Courses</span>
-                                            </div>
-                                            <div class="flex items-center gap-1">
-                                                <i class="ki-filled ki-document text-base"></i>
-                                                <span class="text-sm">5 Sample</span>
-                                            </div>
-                                            <div class="flex items-center gap-1">
-                                                <i class="ki-outline ki-calendar text-base"></i>
-                                                <span class="text-sm">1 Final Exam</span>
-                                            </div>
+                                        <div class="bg-indigo-50 p-2 rounded-md mb-5 ">
+                                            <p class="text-lg">KRAV is a well-known brand, how many of the consumers
+                                                know about krav?</p>
+                                            <p class="text-sm text-gray-600">(Only One Option Is Correct)</p>
                                         </div>
-                                        <div class=" text-end pt-4">
+                                        <div class="space-y-2">
+                                            <label
+                                                class="block p-2 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer">
+                                                <input type="radio" name="answer" value="option1" class="mr-2">
+                                                KRAV-labeled food is food without additives.
+                                            </label>
+                                            <label
+                                                class="block p-2 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer">
+                                                <input type="radio" name="answer" value="option2" checked class="mr-2">
+                                                KRAV-labeled food is food that is produced without unnatural chemical
+                                                pesticides and unnecessary additives.
+                                            </label>
+                                            <label
+                                                class="block p-2 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer">
+                                                <input type="radio" name="answer" value="option3" class="mr-2">
+                                                The krav label is exactly the same as organic.
+                                            </label>
+                                        </div>
+                                        <div class="pt-5 text-end">
                                             <a href=""
                                                 class="rounded-lg bg-primary gap-2 w-full text-center text-sm py-2 px-4 text-white hover:bg-blue-900 transition-colors">
-                                                <i class="ki-filled ki-arrow-down"></i>
-                                                Download Course Material
+                                                submit
+                                                <i class="ki-filled ki-arrow-right"></i>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Tab 2 Content -->
-
-                                <div class="hidden p-5 space-y-5 text-dark dark:text-white" id="tab_process_intro">
-                                    <div class="relative">
-                                        <iframe class="w-full h-60 rounded-xl object-cover"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY?enablejsapi=1"
-                                            id="youtube-video">
-                                        </iframe>
-                                    </div>
-                                    <div class="card border rounded-xl ">
-                                        <div class="card-header bg-blue-50 ">
-                                            <h3 class="text-blue-700 font-semibold">Process Overview</h3>
+                                <div class="hidden relative" id="question_2">
+                                    <span class="absolute -top-2 -left-28">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="468.192" height="166.678"
+                                            viewBox="0 0 468.192 166.678">
+                                            <path id="Path_103" data-name="Path 103"
+                                                d="M28.316,0h438.13c15.631,0-96.989,88.486-174.317,92.755s-163.216-13.742-211.67,0S.013,166.678.013,166.678c-.655,0,0-62.212,0-84.817V40.931C.013,18.325,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#c2c6de" />
+                                            <path id="Path_104" data-name="Path 104"
+                                                d="M28.316,0h438.13c15.631,0-96.989,79.857-174.317,83.71s-163.216-12.4-211.67,0S.013,150.424.013,150.424c-.655,0,0-56.145,0-76.546V36.939C.013,16.538,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#858ec4" />
+                                            <path id="Path_105" data-name="Path 105"
+                                                d="M28.316,0h438.13c15.631,0-96.989,70.8-174.317,74.212s-163.216-10.995-211.67,0S.013,133.356.013,133.356c-.655,0,0-49.775,0-67.861V32.748C.013,14.662,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#34459d" />
+                                            <path id="Path_106" data-name="Path 106"
+                                                d="M28.316,0h438.13c15.631,0-96.989,88.486-174.317,92.755s-163.216-13.742-211.67,0S.013,166.678.013,166.678c-.655,0,0-62.212,0-84.817V40.931C.013,18.325,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#c2c6de" />
+                                            <path id="Path_107" data-name="Path 107"
+                                                d="M28.316,0h438.13c15.631,0-96.989,79.857-174.317,83.71s-163.216-12.4-211.67,0S.013,150.424.013,150.424c-.655,0,0-56.145,0-76.546V36.939C.013,16.538,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#858ec4" />
+                                            <path id="Path_108" data-name="Path 108"
+                                                d="M28.316,0h438.13c15.631,0-96.989,70.8-174.317,74.212s-163.216-10.995-211.67,0S.013,133.356.013,133.356c-.655,0,0-49.775,0-67.861V32.748C.013,14.662,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#34459d" />
+                                        </svg>
+                                    </span>
+                                    <span class="absolute top-5 right-5 rounded-lg bg-indigo-50 gap-2 text-center text-sm py-2 px-4 hover:bg-indigo-100 transition-colors">
+                                        Move On
+                                    </span>
+                                    <div class="pt-28 p-5 space-y-2 text-dark dark:text-white">
+                                        <div class="bg-indigo-50 p-2 rounded-md mb-5 ">
+                                            <p class="text-lg">KRAV is a well-known brand, how many of the consumers
+                                                know about krav?</p>
+                                            <p class="text-sm text-gray-600">(Only One Option Is Correct)</p>
                                         </div>
-                                        <div class="card-body">
-                                            <h4 class="font-medium">About This Course</h4>
-                                            <p class="text-gray-600 text-sm mt-1">
-                                                When an unknown printer took a galley of type and scrambled it to make a
-                                                type specimen book.
-                                            </p>
+                                        <div class="space-y-2">
+                                            <label
+                                                class="block p-2 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer">
+                                                <input type="radio" name="answer" value="option1" class="mr-2">
+                                                KRAV-labeled food is food without additives.
+                                            </label>
+                                            <label
+                                                class="block p-2 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer">
+                                                <input type="radio" name="answer" value="option2" checked class="mr-2">
+                                                KRAV-labeled food is food that is produced without unnatural chemical
+                                                pesticides and unnecessary additives.
+                                            </label>
+                                            <label
+                                                class="block p-2 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer">
+                                                <input type="radio" name="answer" value="option3" class="mr-2">
+                                                The krav label is exactly the same as organic.
+                                            </label>
                                         </div>
-                                    </div>
-                                    <div class=" text-end">
-                                        <a href=""
-                                            class="rounded-lg bg-primary gap-2 w-full text-center text-sm py-2 px-4 text-white hover:bg-blue-900 transition-colors">
-                                            <i class="ki-filled ki-arrow-down"></i>
-                                            Download Course Material
-                                        </a>
+                                        <div class="pt-5 text-end">
+                                            <a href=""
+                                                class="rounded-lg bg-primary gap-2 w-full text-center text-sm py-2 px-4 text-white hover:bg-blue-900 transition-colors">
+                                                submit
+                                                <i class="ki-filled ki-arrow-right"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <!-- Tab 3 Content (Visible by default) -->
-                                <div class="hidden p-5 space-y-5 text-dark dark:text-white" id="tab_discovery">
-                                    <div class="relative">
-                                        <iframe class="w-full h-60 rounded-xl object-cover"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY?enablejsapi=1"
-                                            id="youtube-video">
-                                        </iframe>
-                                    </div>
-                                    <div class="card border rounded-xl ">
-                                        <div class="card-header bg-blue-50 ">
-                                            <h3 class="text-blue-700 font-semibold">Process Overview</h3>
+                                <div class="relative" id="question_3">
+                                    <span class="absolute -top-2 -left-28">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="468.192" height="166.678"
+                                            viewBox="0 0 468.192 166.678">
+                                            <path id="Path_103" data-name="Path 103"
+                                                d="M28.316,0h438.13c15.631,0-96.989,88.486-174.317,92.755s-163.216-13.742-211.67,0S.013,166.678.013,166.678c-.655,0,0-62.212,0-84.817V40.931C.013,18.325,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#c2c6de" />
+                                            <path id="Path_104" data-name="Path 104"
+                                                d="M28.316,0h438.13c15.631,0-96.989,79.857-174.317,83.71s-163.216-12.4-211.67,0S.013,150.424.013,150.424c-.655,0,0-56.145,0-76.546V36.939C.013,16.538,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#858ec4" />
+                                            <path id="Path_105" data-name="Path 105"
+                                                d="M28.316,0h438.13c15.631,0-96.989,70.8-174.317,74.212s-163.216-10.995-211.67,0S.013,133.356.013,133.356c-.655,0,0-49.775,0-67.861V32.748C.013,14.662,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#34459d" />
+                                            <path id="Path_106" data-name="Path 106"
+                                                d="M28.316,0h438.13c15.631,0-96.989,88.486-174.317,92.755s-163.216-13.742-211.67,0S.013,166.678.013,166.678c-.655,0,0-62.212,0-84.817V40.931C.013,18.325,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#c2c6de" />
+                                            <path id="Path_107" data-name="Path 107"
+                                                d="M28.316,0h438.13c15.631,0-96.989,79.857-174.317,83.71s-163.216-12.4-211.67,0S.013,150.424.013,150.424c-.655,0,0-56.145,0-76.546V36.939C.013,16.538,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#858ec4" />
+                                            <path id="Path_108" data-name="Path 108"
+                                                d="M28.316,0h438.13c15.631,0-96.989,70.8-174.317,74.212s-163.216-10.995-211.67,0S.013,133.356.013,133.356c-.655,0,0-49.775,0-67.861V32.748C.013,14.662,12.685,0,28.316,0Z"
+                                                transform="translate(0.278)" fill="#34459d" />
+                                        </svg>
+                                    </span>
+                                    <span class="absolute top-5 right-5 rounded-lg bg-indigo-50 gap-2 text-center text-sm py-2 px-4 hover:bg-indigo-100 transition-colors">
+                                        Move On
+                                    </span>
+                                    <div class="pt-28 p-5 space-y-2 text-dark dark:text-white">
+                                        <div class="bg-indigo-50 p-2 rounded-md mb-5 ">
+                                            <p class="text-lg">KRAV is a well-known brand, how many of the consumers
+                                                know about krav?</p>
+                                            <p class="text-sm text-gray-600">(Only One Option Is Correct)</p>
                                         </div>
-                                        <div class="card-body">
-                                            <h4 class="font-medium">About This Course</h4>
-                                            <p class="text-gray-600 text-sm mt-1">
-                                                When an unknown printer took a galley of type and scrambled it to make a
-                                                type specimen book.
-                                            </p>
+                                        <div class="space-y-2">
+                                            <label
+                                                class="block p-2 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer">
+                                                <input type="radio" name="answer" value="option1" class="mr-2">
+                                                KRAV-labeled food is food without additives.
+                                            </label>
+                                            <label
+                                                class="block p-2 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer">
+                                                <input type="radio" name="answer" value="option2" checked class="mr-2">
+                                                KRAV-labeled food is food that is produced without unnatural chemical
+                                                pesticides and unnecessary additives.
+                                            </label>
+                                            <label
+                                                class="block p-2 border border-gray-300 rounded-md hover:bg-gray-50 cursor-pointer">
+                                                <input type="radio" name="answer" value="option3" class="mr-2">
+                                                The krav label is exactly the same as organic.
+                                            </label>
                                         </div>
-                                    </div>
-                                    <div class=" text-end">
-                                        <a href=""
-                                            class="rounded-lg bg-primary gap-2 w-full text-center text-sm py-2 px-4 text-white hover:bg-blue-900 transition-colors">
-                                            <i class="ki-filled ki-arrow-down"></i>
-                                            Download Course Material
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Tab 4 Content -->
-                                <div class="hidden p-5 space-y-5 text-dark dark:text-white" id="tab_quiz">
-                                    <div class="quiz-container p-6">
-                                        <h3 class="text-blue-700 font-semibold">Knowledge Quiz</h3>
-
-                                        <div class="mt-4">
-                                            <h4 class="font-medium">Test Your Knowledge</h4>
-                                            <p class="text-gray-600 text-sm mt-1">
-                                                This quiz contains 9 questions to test your understanding of the
-                                                material covered so far.
-                                            </p>
-
-                                            <div class="mt-6 space-y-4">
-                                                <div class="p-4 border rounded-lg">
-                                                    <p class="font-medium">Question 1 of 9</p>
-                                                    <p class="mt-2">What is the main purpose of this course?</p>
-                                                    <div class="mt-3 space-y-2">
-                                                        <div class="flex items-center">
-                                                            <input type="radio" name="q1" id="q1a" class="mr-2">
-                                                            <label for="q1a">To learn programming</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input type="radio" name="q1" id="q1b" class="mr-2">
-                                                            <label for="q1b">To understand design principles</label>
-                                                        </div>
-                                                        <div class="flex items-center">
-                                                            <input type="radio" name="q1" id="q1c" class="mr-2">
-                                                            <label for="q1c">To create a portfolio</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="mt-8 flex justify-end">
-                                            <button class="bg-blue-700 text-white px-4 py-2 rounded">
-                                                Submit Quiz
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Tab 5 Content -->
-                                <div class="hidden p-5 space-y-5 text-dark dark:text-white" id="tab_advanced_process">
-                                    <div class="relative">
-                                        <iframe class="w-full h-60 rounded-xl object-cover"
-                                            src="https://www.youtube.com/embed/tgbNymZ7vqY?enablejsapi=1"
-                                            id="youtube-video">
-                                        </iframe>
-                                    </div>
-                                    <div class="card border rounded-xl ">
-                                        <div class="card-header bg-blue-50 ">
-                                            <h3 class="text-blue-700 font-semibold">Process Overview</h3>
-                                        </div>
-                                        <div class="card-body">
-                                            <h4 class="font-medium">About This Course</h4>
-                                            <p class="text-gray-600 text-sm mt-1">
-                                                When an unknown printer took a galley of type and scrambled it to make a
-                                                type specimen book.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class=" text-end">
-                                        <a href=""
-                                            class="rounded-lg bg-primary gap-2 w-full text-center text-sm py-2 px-4 text-white hover:bg-blue-900 transition-colors">
-                                            <i class="ki-filled ki-arrow-down"></i>
-                                            Download Course Material
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Tab 6 Content -->
-                                <div class="hidden  p-5 space-y-5 text-dark dark:text-white" id="tab_final_exam">
-                                    <div class="exam-container p-6">
-                                        <h3 class="text-blue-700 font-semibold">Final Assessment</h3>
-
-                                        <div class="mt-4">
-                                            <h4 class="font-medium">Complete Course Exam</h4>
-                                            <p class="text-gray-600 text-sm mt-1">
-                                                This final exam contains 9 questions that test your understanding of all
-                                                course materials.
-                                            </p>
-
-                                            <div class="mt-6">
-                                                <p class="font-medium">Instructions:</p>
-                                                <ul class="list-disc ml-6 mt-2 text-sm text-gray-600">
-                                                    <li>You have 60 minutes to complete this exam</li>
-                                                    <li>All questions are mandatory</li>
-                                                    <li>A passing score of 70% is required to receive your certificate
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="mt-8 flex justify-end">
-                                            <button class="bg-blue-700 text-white px-4 py-2 rounded">
-                                                Start Exam
-                                            </button>
+                                        <div class="pt-5 text-end">
+                                            <a href=""
+                                                class="rounded-lg bg-primary gap-2 w-full text-center text-sm py-2 px-4 text-white hover:bg-blue-900 transition-colors">
+                                                submit
+                                                <i class="ki-filled ki-arrow-right"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
