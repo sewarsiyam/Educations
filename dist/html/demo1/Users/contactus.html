@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html class="h-full" data-theme="true" data-theme-mode="light" lang="en">
+
+<head>
+    <base href="../../../">
+    <title>
+        user Dashboard
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+
+
+    <style>
+        .right_side_drawer .drawer-end {
+            top: 24px;
+            bottom: 23px;
+            right: 68px;
+            left: auto;
+            border-radius: 25px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="flex h-full demo1 sidebar-fixed header-fixed bg-[#f0f0f0] dark:bg-coal-500">
+    <script>
+        const defaultThemeMode = 'light';
+        let themeMode;
+
+        if (document.documentElement) {
+            if (localStorage.getItem('theme')) {
+                themeMode = localStorage.getItem('theme');
+            } else if (document.documentElement.hasAttribute('data-theme-mode')) {
+                themeMode = document.documentElement.getAttribute('data-theme-mode');
+            } else {
+                themeMode = defaultThemeMode;
+            }
+
+            if (themeMode === 'system') {
+                themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            document.documentElement.classList.add(themeMode);
+        }
+    </script>
+
+
+    <div class="flex grow">
+       <div class="sidebar dark:bg-primary bg-primary fixed top-0 bottom-0 z-20 hidden lg:flex flex-col items-stretch shrink-0 rounded-r-3xl"
+            data-drawer="true" data-drawer-class="drawer drawer-start top-0 bottom-0" data-drawer-enable="true|lg:false"
+            id="sidebar">
+            <div class="sidebar-header hidden lg:flex items-center relative justify-between px-3 lg:px-6 shrink-0"
+                id="sidebar_header">
+                <a class="dark:hidden" href="html/demo1.html">
+                    <img class="default-logo min-h-[22px] max-w-none" src="assets/media/app/default-logo-dark.svg" />
+                    <img class="small-logo min-h-[22px] max-w-none" src="assets/media/app/mini-logo.svg" />
+                </a>
+                <a class="hidden dark:block" href="html/demo1.html">
+                    <img class="default-logo min-h-[22px] max-w-none" src="assets/media/app/default-logo-dark.svg" />
+                    <img class="small-logo min-h-[22px] max-w-none" src="assets/media/app/mini-logo.svg" />
+                </a>
+            </div>
+            <div class="sidebar-content flex grow shrink-0 py-5 pr-2" id="sidebar_content">
+                <div class="scrollable-y-hover grow shrink-0 flex pl-2 lg:pl-5 pr-1 lg:pr-3" data-scrollable="true"
+                    data-scrollable-dependencies="#sidebar_header" data-scrollable-height="auto"
+                    data-scrollable-offset="0px" data-scrollable-wrappers="#sidebar_content" id="sidebar_scrollable">
+                    <div class="menu flex flex-col grow gap-1" data-menu="true" data-menu-accordion-expand-all="false"
+                        id="sidebar_menu">
+                        <a href="html/demo1/Users/index-users.html" class="menu-item ">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <i class="ki-filled ki-category text-lg"></i>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Dashboards
+                                </span>
+                            </div>
+                        </a>
+                        <a href="html/demo1/Users/MyEducations.html" class="menu-item ">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_outline_teacher" data-name="vuesax/outline/teacher"
+                                            transform="translate(-172 -252)">
+                                            <g id="teacher">
+                                                <path id="Vector"
+                                                    d="M10.19,15.751a4.475,4.475,0,0,1-2.38-.65l-6.02-3.93a3.937,3.937,0,0,1,0-6.6L7.82.651a4.644,4.644,0,0,1,4.76.01l5.99,3.93a3.93,3.93,0,0,1,0,6.58L12.58,15.1A4.4,4.4,0,0,1,10.19,15.751Zm0-14.25a2.8,2.8,0,0,0-1.55.41L2.62,5.831a2.43,2.43,0,0,0,0,4.08l6.02,3.93a3.207,3.207,0,0,0,3.12,0l5.99-3.93a2.442,2.442,0,0,0,0-4.08L11.76,1.9A3.052,3.052,0,0,0,10.19,1.5Z"
+                                                    transform="translate(173.82 253.249)" fill="currentColor" />
+                                                <path id="Vector-2" data-name="Vector"
+                                                    d="M7.13,10.42a4.1,4.1,0,0,1-1.25-.18L2.69,9.18A4.133,4.133,0,0,1,0,5.44L.01.75A.755.755,0,0,1,.76,0a.755.755,0,0,1,.75.75L1.5,5.44A2.69,2.69,0,0,0,3.17,7.76L6.36,8.82a3.089,3.089,0,0,0,1.54,0l3.19-1.06a2.688,2.688,0,0,0,1.67-2.31V.81a.75.75,0,0,1,1.5,0V5.45a4.159,4.159,0,0,1-2.69,3.74L8.38,10.25A4.445,4.445,0,0,1,7.13,10.42Z"
+                                                    transform="translate(176.87 264.33)" fill="currentColor" />
+                                                <path id="Vector-3" data-name="Vector"
+                                                    d="M.75,7.5A.755.755,0,0,1,0,6.75v-6A.755.755,0,0,1,.75,0,.755.755,0,0,1,1.5.75v6A.755.755,0,0,1,.75,7.5Z"
+                                                    transform="translate(192.65 260.25)" fill="currentColor" />
+                                                <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                    transform="translate(172 252)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    My Educations
+                                </span>
+                            </div>
+                        </a>
+
+                        <a href="html/demo1/Users/wish-list.html" class="menu-item ">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_linear_clipboard-text" data-name="vuesax/linear/clipboard-text"
+                                            transform="translate(-108 -252)">
+                                            <g id="clipboard-text">
+                                                <path id="Vector" d="M0,0H7" transform="translate(116 264.2)"
+                                                    fill="none" stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="1.5" />
+                                                <path id="Vector-2" data-name="Vector" d="M0,0H4.38"
+                                                    transform="translate(116 268.2)" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                <path id="Vector-3" data-name="Vector"
+                                                    d="M2,4H6C8,4,8,3,8,2,8,0,7,0,6,0H2C1,0,0,0,0,2S1,4,2,4Z"
+                                                    transform="translate(116 254)" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                <path id="Vector-4" data-name="Vector"
+                                                    d="M13,0c3.33.18,5,1.41,5,5.98v6c0,4-1,6-6,6H6c-5,0-6-2-6-6v-6C0,1.42,1.67.18,5,0"
+                                                    transform="translate(111 256.02)" fill="none" stroke="currentColor"
+                                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+                                                <path id="Vector-5" data-name="Vector" d="M0,0H24V24H0Z"
+                                                    transform="translate(108 252)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Wish List
+                                </span>
+                            </div>
+                        </a>
+
+
+                        <a href="html/demo1/Users/complete-educations.html" class="menu-item ">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_bold_clipboard-text" data-name="vuesax/bold/clipboard-text"
+                                            transform="translate(-108 -252)">
+                                            <g id="clipboard-text">
+                                                <path id="Vector"
+                                                    d="M6.59,0H1.89A1.886,1.886,0,0,0,0,1.88v.94A1.878,1.878,0,0,0,1.88,4.7H6.59A1.878,1.878,0,0,0,8.47,2.82V1.88A1.871,1.871,0,0,0,6.59,0Z"
+                                                    transform="translate(115.76 254)" fill="currentColor" />
+                                                <path id="Vector-2" data-name="Vector"
+                                                    d="M13.95.737a2.9,2.9,0,0,1-2.89,2.89H6.36A2.9,2.9,0,0,1,3.47.737a.747.747,0,0,0-1.1-.65A4.472,4.472,0,0,0,0,4.037v9.41a4.481,4.481,0,0,0,4.47,4.47h8.48a4.481,4.481,0,0,0,4.47-4.47V4.037A4.472,4.472,0,0,0,15.05.087.747.747,0,0,0,13.95.737ZM9.09,12.867H4.71a.75.75,0,0,1,0-1.5H9.09a.75.75,0,0,1,0,1.5Zm2.62-4h-7a.75.75,0,0,1,0-1.5h7a.75.75,0,0,1,0,1.5Z"
+                                                    transform="translate(111.29 256.083)" fill="currentColor" />
+                                                <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z"
+                                                    transform="translate(132 276) rotate(180)" fill="none"
+                                                    opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Complete Educations
+                                </span>
+                            </div>
+                        </a>
+
+
+                        <a href="html/demo1/Users/contactus.html" class="menu-item active">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="user-cirlce-add" transform="translate(-684 -188)">
+                                            <path id="Vector" d="M0,0H24V24H0Z" transform="translate(684 188)"
+                                                fill="none" opacity="0" />
+                                            <path id="Vector-2" data-name="Vector"
+                                                d="M6.97,1.33A3.944,3.944,0,0,0,4,0,4,4,0,0,0,1.13,1.21,3.945,3.945,0,0,0,.2,2.74,4.054,4.054,0,0,0,0,4,3.921,3.921,0,0,0,.58,6.06a3.684,3.684,0,0,0,.76.91A3.921,3.921,0,0,0,4,8a3.686,3.686,0,0,0,1.25-.21A3.9,3.9,0,0,0,7.42,6.06a3.734,3.734,0,0,0,.46-1.13A3.594,3.594,0,0,0,8,4,3.984,3.984,0,0,0,6.97,1.33ZM5.49,4.73H4.75v.78a.75.75,0,0,1-1.5,0V4.73H2.51a.75.75,0,0,1,0-1.5h.74V2.52a.75.75,0,1,1,1.5,0v.71h.74a.75.75,0,0,1,0,1.5Z"
+                                                transform="translate(699 189)" fill="currentColor" />
+                                            <path id="Vector-3" data-name="Vector"
+                                                d="M20,10a9.821,9.821,0,0,0-.72-3.72,3.81,3.81,0,0,1-1.03.51,3.374,3.374,0,0,1-.34.1,8.48,8.48,0,0,1-1.87,9.08,4.628,4.628,0,0,0-1.1-1,9.622,9.622,0,0,0-9.88,0,4.829,4.829,0,0,0-1.1,1A8.491,8.491,0,0,1,13.1,2.09c.03-.12.06-.23.1-.35A3.512,3.512,0,0,1,13.72.72,9.82,9.82,0,0,0,10,0,9.986,9.986,0,0,0,3.23,17.34c0,.01,0,.01-.01.02.1.1.22.18.32.27a2.1,2.1,0,0,0,.17.14c.18.15.38.29.57.43l.2.14a5.953,5.953,0,0,0,.6.36c.07.04.15.09.22.13a6.093,6.093,0,0,0,.63.3,2.557,2.557,0,0,0,.24.11q.33.135.66.24a2.25,2.25,0,0,0,.24.08c.24.07.48.13.72.19a1.419,1.419,0,0,0,.22.05,7.914,7.914,0,0,0,.85.13.5.5,0,0,1,.12.02c.34.03.68.05,1.02.05s.68-.02,1.01-.05a.5.5,0,0,0,.12-.02,7.914,7.914,0,0,0,.85-.13c.07-.01.14-.04.22-.05.24-.06.49-.11.72-.19a2.25,2.25,0,0,1,.24-.08c.22-.08.45-.15.66-.24a2.557,2.557,0,0,0,.24-.11q.315-.135.63-.3c.08-.04.15-.09.22-.13.2-.12.4-.23.6-.36a2.426,2.426,0,0,0,.2-.14c.2-.14.39-.28.57-.43a2.1,2.1,0,0,1,.17-.14c.11-.09.22-.18.32-.27,0-.01,0-.01-.01-.02A9.946,9.946,0,0,0,20,10Z"
+                                                transform="translate(686 190)" fill="currentColor" />
+                                            <path id="Vector-4" data-name="Vector"
+                                                d="M3.75,0A3.745,3.745,0,0,0,3.7,7.49h.18A3.746,3.746,0,0,0,3.75,0Z"
+                                                transform="translate(692.25 194.93)" fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Contact Us
+                                </span>
+                            </div>
+                        </a>
+
+                        <a href="html/demo1/Users/faq.html" class="menu-item ">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_outline_info-circle" data-name="vuesax/outline/info-circle"
+                                            transform="translate(-364 -252)">
+                                            <g id="info-circle">
+                                                <path id="Vector"
+                                                    d="M10.75,21.5A10.75,10.75,0,1,1,21.5,10.75,10.759,10.759,0,0,1,10.75,21.5Zm0-20A9.25,9.25,0,1,0,20,10.75,9.261,9.261,0,0,0,10.75,1.5Z"
+                                                    transform="translate(365.25 253.25)" fill="currentColor" />
+                                                <path id="Vector-2" data-name="Vector"
+                                                    d="M.75,6.5A.755.755,0,0,1,0,5.75v-5A.755.755,0,0,1,.75,0,.755.755,0,0,1,1.5.75v5A.755.755,0,0,1,.75,6.5Z"
+                                                    transform="translate(375.25 259.25)" fill="currentColor" />
+                                                <path id="Vector-3" data-name="Vector"
+                                                    d="M1,2a1,1,0,0,1-.38-.08A1.155,1.155,0,0,1,.29,1.7a1.032,1.032,0,0,1-.21-.33A1,1,0,0,1,0,1,1,1,0,0,1,.08.615,1.155,1.155,0,0,1,.29.285,1.155,1.155,0,0,1,.62.075a1,1,0,0,1,.76,0,1.155,1.155,0,0,1,.33.21,1.155,1.155,0,0,1,.21.33A1,1,0,0,1,2,1a1,1,0,0,1-.08.38,1.032,1.032,0,0,1-.21.33,1.155,1.155,0,0,1-.33.21A1,1,0,0,1,1,2Z"
+                                                    transform="translate(375 267.005)" fill="currentColor" />
+                                                <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                    transform="translate(364 252)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Faq
+                                </span>
+                            </div>
+                        </a>
+
+                        <a href="html/demo1/login.html" class="menu-item ">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_outline_login" data-name="vuesax/outline/login"
+                                            transform="translate(-684 -444)">
+                                            <g id="login">
+                                                <path id="Vector"
+                                                    d="M7.092,20.54h-.13c-4.44,0-6.58-1.75-6.95-5.67a.753.753,0,1,1,1.5-.14c.29,3.14,1.77,4.31,5.46,4.31H7.1c4.07,0,5.51-1.44,5.51-5.51V7.01c0-4.07-1.44-5.51-5.51-5.51h-.13c-3.71,0-5.19,1.19-5.46,4.39a.753.753,0,0,1-.82.68A.751.751,0,0,1,0,5.76C.342,1.78,2.492,0,6.962,0h.13C12,0,14.1,2.1,14.1,7.01v6.52C14.1,18.44,12,20.54,7.092,20.54Z"
+                                                    transform="translate(692.148 445.73)" fill="currentColor" />
+                                                <path id="Vector-2" data-name="Vector"
+                                                    d="M13.63,1.5H.75A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0H13.63a.75.75,0,0,1,0,1.5Z"
+                                                    transform="translate(685.25 455.25)" fill="currentColor" />
+                                                <path id="Vector-3" data-name="Vector"
+                                                    d="M.747,8.2a.742.742,0,0,1-.53-.22.754.754,0,0,1,0-1.06L3.037,4.1.218,1.278A.75.75,0,0,1,1.278.218l3.35,3.35a.754.754,0,0,1,0,1.06l-3.35,3.35A.742.742,0,0,1,.747,8.2Z"
+                                                    transform="translate(695.903 451.902)" fill="currentColor" />
+                                                <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                    transform="translate(684 444)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Log Out
+                                </span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper flex grow flex-col">
+            <header
+                class="header bg-[#f0f0f0]  dark:bg-coal-500 fixed top-0 z-10 left-0 right-0 flex items-stretch shrink-0 justify-center lg:mr-16 border-b border-b-gray-300"
+                data-sticky="true" data-sticky-class="shadow-sm dark:border-b dark:border-b-coal-100"
+                data-sticky-name="header" id="header">
+                <div class="container-fixed flex justify-between items-stretch lg:gap-4" id="header_container">
+                    <div class="flex gap-1 lg:hidden items-center -ml-1">
+                        <a class="shrink-0" href="html/demo1.html">
+                            <img class="max-h-[25px] w-full" src="assets/media/app/mini-logo.svg" />
+                        </a>
+                        <div class="flex items-center">
+                            <button class="btn btn-icon btn-light btn-clear btn-sm" data-drawer-toggle="#sidebar">
+                                <i class="ki-filled ki-menu">
+                                </i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-stretch" id="megamenu_container">
+                        <div class="flex items-stretch" data-reparent="true" data-reparent-mode="prepend|lg:prepend"
+                            data-reparent-target="body|lg:#megamenu_container">
+                            <div class="hidden lg:flex lg:items-stretch" data-drawer="true"
+                                data-drawer-class="drawer drawer-start fixed z-10 top-0 bottom-0 w-full mr-5 max-w-[250px] p-5 lg:p-0 overflow-auto"
+                                data-drawer-enable="true|lg:false" id="megamenu_wrapper">
+                                <div class="menu flex-col lg:flex-row items-center gap-3" data-menu="true"
+                                    id="megamenu">
+                                    <button
+                                        class="btn btn-icon btn-icon-md size-[30px] text-black dark:text-white toggle "
+                                        data-toggle="body" data-toggle-class="sidebar-collapse" id="sidebar_toggle">
+                                        <i
+                                            class="ki-filled ki-burger-menu-6 toggle-active:rotate-180 transition-all duration-300"></i>
+                                    </button>
+                                    <div class="menu-item active">
+                                        <a class="menu-link text-nowrap text-sm text-gray-700 font-medium menu-item-hover:text-primary menu-item-active:text-gray-900 menu-item-active:font-semibold"
+                                            href="html/demo1/layout.html">
+                                            <span class="menu-title font-bold text-lg text-nowrap">
+                                                Dashboard
+                                            </span>
+                                        </a>
+                                        <span class="text-sm text-gray-600">Dashboard - Contact Us</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 lg:gap-3.5">
+                        <div>
+                            <input data-element="theme-toggle" data-theme-toggle="true" data-theme-state="dark"
+                                style="display: none;" id="theme-toggle-hidden" />
+                            <button class="btn btn-icon btn-outline dark:hidden text-gray-900 dark:text-gray-800"
+                                onclick="document.getElementById('theme-toggle-hidden').click()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-sun">
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <path d="M12 2v2"></path>
+                                    <path d="M12 20v2"></path>
+                                    <path d="m4.93 4.93 1.41 1.41"></path>
+                                    <path d="m17.66 17.66 1.41 1.41"></path>
+                                    <path d="M2 12h2"></path>
+                                    <path d="M20 12h2"></path>
+                                    <path d="m6.34 17.66-1.41 1.41"></path>
+                                    <path d="m19.07 4.93-1.41 1.41"></path>
+                                </svg>
+                            </button>
+                            <button
+                                class="btn btn-icon btn-outline hidden dark:inline-flex text-gray-900 dark:text-gray-800"
+                                onclick="document.getElementById('theme-toggle-hidden').click()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-moon">
+                                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center rounded-lg px-3 bg-white">
+                            <i class="ki-filled ki-magnifier text-gray-700 text-xl">
+                            </i>
+                            <input class="input px-0 border-none bg-transparent shadow-none ml-2.5" name="query"
+                                placeholder="Search here..." type="text" value="" />
+                        </div>
+
+                        <div class="flex lg:hidden items-center ">
+                            <button class="btn btn-icon btn-light btn-clear btn-sm" data-drawer-toggle="#menu-right">
+                                <i class="ki-filled ki-burger-menu-6">
+                                </i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="grow content pt-5 lg:mr-16" id="content" role="content">
+                <div class="container-fixed">
+
+
+                    <div class="flex justify-center items-center">
+                        <div class="flex flex-col md:flex-row w-full max-w-4xl rounded-2xl shadow-lg overflow-hidden">
+                            <!-- Left Side: Contact Information -->
+                            <div class="w-full md:w-[40%] bg-blue-900 text-white p-16">
+                                <h2 class="text-lg font-semibold mb-4">Contact Information</h2>
+                                <div class="space-y-5 ">
+                                    <div class="flex items-center  space-x-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <g id="location" transform="translate(-428 -188)">
+                                                <path id="Vector"
+                                                    d="M3.87,7.73A3.865,3.865,0,1,1,7.74,3.87,3.873,3.873,0,0,1,3.87,7.73Zm0-6.23A2.37,2.37,0,1,0,6.24,3.87,2.375,2.375,0,0,0,3.87,1.5Z"
+                                                    transform="translate(436.13 194.44)" fill="#8dc0eb" />
+                                                <path id="Vector-2" data-name="Vector"
+                                                    d="M9.377,21.51a5.971,5.971,0,0,1-4.13-1.67C2.3,17-.963,12.47.267,7.08A9.116,9.116,0,0,1,9.377,0h.01A9.115,9.115,0,0,1,18.5,7.09c1.22,5.39-2.04,9.91-4.99,12.75A5.971,5.971,0,0,1,9.377,21.51Zm0-20.01a7.552,7.552,0,0,0-7.64,5.91c-1.08,4.71,1.88,8.77,4.56,11.34a4.426,4.426,0,0,0,6.17,0c2.67-2.57,5.63-6.63,4.57-11.34A7.58,7.58,0,0,0,9.377,1.5Z"
+                                                    transform="translate(430.623 189.25)" fill="#8dc0eb" />
+                                                <path id="Vector-3" data-name="Vector" d="M0,0H24V24H0Z"
+                                                    transform="translate(428 188)" fill="none" opacity="0" />
+                                            </g>
+                                        </svg>
+                                        <p class="text-xs opacity-75">360 KING STREET, <br /> SWEDEN STOCKHOLM, PA
+                                            349123</p>
+                                    </div>
+                                    <div class="flex items-center  space-x-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="19.3" height="19.026"
+                                            viewBox="0 0 19.3 19.026">
+                                            <g id="vuesax_outline_call" data-name="vuesax/outline/call"
+                                                transform="translate(-108 -188)">
+                                                <g id="call" transform="translate(108 188)">
+                                                    <path id="Vector"
+                                                        d="M12.652,16.526a7.242,7.242,0,0,1-2.772-.607,14.725,14.725,0,0,1-2.8-1.583,24.281,24.281,0,0,1-2.632-2.206A23.065,23.065,0,0,1,2.2,9.547,14.287,14.287,0,0,1,.609,6.81,7.022,7.022,0,0,1,0,4.066a4.568,4.568,0,0,1,.32-1.7A4.1,4.1,0,0,1,1.367.876,2.858,2.858,0,0,1,3.389,0a2.14,2.14,0,0,1,.882.192,1.78,1.78,0,0,1,.75.623L6.833,3.328a2.965,2.965,0,0,1,.375.653,1.7,1.7,0,0,1,.156.684,1.612,1.612,0,0,1-.25.846,3.082,3.082,0,0,1-.523.653L6.06,6.71a.372.372,0,0,0,.023.054,5.916,5.916,0,0,0,.64.853c.383.43.742.822,1.1,1.184.461.446.843.8,1.2,1.091a5.088,5.088,0,0,0,.906.638l-.016.038.57-.553a2.913,2.913,0,0,1,.7-.53A1.672,1.672,0,0,1,12.714,9.4a3.572,3.572,0,0,1,.656.361l2.593,1.814a1.659,1.659,0,0,1,.625.73,2.194,2.194,0,0,1,.172.83,2.53,2.53,0,0,1-.25,1.084,3.576,3.576,0,0,1-.625.922A4,4,0,0,1,14.393,16.2,4.676,4.676,0,0,1,12.652,16.526ZM3.389,1.153a1.724,1.724,0,0,0-1.21.553A2.948,2.948,0,0,0,1.414,2.79a3.316,3.316,0,0,0-.242,1.276,5.847,5.847,0,0,0,.515,2.291A12.781,12.781,0,0,0,3.155,8.863a21.358,21.358,0,0,0,2.116,2.444A21.9,21.9,0,0,0,7.763,13.4a12.742,12.742,0,0,0,2.569,1.453,4.726,4.726,0,0,0,3.616.269,2.882,2.882,0,0,0,1.07-.761,2.49,2.49,0,0,0,.437-.646,1.344,1.344,0,0,0,.141-.592.905.905,0,0,0-.086-.384.585.585,0,0,0-.219-.231L12.7,10.692a2.249,2.249,0,0,0-.43-.238.416.416,0,0,0-.508.023,1.777,1.777,0,0,0-.453.346l-.594.576a1.126,1.126,0,0,1-1.132.231l-.211-.092a6.658,6.658,0,0,1-1.109-.776c-.375-.315-.781-.684-1.273-1.161-.383-.384-.765-.792-1.164-1.245a6.561,6.561,0,0,1-.8-1.084l-.094-.231a1.414,1.414,0,0,1-.062-.384.979.979,0,0,1,.3-.715l.586-.6a2.232,2.232,0,0,0,.351-.43.488.488,0,0,0,.086-.261A.705.705,0,0,0,6.131,4.4,2.2,2.2,0,0,0,5.881,4L4.069,1.476a.717.717,0,0,0-.289-.238A.991.991,0,0,0,3.389,1.153Zm6.529,9.424-.125.523L10,10.561A.1.1,0,0,0,9.918,10.577Z"
+                                                        transform="translate(1.25 1.25)" fill="#8dc0eb" />
+                                                    <path id="Vector-2" data-name="Vector" d="M0,0H19.3V19.026H0Z"
+                                                        fill="none" opacity="0" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <a class="text-xs opacity-75" href="tel:905141419888">+905141419888</a>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <g id="vuesax_outline_directbox-notif"
+                                                data-name="vuesax/outline/directbox-notif"
+                                                transform="translate(-172 -188)">
+                                                <g id="directbox-notif">
+                                                    <path id="Vector"
+                                                        d="M12.327,10H5.155C0,10,0,7.348,0,5V4.13C0,2.191,0,0,4.258,0A2.844,2.844,0,0,1,6.276.652a.721.721,0,0,1,.09.078l.914.939a2.118,2.118,0,0,0,2.941,0L11.135.73a.8.8,0,0,1,.09-.078A2.8,2.8,0,0,1,13.242,0C17.5,0,17.5,2.191,17.5,4.13V5C17.482,8.322,15.752,10,12.327,10ZM4.258,1.3c-2.914,0-2.914.887-2.914,2.826V5c0,2.383,0,3.7,3.81,3.7h7.172c2.672,0,3.81-1.1,3.81-3.7V4.13c0-1.939,0-2.826-2.914-2.826a1.5,1.5,0,0,0-1.165.357l-.87.9a3.432,3.432,0,0,1-4.895,0l-.87-.9A1.5,1.5,0,0,0,4.258,1.3Z"
+                                                        transform="translate(174.25 200.75)" fill="#8dc0eb" />
+                                                    <path id="Vector-2" data-name="Vector"
+                                                        d="M13.477,10.413a.687.687,0,0,1-.685-.679V4.3c0-2.019,0-2.943-2.969-2.943H4.34c-2.969,0-2.969.924-2.969,2.943V9.734A.685.685,0,0,1,0,9.734V4.3C0,2.282,0,0,4.34,0H9.822c4.34,0,4.34,2.282,4.34,4.3V9.734A.687.687,0,0,1,13.477,10.413Z"
+                                                        transform="translate(175.919 191.274)" fill="#8dc0eb" />
+                                                    <path id="Vector-3" data-name="Vector"
+                                                        d="M4.024,1.26H.74A.7.7,0,0,1,0,.63.7.7,0,0,1,.74,0H4.024a.7.7,0,0,1,.74.63A.69.69,0,0,1,4.024,1.26Z"
+                                                        transform="translate(180.585 198.74)" fill="#8dc0eb" />
+                                                    <path id="Vector-4" data-name="Vector"
+                                                        d="M5.81,1.4H.758A.736.736,0,0,1,0,.7.736.736,0,0,1,.758,0H5.81a.736.736,0,0,1,.758.7A.729.729,0,0,1,5.81,1.4Z"
+                                                        transform="translate(179.716 195.781)" fill="#8dc0eb" />
+                                                    <path id="Vector-5" data-name="Vector" d="M0,0H24V24H0Z"
+                                                        transform="translate(172 188)" fill="none" opacity="0" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <a class="text-xs opacity-75" href="mail:info@krogama.se">info@krogama.se</a>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-3 mt-6 lg:mt-20 justify-center">
+                                    <a href="#">
+                                        <svg id="_x37__stroke" xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                            viewBox="0 0 19 19">
+                                            <g id="Instagram_1_">
+                                                <rect id="Rectangle_300" data-name="Rectangle 300" width="19"
+                                                    height="19" transform="translate(0 0)" fill="none" />
+                                                <path id="Instagram"
+                                                    d="M15.521,4.375a1.126,1.126,0,1,1-1.126-1.126A1.126,1.126,0,0,1,15.521,4.375ZM9.385,12.513a3.128,3.128,0,1,1,3.128-3.128A3.128,3.128,0,0,1,9.385,12.513Zm0-7.948A4.819,4.819,0,1,0,14.2,9.385,4.819,4.819,0,0,0,9.385,4.566Zm0-2.875c2.506,0,2.8.01,3.792.055a5.191,5.191,0,0,1,1.743.323,2.908,2.908,0,0,1,1.079.7,2.906,2.906,0,0,1,.7,1.079,5.2,5.2,0,0,1,.323,1.743c.045.99.055,1.286.055,3.792s-.01,2.8-.055,3.792A5.191,5.191,0,0,1,16.7,14.92,3.109,3.109,0,0,1,14.92,16.7a5.2,5.2,0,0,1-1.743.323c-.99.045-1.286.055-3.792.055s-2.8-.01-3.792-.055A5.191,5.191,0,0,1,3.85,16.7,2.908,2.908,0,0,1,2.771,16a2.908,2.908,0,0,1-.7-1.079,5.2,5.2,0,0,1-.323-1.743c-.045-.99-.055-1.286-.055-3.792s.01-2.8.055-3.792A5.191,5.191,0,0,1,2.069,3.85a2.908,2.908,0,0,1,.7-1.079,2.906,2.906,0,0,1,1.079-.7,5.2,5.2,0,0,1,1.743-.323C6.582,1.7,6.879,1.691,9.385,1.691ZM9.385,0C6.836,0,6.517.011,5.516.056A6.888,6.888,0,0,0,3.238.493,4.6,4.6,0,0,0,1.575,1.575,4.6,4.6,0,0,0,.493,3.238,6.889,6.889,0,0,0,.056,5.516C.011,6.517,0,6.836,0,9.385s.011,2.868.056,3.869a6.889,6.889,0,0,0,.436,2.278,4.6,4.6,0,0,0,1.083,1.662,4.6,4.6,0,0,0,1.662,1.083,6.889,6.889,0,0,0,2.278.436c1,.046,1.321.056,3.869.056s2.868-.011,3.869-.056a6.889,6.889,0,0,0,2.278-.436,4.8,4.8,0,0,0,2.745-2.745,6.889,6.889,0,0,0,.436-2.278c.046-1,.056-1.321.056-3.869s-.011-2.868-.056-3.869a6.889,6.889,0,0,0-.436-2.278,4.6,4.6,0,0,0-1.083-1.662A4.6,4.6,0,0,0,15.532.493,6.889,6.889,0,0,0,13.254.056C12.253.011,11.934,0,9.385,0Z"
+                                                    transform="translate(0 0.23)" fill="#8dc0eb" fill-rule="evenodd" />
+                                            </g>
+                                        </svg> </a>
+                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20.609" height="15.109"
+                                            viewBox="0 0 20.609 15.109">
+                                            <g id="_x37__stroke" transform="translate(0)">
+                                                <g id="Twitter" transform="translate(0)">
+                                                    <rect id="Rectangle_301" data-name="Rectangle 301" width="16.986"
+                                                        height="15.109" transform="translate(2.051)" fill="none" />
+                                                    <path id="Twitter_1_"
+                                                        d="M20.607,12.456a9.141,9.141,0,0,1-2.428.6,3.92,3.92,0,0,0,1.859-2.109,9.029,9.029,0,0,1-2.687.924,4.443,4.443,0,0,0-3.086-1.2,4.037,4.037,0,0,0-4.227,3.814,3.444,3.444,0,0,0,.109.869,12.476,12.476,0,0,1-8.715-3.987,3.529,3.529,0,0,0-.572,1.92,3.731,3.731,0,0,0,1.881,3.175,4.587,4.587,0,0,1-1.916-.476v.047a3.938,3.938,0,0,0,3.393,3.74A4.547,4.547,0,0,1,3.1,19.9a4.652,4.652,0,0,1-.8-.068,4.2,4.2,0,0,0,3.949,2.647,9.081,9.081,0,0,1-5.251,1.634A9.586,9.586,0,0,1,0,24.063a12.95,12.95,0,0,0,6.481,1.712c7.778,0,12.03-5.811,12.03-10.852,0-.166,0-.332-.011-.494a8.136,8.136,0,0,0,2.109-1.974"
+                                                        transform="translate(0.002 -10.667)" fill="#8dc0eb"
+                                                        fill-rule="evenodd" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </a>
+                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="17.232" height="16.387"
+                                            viewBox="0 0 17.232 16.387">
+                                            <path id="Path_142" data-name="Path 142"
+                                                d="M2,3.092v14.2a1.125,1.125,0,0,0,1.149,1.092H18.083a1.125,1.125,0,0,0,1.149-1.092V3.092A1.125,1.125,0,0,0,18.083,2H3.149A1.125,1.125,0,0,0,2,3.092ZM6.911,15.655H4.872V8.118H6.911ZM5.906,6.616a.979.979,0,0,1-1.034-.929.979.979,0,0,1,1.034-.929.979.979,0,0,1,1.034.929A1.017,1.017,0,0,1,5.906,6.616Zm10.454,9.04H14.321V11.887a6.036,6.036,0,0,0-.115-1.557,1.166,1.166,0,0,0-.4-.546,1.188,1.188,0,0,0-.689-.191,1.513,1.513,0,0,0-.919.273,1.472,1.472,0,0,0-.574.737,5.808,5.808,0,0,0-.144,1.693v3.359H9.008V8.118h2.039v1.12a3.284,3.284,0,0,1,2.642-1.284,3.391,3.391,0,0,1,1.292.246,2.361,2.361,0,0,1,.89.6,1.807,1.807,0,0,1,.4.847,5.408,5.408,0,0,1,.115,1.338v4.67Z"
+                                                transform="translate(-2 -2)" fill="#8dc0eb" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <p class="mt-3 text-sm text-center text-[#0089FF]">https://www.krogama.se</p>
+                            </div>
+
+                            <!-- Right Side: Contact Form -->
+                            <div class="w-full md:w-[60%] bg-white p-6 relative">
+                                <div class="absolute top-0 -right-10 md:block hidde">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="152.947" height="119.361"
+                                        viewBox="0 0 152.947 119.361">
+                                        <g id="Group_536" data-name="Group 536"
+                                            transform="translate(-1439.515 -236.819)">
+                                            <path id="Path_139" data-name="Path 139"
+                                                d="M7170.51-921.178c23.343,52.5,19.527,84.37,5.939,103.917-21.169,30.46-66.646,29.7-66.646,29.7"
+                                                transform="translate(3158.339 -6713.393) rotate(110)" fill="none"
+                                                stroke="#34459d" stroke-width="1" />
+                                            <path id="Path_140" data-name="Path 140"
+                                                d="M7162.452-921.178c20.244,45.243,16.935,72.715,5.151,89.561-18.359,26.252-57.8,25.593-57.8,25.593"
+                                                transform="translate(3154.686 -6719.705) rotate(110)" fill="none"
+                                                stroke="#34459d" stroke-width="1" />
+                                            <path id="Path_141" data-name="Path 141"
+                                                d="M7155.1-921.178c17.418,37.528,14.571,60.315,4.432,74.289-15.8,21.775-49.731,21.229-49.731,21.229"
+                                                transform="translate(3152.26 -6726.421) rotate(110)" fill="none"
+                                                stroke="#34459d" stroke-width="1" />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <h2 class="text-xl mb-5">We’d love to hear from you! <br /> Let’s get in touch</h2>
+                                <form>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                                        <div class="space-y-1">
+                                            <label class="form-label ">Full Name</label>
+                                            <input type="text" placeholder="Faraz" class="input">
+                                        </div>
+                                        <div class="space-y-1">
+                                            <label class="form-label ">Company</label>
+                                            <input type="text" placeholder="Company" class="input">
+                                        </div>
+                                        <div class="space-y-1">
+                                            <label class="form-label ">Email</label>
+                                            <div class="input">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                                    viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                    class="lucide lucide-mail" aria-hidden="true">
+                                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                                </svg>
+                                                <input type="text" class="" placeholder="Email address" />
+                                            </div>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <label class="form-label">Phone number</label>
+                                            <div class="input p-0 m-0">
+                                                <select class="select  w-[70px]  ">
+                                                    <option>+1</option>
+                                                    <option>US</option>
+                                                </select>
+                                                <input type="text" placeholder="+1 (555) 000-0000" class="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="space-y-1 mb-3">
+                                        <label class="form-label">Enter subject header</label>
+                                        <input type="text" class="input">
+                                    </div>
+                                    <div class="space-y-1 mb-3">
+                                        <label class="form-label">Your Message</label>
+                                        <textarea placeholder="Type your message here..."
+                                            class="textarea"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary float-end">Send
+                                        Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </main>
+        </div>
+
+        <div class=" z-20 bg-primary w-16 mt-5 mb-5 rounded-l-3xl " id="menu-right" data-drawer="true"
+            data-drawer-class="drawer drawer-end top-0 bottom-0" data-drawer-enable="true|lg:false">
+            <div class="flex flex-col h-full items-center py-5 justify-between">
+                <div class="menu" data-menu="true">
+                    <div class="menu-item" data-menu-item-offset="-90px, 0px" data-menu-item-placement="bottom-start"
+                        data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+                        <div class="menu-toggle btn btn-icon rounded-full">
+                            <img alt="" class="size-9 rounded-md border-2 border-success shrink-0"
+                                src="assets/media/avatars/300-2.png">
+                            </img>
+                        </div>
+                        <div class="menu-dropdown menu-default light:border-gray-300 w-full max-w-[180px]">
+                            <div class="flex flex-col" data-menu-dismiss="true">
+                                <div class="menu-item">
+                                    <a class="menu-link" href="html/demo1/public-profile/profiles/default.html">
+                                        <span class="menu-icon">
+                                            <i class="ki-outline ki-user"></i>
+                                        </span>
+                                        <span class="menu-title">
+                                            My Profile
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link" href="html/demo1/account/home/user-profile.html">
+                                        <span class="menu-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21.617" height="20.319"
+                                                viewBox="0 0 21.617 20.319">
+                                                <g id="vuesax_outline_sms" data-name="vuesax/outline/sms"
+                                                    transform="translate(-556 -252)">
+                                                    <g id="sms" transform="translate(556 252)">
+                                                        <path id="Vector"
+                                                            d="M14,14.819H5.113C1.867,14.819,0,13.137,0,10.213V4.606C0,1.682,1.867,0,5.113,0H14c3.245,0,5.113,1.682,5.113,4.606v5.607C19.117,13.137,17.25,14.819,14,14.819ZM5.113,1.2c-2.543,0-3.779,1.113-3.779,3.4v5.607c0,2.291,1.236,3.4,3.779,3.4H14c2.543,0,3.779-1.113,3.779-3.4V4.606c0-2.291-1.236-3.4-3.779-3.4Z"
+                                                            transform="translate(1.25 2.75)" fill="currentColor" />
+                                                        <path id="Vector-2" data-name="Vector"
+                                                            d="M4.555,4.245A2.693,2.693,0,0,1,2.7,3.52L.224,1.226a.763.763,0,0,1-.1-.964A.539.539,0,0,1,.96.152L3.439,2.447a1.684,1.684,0,0,0,2.225,0L8.142.152a.533.533,0,0,1,.831.11.752.752,0,0,1-.1.964L6.4,3.52A2.661,2.661,0,0,1,4.555,4.245Z"
+                                                            transform="translate(6.256 7.078)" fill="currentColor" />
+                                                        <path id="Vector-3" data-name="Vector" d="M0,0H21.617V20.319H0Z"
+                                                            fill="none" opacity="0" />
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <span class="menu-title">
+                                            Inbox
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link" href="html/demo1/account/home/user-profile.html">
+                                        <span class="menu-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g id="vuesax_outline_login" data-name="vuesax/outline/login"
+                                                    transform="translate(-684 -444)">
+                                                    <g id="login">
+                                                        <path id="Vector"
+                                                            d="M7.092,20.54h-.13c-4.44,0-6.58-1.75-6.95-5.67a.753.753,0,1,1,1.5-.14c.29,3.14,1.77,4.31,5.46,4.31H7.1c4.07,0,5.51-1.44,5.51-5.51V7.01c0-4.07-1.44-5.51-5.51-5.51h-.13c-3.71,0-5.19,1.19-5.46,4.39a.753.753,0,0,1-.82.68A.751.751,0,0,1,0,5.76C.342,1.78,2.492,0,6.962,0h.13C12,0,14.1,2.1,14.1,7.01v6.52C14.1,18.44,12,20.54,7.092,20.54Z"
+                                                            transform="translate(692.148 445.73)" fill="currentColor">
+                                                        </path>
+                                                        <path id="Vector-2" data-name="Vector"
+                                                            d="M13.63,1.5H.75A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0H13.63a.75.75,0,0,1,0,1.5Z"
+                                                            transform="translate(685.25 455.25)" fill="currentColor">
+                                                        </path>
+                                                        <path id="Vector-3" data-name="Vector"
+                                                            d="M.747,8.2a.742.742,0,0,1-.53-.22.754.754,0,0,1,0-1.06L3.037,4.1.218,1.278A.75.75,0,0,1,1.278.218l3.35,3.35a.754.754,0,0,1,0,1.06l-3.35,3.35A.742.742,0,0,1,.747,8.2Z"
+                                                            transform="translate(695.903 451.902)" fill="currentColor">
+                                                        </path>
+                                                        <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                            transform="translate(684 444)" fill="none" opacity="0">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <span class="menu-title">
+                                            Logout
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-2 items-center justify-center">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-black text-primary text-lg cursor-pointer hover:bg-gray-100"
+                        data-drawer-toggle="#settings">
+                        <i class="ki-filled ki-setting-2"></i>
+                    </div>
+                    <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-black text-primary text-lg cursor-pointer hover:bg-gray-100"
+                        data-drawer-toggle="#email">
+                        <i class="ki-filled ki-sms"></i>
+                    </div>
+                    <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-black text-primary text-lg cursor-pointer hover:bg-gray-100"
+                        data-drawer-toggle="#notification">
+                        <i class="ki-filled ki-notification-on"></i>
+                    </div>
+                </div>
+
+                <div class="menu" data-menu="true">
+                    <div class="menu-item" data-menu-item-offset="20px, 10px" data-menu-item-placement="bottom-end"
+                        data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+                        <div class="menu-toggle btn btn-icon rounded-full flex-col-reverse gap-1">
+                            <span class="text-white text-lg">Eng</span>
+                            <img alt="" class="inline-block size-4 rounded-full"
+                                src="assets/media/flags/united-states.svg" />
+                        </div>
+                        <div class="menu-dropdown menu-default light:border-gray-300 w-full max-w-[150px]">
+                            <div class="menu-item active">
+                                <a class="menu-link h-10" href="#">
+                                    <span class="menu-icon">
+                                        <img alt="" class="inline-block size-4 rounded-full"
+                                            src="assets/media/flags/united-states.svg" />
+                                    </span>
+                                    <span class="menu-title">
+                                        English
+                                    </span>
+                                    <span class="menu-badge">
+                                        <i class="ki-solid ki-check-circle text-success text-base">
+                                        </i>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link h-10" href="html/demo1/layout.html">
+                                    <span class="menu-icon">
+                                        <img alt="" class="inline-block size-4 rounded-full"
+                                            src="assets/media/flags/saudi-arabia.svg" />
+                                    </span>
+                                    <span class="menu-title">
+                                        العربية
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="right_side_drawer">
+        <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="settings">
+            <div class="drawer-header">
+                <h3 class="drawer-title">settings</h3>
+                <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x" aria-hidden="true">
+                        <path d="M18 6 6 18"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="drawer-content scrollable">Drawer content</div>
+        </div>
+
+        <div class="drawer drawer-end hidden w-64" data-drawer="true" data-drawer-backdrop="false" id="email">
+            <div class="drawer-header p-1">
+                <button class="drawer-close bg-primary rounded-full w-8 h-8 flex items-center justify-center"
+                    aria-label="Close drawer" data-drawer-dismiss="#alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#fff"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x" aria-hidden="true">
+                        <path d="M18 6 6 18"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="drawer-content scrollable p-3">
+                <div class="flex flex-col gap-5 lg:gap-6">
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-center grow gap-2.5">
+                            <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
+                            <div class="flex flex-col">
+                                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
+                                    Dr sultads send you photo
+                                </a>
+                                <span class="text-xs font-semibold text-gray-600">
+                                    29 July 2022 - 02:26 pm
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-center grow gap-2.5">
+                            <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
+                            <div class="flex flex-col">
+                                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
+                                    Dr sultads send you photo
+                                </a>
+                                <span class="text-xs font-semibold text-gray-600">
+                                    29 July 2022 - 02:26 pm
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-center grow gap-2.5">
+                            <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
+                            <div class="flex flex-col">
+                                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
+                                    Dr sultads send you photo
+                                </a>
+                                <span class="text-xs font-semibold text-gray-600">
+                                    29 July 2022 - 02:26 pm
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <div class="flex items-center grow gap-2.5">
+                            <img alt="" class="rounded-lg size-9 shrink-0" src="assets/media/avatars/300-3.png">
+                            <div class="flex flex-col">
+                                <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px" href="#">
+                                    Dr sultads send you photo
+                                </a>
+                                <span class="text-xs font-semibold text-gray-600">
+                                    29 July 2022 - 02:26 pm
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="notification">
+            <div class="drawer-header">
+                <h3 class="drawer-title">notification</h3>
+                <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x" aria-hidden="true">
+                        <path d="M18 6 6 18"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="drawer-content scrollable">Drawer content</div>
+        </div>
+
+    </div>
+
+
+    <div class="modal" data-modal="true" id="modalSyllabus">
+        <div class="modal-content rounded-xl max-w-[600px] top-[15%]">
+            <div class="modal-header bg-blue-100 dark:bg-coal-200 dark:text-white py-1 px-4 rounded-t-xl">
+                <p class="text-primary font-semibold">Course Name</p>
+                <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
+                    <i class="ki-filled ki-cross">
+                    </i>
+                </button>
+            </div>
+            <div class="modal-body p-4 pb-5">
+                <div class="scrollable-y-auto" data-scrollable="true" data-scrollable-max-height="auto"
+                    data-scrollable-offset="300px">
+                    <div
+                        class="rounded-xl shadow bg-white w-[70%] mx-auto grow  aspect-video flex items-center justify-center">
+                        <img src="assets/media/images/2600x1200/bg-13.png" alt="Course Image"
+                            class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-4 flex gap-3 w-full">
+                        <div class="bg-blue-50 dark:bg-coal-200 dark:text-white rounded-xl flex-1 p-2">
+                            <p class="font-bold">Description</p>
+                            <p>This Course is Top Seller</p>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bg-blue-50 dark:bg-coal-200 dark:text-white rounded-xl w-full p-2">
+                                <p>Days: <span class="text-gray-700">40 Days</span></p>
+                                <p>Course Price: <span class="text-gray-700">2500.00 SEK</span></p>
+                            </div>
+                            <div class="mt-2">
+                                <p class="mb-1 text-yellow-600">License</p>
+                                <div class="bg-blue-50 dark:bg-coal-200 dark:text-white rounded-xl w-full p-2">
+                                    1
+                                </div>
+                            </div>
+                            <div class="mt-4 text-end">
+                                <button
+                                    class="rounded-lg bg-primary text-base py-1.5 px-4 text-white hover:bg-blue-900 transition-colors"><i
+                                        class="ki-solid ki-plus"></i> Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/core.bundle.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/js/widgets/general.js"></script>
+    <script src="assets/js/layouts/demo1.js"></script>
+</body>
+
+</html>
