@@ -589,12 +589,15 @@
                     <form class="bg-white dark:bg-coal-black rounded-3xl p-6">
                         <div class="grid grid-cols-1 xl:grid-cols-3 gap-5 lg:gap-7">
                             <div class="col-span-2">
-                                <h2 class="font-bold text-lg text-primary mb-5">General</h2>
+
+                                <h2 class="font-bold text-lg text-primary mb-5">
+                                    General</h2>
 
                                 <div class="mb-5">
                                     <label class="form-label text-gray-700 mb-2 block">Education Name <span
                                             class="text-red-500">*</span></label>
-                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Education Name">
+                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                        placeholder="Education Name">
                                 </div>
 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
@@ -635,11 +638,13 @@
                                     <div>
                                         <label class="form-label text-gray-700 mb-2 block">Duration From Purchase
                                             *</label>
-                                        <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="1 year">
+                                        <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                            placeholder="1 year">
                                     </div>
                                     <div>
                                         <label class="form-label text-gray-700 mb-2 block">Education Barcode *</label>
-                                        <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="1234567">
+                                        <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                            placeholder="1234567">
                                     </div>
                                     <div>
                                         <label class="form-label text-gray-700 mb-2 block">Publish To *</label>
@@ -654,37 +659,38 @@
                                 <h2 class="font-bold text-lg text-primary mb-5">Education Price</h2>
                                 <div class="mb-5">
                                     <label class="form-label text-gray-700 mb-2 block">Base Price *</label>
-                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Education Price">
+                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                        placeholder="Education Price">
                                     <span class="text-gray-500 text-xs">She the education price.</span>
                                 </div>
 
                                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-5">
                                     <div>
-                                        <h2 class="font-bold text-lg text-primary mb-3">Education Price</h2>
+                                        <h2 class="font-bold text-lg text-primary mb-3">Education image</h2>
                                         <div
                                             class="border-2 border-dashed border-primary rounded-lg p-6 text-center bg-[#EDF0F9] dark:bg-[#0d0e12]">
-                                            <label class="flex items-center gap-5 cursor-pointer">
+                                            <label class="flex items-center jus gap-5 cursor-pointer"   data-modal-toggle="#Image_modal">
                                                 <i class="ki-duotone ki-file-up text-4xl text-primary"></i>
                                                 <div class="text-start  text-dark dark:text-white">
                                                     <p class="font-medium">Drop files here or click to upload.</p>
                                                     <span class="text-gray-500 text-sm">Upload up to 10 files</span>
                                                 </div>
-                                                <input type="file" class="hidden" multiple />
+                                                <!-- <input type="file" class="hidden" multiple /> -->
                                             </label>
                                         </div>
                                         <p class="text-gray-400 text-xs mt-2">See the education media gallery.</p>
                                     </div>
                                     <div>
-                                        <h2 class="font-bold text-lg text-primary mb-3">Material Image</h2>
+                                        <h2 class="font-bold text-lg text-primary mb-3">Material file</h2>
                                         <div
                                             class="border-2 border-dashed border-primary rounded-lg p-6 text-center bg-[#EDF0F9] dark:bg-[#0d0e12]">
-                                            <label class="flex items-center gap-5 cursor-pointer">
+                                            <label class="flex items-center gap-5 cursor-pointer"  data-modal-toggle="#Image_modal">
                                                 <i class="ki-duotone ki-file-up text-4xl text-primary"></i>
                                                 <div class="text-start text-dark dark:text-white">
                                                     <p class="font-medium">Drop files here or click to upload.</p>
                                                     <span class="text-gray-500 text-sm">Upload up to 10 files</span>
                                                 </div>
-                                                <input type="file" class="hidden" multiple />
+                                                <!-- <input type="file" class="hidden" multiple /> -->
                                             </label>
                                         </div>
                                         <p class="text-gray-400 text-xs mt-2">See the education media gallery.</p>
@@ -800,8 +806,7 @@
 
                                     <div class="mb-5">
                                         <label class="block text-gray-800 font-medium mb-2">Total Price</label>
-                                        <input type="text" value="0.00 SEK" readonly
-                                            class="input bg-gray-100">
+                                        <input type="text" value="0.00 SEK" readonly class="input bg-gray-100">
                                     </div>
 
 
@@ -809,13 +814,15 @@
                             </div>
                         </div>
                         <div class="flex items-center justify-end gap-4">
-                            <a href="#" class="rounded-lg bg-gray-200 text-lg py-2 px-3 text-dark dark:text-white hover:opacity-90 transition-opacity">
+                            <a href="#"
+                                class="rounded-lg bg-gray-200 text-lg py-2 px-3 text-dark dark:text-white hover:opacity-90 transition-opacity">
                                 Cancel
                             </a>
-                            <button class="rounded-lg bg-[#2A3F9D] text-lg py-2 px-3 text-white hover:opacity-90 transition-opacity">
+                            <button
+                                class="rounded-lg bg-[#2A3F9D] text-lg py-2 px-3 text-white hover:opacity-90 transition-opacity">
                                 Create Education
                             </button>
-                           
+
                         </div>
                     </form>
                 </div>
@@ -1013,6 +1020,223 @@
     </div>
 
 
+
+    <div class="modal" data-modal="true" id="Image_modal">
+        <div class="modal-content max-w-[900px] top-[10%]">
+            <div class="modal-header bg-primary-light rounded-xl pr-2.5">
+                <div class="tabs tabs-line" data-tabs="true">
+                    <button class="tab-toggle active" data-tab-toggle="#Select"> Select File</button>
+                    <button class="tab-toggle" data-tab-toggle="#Upload">Upload New</button>
+                </div>
+                <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
+                    <i class="ki-filled ki-cross">
+                    </i>
+                </button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="p-4" id="Select">
+                    <div class="flex justify-between items-center mb-6 px-2">
+                        <div class="relative w-72">
+                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                                </svg>
+                            </div>
+                            <input type="text"
+                                class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg block w-full pl-10 p-2.5"
+                                placeholder="Search your file...">
+                        </div>
+                        <label>
+                            <input type="radio" name="" class="" value="">
+                            Select Only
+                        </label>
+                    </div>
+                    <form class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                        <label
+                            class="bg-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow cursor-pointer relative group">
+                            <input type="checkbox" name="fileSelect" class="sr-only peer" value="file1">
+                            <div
+                                class="absolute inset-0 border-2 border-transparent peer-checked:border-blue-500 rounded-lg pointer-events-none">
+                            </div>
+                            <img src="assets/media/images/img.png" alt="Parallax-ihep aimed"
+                                class="w-2/3 mx-auto mb-2 rounded">
+                            <h3 class="text-xs font-medium text-gray-800">Parallax-ihep aimed</h3>
+                            <p class="text-xs text-gray-500">6.3.2025</p>
+                        </label>
+                        <label
+                            class="bg-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow cursor-pointer relative group">
+                            <input type="checkbox" name="fileSelect" class="sr-only peer" value="file1">
+                            <div
+                                class="absolute inset-0 border-2 border-transparent peer-checked:border-blue-500 rounded-lg pointer-events-none">
+                            </div>
+                            <img src="assets/media/images/img.png" alt="Parallax-ihep aimed"
+                                class="w-2/3 mx-auto  mb-2 rounded">
+                            <h3 class="text-xs font-medium text-gray-800">Parallax-ihep aimed</h3>
+                            <p class="text-xs text-gray-500">6.3.2025</p>
+                        </label>
+                        <label
+                            class="bg-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow cursor-pointer relative group">
+                            <input type="checkbox" name="fileSelect" class="sr-only peer" value="file1">
+                            <div
+                                class="absolute inset-0 border-2 border-transparent peer-checked:border-blue-500 rounded-lg pointer-events-none">
+                            </div>
+                            <img src="assets/media/images/img.png" alt="Parallax-ihep aimed"
+                                class="w-2/3 mx-auto  mb-2 rounded">
+                            <h3 class="text-xs font-medium text-gray-800">Parallax-ihep aimed</h3>
+                            <p class="text-xs text-gray-500">6.3.2025</p>
+                        </label>
+                        <label
+                            class="bg-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow cursor-pointer relative group">
+                            <input type="checkbox" name="fileSelect" class="sr-only peer" value="file1">
+                            <div
+                                class="absolute inset-0 border-2 border-transparent peer-checked:border-blue-500 rounded-lg pointer-events-none">
+                            </div>
+                            <img src="assets/media/images/img.png" alt="Parallax-ihep aimed"
+                                class="w-2/3 mx-auto mb-2 rounded">
+                            <h3 class="text-xs font-medium text-gray-800">Parallax-ihep aimed</h3>
+                            <p class="text-xs text-gray-500">6.3.2025</p>
+                        </label>
+                        <label
+                            class="bg-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow cursor-pointer relative group">
+                            <input type="checkbox" name="fileSelect" class="sr-only peer" value="file1">
+                            <div
+                                class="absolute inset-0 border-2 border-transparent peer-checked:border-blue-500 rounded-lg pointer-events-none">
+                            </div>
+                            <img src="assets/media/images/img.png" alt="Parallax-ihep aimed"
+                                class="w-2/3 mx-auto mb-2 rounded">
+                            <h3 class="text-xs font-medium text-gray-800">Parallax-ihep aimed</h3>
+                            <p class="text-xs text-gray-500">6.3.2025</p>
+                        </label>
+                        <label
+                            class="bg-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow cursor-pointer relative group">
+                            <input type="checkbox" name="fileSelect" class="sr-only peer" value="file1">
+                            <div
+                                class="absolute inset-0 border-2 border-transparent peer-checked:border-blue-500 rounded-lg pointer-events-none">
+                            </div>
+                            <img src="assets/media/images/img.png" alt="Parallax-ihep aimed"
+                                class="w-2/3 mx-auto mb-2 rounded">
+                            <h3 class="text-xs font-medium text-gray-800">Parallax-ihep aimed</h3>
+                            <p class="text-xs text-gray-500">6.3.2025</p>
+                        </label>
+                        <label
+                            class="bg-gray-200 rounded-lg p-3 hover:shadow-md transition-shadow cursor-pointer relative group">
+                            <input type="checkbox" name="fileSelect" class="sr-only peer" value="file1">
+                            <div
+                                class="absolute inset-0 border-2 border-transparent peer-checked:border-blue-500 rounded-lg pointer-events-none">
+                            </div>
+                            <img src="assets/media/images/img.png" alt="Parallax-ihep aimed"
+                                class="w-2/3 mx-auto mb-2 rounded">
+                            <h3 class="text-xs font-medium text-gray-800">Parallax-ihep aimed</h3>
+                            <p class="text-xs text-gray-500">6.3.2025</p>
+                        </label>
+                    </form>
+                </div>
+                <div class="hidden p-4" id="Upload">
+                    <div class="max-w-2xl mx-auto p-4">
+                        <div
+                            class="border-2 border-dashed border-blue-500 rounded-3xl p-6 text-center bg-blue-50 dark:bg-[#0d0e12] mb-10">
+                            <label class="flex flex-col items-center justify-center gap-5 cursor-pointer">
+                                <i class="ki-duotone ki-file-up text-4xl text-blue-600"></i>
+                                <div class="text-center text-dark dark:text-white">
+                                    <p class="font-medium">Drop files here or click to upload.</p>
+                                    <span class="text-gray-500 text-sm">Upload up to 10 files</span>
+                                </div>
+                                <input type="file" class="hidden" multiple />
+                            </label>
+                        </div>
+
+                        <div class="text-sm text-gray-500 mb-2">
+                            4 files here
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-[#F4F7FE] rounded-lg p-4 flex items-center">
+                                <div class="mr-4 relative">
+                                    <img src="assets/media/images/img.png" alt="Pexels-thep aimed"
+                                        class="relative w-14 h-11 object-fill rounded-sm">
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-700">Pexels-thep aimed</span>
+                                        <span class="text-sm text-gray-500">35%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-primary h-2.5 rounded-full" style="width: 35%"></div>
+                                    </div>
+                                </div>
+                                <button class="ml-4 text-gray-400 hover:text-gray-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="bg-[#F4F7FE] rounded-lg p-4 flex items-center">
+                                <div class="mr-4 relative">
+                                    <img src="assets/media/images/img.png" alt="Pexels-thep aimed"
+                                        class="relative w-14 h-11 object-fill rounded-sm">
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-700">Pexels-thep aimed</span>
+                                        <span class="text-sm text-gray-500">35%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-primary h-2.5 rounded-full" style="width: 35%"></div>
+                                    </div>
+                                </div>
+                                <button class="ml-4 text-gray-400 hover:text-gray-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="bg-[#F4F7FE] rounded-lg p-4 flex items-center">
+                                <div class="mr-4 relative">
+                                    <img src="assets/media/images/img.png" alt="Pexels-thep aimed"
+                                        class="relative w-14 h-11 object-fill rounded-sm">
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between mb-1">
+                                        <span class="text-sm font-medium text-gray-700">Pexels-thep aimed</span>
+                                        <span class="text-sm text-gray-500">35%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                        <div class="bg-primary h-2.5 rounded-full" style="width: 35%"></div>
+                                    </div>
+                                </div>
+                                <button class="ml-4 text-gray-400 hover:text-gray-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="flex items-center gap-2.5 justify-end p-5" id="Image_modal">
+                    <button class="btn btn-sm btn-light" data-modal-dismiss="true">
+                        Cancel
+                    </button>
+                    <button class="btn btn-sm btn-primary">
+                        Import
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="assets/js/core.bundle.js"></script>
