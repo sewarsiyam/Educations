@@ -587,8 +587,6 @@
                         </div>
 
 
-
-
                         <div class="flex lg:hidden items-center ">
                             <button class="btn btn-icon btn-light btn-clear btn-sm" data-drawer-toggle="#menu-right">
                                 <i class="ki-filled ki-burger-menu-6">
@@ -599,395 +597,361 @@
                 </div>
             </header>
             <main class="grow content pt-5" id="content" role="content">
-
                 <div class="container-fixed">
                     <div class="grid gap-5 lg:gap-7.5">
-
-                        <div class="">
-                            <div class="grid">
-                                <div class="bg-blue-500 text-white p-6 rounded-2xl w-80 h-64 flex flex-col shadow-lg">
-                                    <!-- أيقونة المستخدم -->
-                                    <div
-                                        class="bg-white bg-opacity-20 rounded-lg p-3 w-12 h-12 flex items-center justify-center mb-4">
-                                        <i class="ki-faild fa-user text-white text-lg"></i>
-                                    </div>
-
-                                    <!-- الرقم الرئيسي -->
-                                    <div class="flex-1">
-                                        <div class="text-3xl font-bold mb-1">43,322</div>
-                                        <div class="text-blue-100 text-sm font-medium">Total Students</div>
-                                    </div>
-
-                                    <!-- المخطط -->
-                                    <div class="h-20 mt-4">
-                                        <canvas id="studentChart" class="w-full h-full"></canvas>
-                                    </div>
+                        <div class="card card-grid h-full min-w-full" id="editeUser">
+                            <div class="card-header bg-primary-light rounded-t-xl pr-2.5">
+                                <div class="tabs tabs-line" data-tabs="true">
+                                    <button class="tab-toggle btn active" data-tab-toggle="#AccountInformation"> Account
+                                        Information</button>
+                                    <button class="tab-toggle btn" data-tab-toggle="#CompanyEducations">Company
+                                        Educations</button>
+                                    <button class="tab-toggle btn" data-tab-toggle="#Users">Users</button>
                                 </div>
+                                <a class="btn bg-indigo-100 gap-1 text-primary" href="html/demo1/edite_users.html"><i
+                                        class="ki-filled ki-arrow-left"></i> Back</a>
+                            </div>
 
 
-                                <div class="card card-grid h-full min-w-full">
-                                    <div class="card-header">
-                                        <h3 class="card-title">
-                                            Students List
-                                        </h3>
-                                        <div class="input input-sm max-w-48">
-                                            <i class="ki-filled ki-magnifier">
-                                            </i>
-                                            <input placeholder="Search Students" type="text" />
+                            <div class="p-10 pt-5 space-y-3" id="AccountInformation">
+                                <p class="">Edit Companys</p>
+                                <hr>
+                                <form class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                    <div class="form-item mb-3">
+                                        <label class="form-label mb-1">Company Name <span
+                                                class="text-danger">*</span></label>
+                                        <div class="form-control">
+                                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                                placeholder="Full name" required />
                                         </div>
                                     </div>
-                                    <div class="card-body">
-                                        <div data-datatable="true" data-datatable-page-size="5">
-                                            <div class="scrollable-x-auto">
-                                                <table class="table" data-datatable-table="true">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>
-                                                                <span class="sort asc">
-                                                                    <span class="sort-label">
-                                                                        Name
-                                                                    </span>
-                                                                    <span class="sort-icon">
-                                                                    </span>
-                                                                </span>
-                                                            </th>
-                                                            <th>
-                                                                <span class="sort">
-                                                                    <span class="sort-label">
-                                                                        Student id
-                                                                    </span>
-                                                                    <span class="sort-icon">
-                                                                    </span>
-                                                                </span>
-                                                            </th>
-                                                            <th>
-                                                                <span class="sort">
-                                                                    <span class="sort-label">
-                                                                        Courses
-                                                                    </span>
-                                                                    <span class="sort-icon">
-                                                                    </span>
-                                                                </span>
-                                                            </th>
-                                                            <th>
-                                                                <span class="sort">
-                                                                    <span class="sort-label">
-                                                                        Join Date
-                                                                    </span>
-                                                                    <span class="sort-icon">
-                                                                    </span>
-                                                                </span>
-                                                            </th>
-                                                            <th>
-                                                                <span class="sort">
-                                                                    <span class="sort-label">
-                                                                        Status
-                                                                    </span>
-                                                                    <span class="sort-icon">
-                                                                    </span>
-                                                                </span>
-                                                            </th>
-                                                            <th>
-                                                                <span class="sort">
-                                                                    <span class="sort-label">
-                                                                        Action
-                                                                    </span>
-                                                                </span>
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flex items-center grow gap-2.5">
-                                                                    <img alt="" class="rounded-xl size-9 shrink-0"
-                                                                        src="assets/media/avatars/300-3.png">
-                                                                    <div class="flex flex-col gap-1">
-                                                                        <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px"
-                                                                            href="html/demo1/public-profile/profiles/creator.html">
-                                                                            Tyler Hero
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                1234567890
-                                                            </td>
-                                                            <td>
-                                                                ui Design Courses
-                                                            </td>
-                                                            <td>
-                                                                05 Sep, 2024
-                                                            </td>
-                                                            <td>
-                                                                <div class="badge badge-sm badge-warning badge-outline">
-                                                                    On Progress
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="menu" data-menu="true">
-                                                                    <div class="menu-item"
-                                                                        data-menu-item-offset="0, 10px"
-                                                                        data-menu-item-placement="bottom-end"
-                                                                        data-menu-item-toggle="dropdown"
-                                                                        data-menu-item-trigger="click|lg:click">
-                                                                        <button
-                                                                            class="menu-toggle btn btn-sm btn-icon btn-light btn-clear">
-                                                                            <i class="ki-filled ki-dots-vertical">
-                                                                            </i>
-                                                                        </button>
-                                                                        <div class="menu-dropdown menu-default w-full max-w-[175px]"
-                                                                            data-menu-dismiss="true" style="">
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i
-                                                                                            class="ki-filled ki-search-list">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        View
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i class="ki-filled ki-pencil">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        Edit
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i class="ki-filled ki-file-up">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        Export
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="menu-separator">
-                                                                            </div>
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i class="ki-filled ki-trash">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        Share
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flex items-center grow gap-2.5">
-                                                                    <img alt="" class="rounded-xl size-9 shrink-0"
-                                                                        src="assets/media/avatars/300-3.png">
-                                                                    <div class="flex flex-col gap-1">
-                                                                        <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px"
-                                                                            href="html/demo1/public-profile/profiles/creator.html">
-                                                                            Tyler Hero
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                1234567890
-                                                            </td>
-                                                            <td>
-                                                                ui Design Courses
-                                                            </td>
-                                                            <td>
-                                                                05 Sep, 2024
-                                                            </td>
-                                                            <td>
-                                                                <div class="badge badge-sm badge-danger badge-outline">
-                                                                    No Progress
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="menu" data-menu="true">
-                                                                    <div class="menu-item"
-                                                                        data-menu-item-offset="0, 10px"
-                                                                        data-menu-item-placement="bottom-end"
-                                                                        data-menu-item-toggle="dropdown"
-                                                                        data-menu-item-trigger="click|lg:click">
-                                                                        <button
-                                                                            class="menu-toggle btn btn-sm btn-icon btn-light btn-clear">
-                                                                            <i class="ki-filled ki-dots-vertical">
-                                                                            </i>
-                                                                        </button>
-                                                                        <div class="menu-dropdown menu-default w-full max-w-[175px]"
-                                                                            data-menu-dismiss="true" style="">
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i
-                                                                                            class="ki-filled ki-search-list">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        View
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i class="ki-filled ki-pencil">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        Edit
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i class="ki-filled ki-file-up">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        Export
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="menu-separator">
-                                                                            </div>
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i class="ki-filled ki-trash">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        Share
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="flex items-center grow gap-2.5">
-                                                                    <img alt="" class="rounded-xl size-9 shrink-0"
-                                                                        src="assets/media/avatars/300-3.png">
-                                                                    <div class="flex flex-col gap-1">
-                                                                        <a class="text-sm font-semibold text-gray-900 hover:text-primary-active mb-px"
-                                                                            href="html/demo1/public-profile/profiles/creator.html">
-                                                                            Tyler Hero
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                1234567890
-                                                            </td>
-                                                            <td>
-                                                                ui Design Courses
-                                                            </td>
-                                                            <td>
-                                                                05 Sep, 2024
-                                                            </td>
-                                                            <td>
-                                                                <div class="badge badge-sm badge-success badge-outline">
-                                                                    Completed
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <div class="menu" data-menu="true">
-                                                                    <div class="menu-item"
-                                                                        data-menu-item-offset="0, 10px"
-                                                                        data-menu-item-placement="bottom-end"
-                                                                        data-menu-item-toggle="dropdown"
-                                                                        data-menu-item-trigger="click|lg:click">
-                                                                        <button
-                                                                            class="menu-toggle btn btn-sm btn-icon btn-light btn-clear">
-                                                                            <i class="ki-filled ki-dots-vertical">
-                                                                            </i>
-                                                                        </button>
-                                                                        <div class="menu-dropdown menu-default w-full max-w-[175px]"
-                                                                            data-menu-dismiss="true" style="">
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i
-                                                                                            class="ki-filled ki-search-list">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        View
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i class="ki-filled ki-pencil">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        Edit
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i class="ki-filled ki-file-up">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        Export
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                            <div class="menu-separator">
-                                                                            </div>
-                                                                            <div class="menu-item">
-                                                                                <a class="menu-link" href="#">
-                                                                                    <span class="menu-icon">
-                                                                                        <i class="ki-filled ki-trash">
-                                                                                        </i>
-                                                                                    </span>
-                                                                                    <span class="menu-title">
-                                                                                        Share
-                                                                                    </span>
-                                                                                </a>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                            <div
-                                                class="card-footer justify-center md:justify-between flex-col md:flex-row gap-5 text-gray-600 text-2sm font-medium w-full">
-                                                <div class="flex items-center gap-4 justify-between w-full">
-                                                    <span data-datatable-info="true">
-                                                    </span>
-                                                    <div class="pagination" data-datatable-pagination="true">
-                                                    </div>
+                                    <div class="form-item mb-3">
+                                        <label class="form-label mb-1">Company Phone <span
+                                                class="text-danger">*</span></label>
+                                        <div class="form-control">
+                                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                                placeholder="Phone number" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-span-2">
+                                        <div class=" grid grid-cols-1 lg:grid-cols-3 gap-4">
+                                            <div class="form-item mb-3">
+                                                <label class="form-label mb-1">Address <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="form-control">
+                                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                                        placeholder="Address" required />
                                                 </div>
                                             </div>
+                                            <div class="form-item mb-3">
+                                                <label class="form-label mb-1">City <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="form-control">
+                                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                                        placeholder="City " required />
+                                                </div>
+                                            </div>
+                                            <div class="form-item mb-3">
+                                                <label class="form-label mb-1">Zip Code <span
+                                                        class="text-danger">*</span></label>
+                                                <div class="form-control">
+                                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                                        placeholder="Zip" required />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-item mb-3">
+                                        <label class="form-label mb-1">Company Code <span
+                                                class="text-danger">*</span></label>
+                                        <div class="form-control">
+                                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                                placeholder="Ex:Krg145122" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-item mb-3">
+                                        <label class="form-label mb-1">Company Status <span
+                                                class="text-danger">*</span></label>
+                                        <div class="form-control">
+                                            <select class="select bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
+                                                <option value="1">
+                                                    Status
+                                                </option>
+                                                <option value="2">
+                                                    Status1
+                                                </option>
+                                                <option value="3">
+                                                    Status2
+                                                </option>
+                                                <option value="4">
+                                                    Status3
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div></div>
+                                    <div class="flex justify-end items-center mt-3 gap-4">
+                                        <button class="btn btn-success">Save Editing</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                            <div class="hidden p-7 space-y-5" id="CompanyEducations">
+                                <div>
+                                    <h2 class="text-lg font-semibold text-primary mb-2">Completed Training</h2>
+                                    <hr />
+                                    <div class="overflow-x-auto">
+                                        <table class="w-full">
+                                            <thead>
+                                                <tr class="border-b border-gray-200">
+                                                    <th class="text-left py-3 text-sm font-medium">Exercise</th>
+                                                    <th class="text-left py-3 text-sm font-medium">Number Of License
+                                                    </th>
+                                                    <th class="text-left py-3 text-sm font-medium">Start Date</th>
+                                                    <th class="text-left py-3 text-sm font-medium">End Date</th>
+                                                    <th class="text-left py-3 text-sm font-medium">Certification</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-b border-gray-100">
+                                                    <td class="py-4 px-2 text-sm text-gray-700">KRAV Restaurang (Regler
+                                                        2025)</td>
+                                                    <td class="py-4 px-2">
+                                                        <input type="number" value="0"
+                                                            class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                                    </td>
+                                                    <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
+                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
+                                                    <td class="py-4 px-2">
+                                                        <button class="btn btn-sm btn-success">
+                                                            Update
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 class="text-lg font-semibold text-primary mb-2">Prchased/ awarded educations
+                                    </h2>
+                                    <hr />
+                                    <div class="overflow-x-auto">
+                                        <table class="w-full">
+                                            <thead>
+                                                <tr class="border-b border-gray-200">
+                                                    <th class="text-left py-3 text-sm font-medium">Exercise</th>
+                                                    <th class="text-left py-3 text-sm font-medium">Number Of License
+                                                    </th>
+                                                    <th class="text-left py-3 text-sm font-medium">Start Date</th>
+                                                    <th class="text-left py-3 text-sm font-medium">End Date</th>
+                                                    <th class="text-left py-3 text-sm font-medium">Certification</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-b border-gray-100">
+                                                    <td class="py-4 px-2 text-sm text-gray-700">KRAV Restaurang (Regler
+                                                        2025)</td>
+                                                    <td class="py-4 px-2">
+                                                        <input type="number" value="0"
+                                                            class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                                    </td>
+                                                    <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
+                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
+                                                    <td class="py-4 px-2">
+                                                        <button class="btn btn-sm btn-success">
+                                                            Update
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2 class="text-lg font-semibold text-primary mb-2">Other Educations</h2>
+                                    <hr />
+                                    <div class="overflow-x-auto">
+                                        <table class="w-full">
+                                            <thead>
+                                                <tr class="border-b border-gray-200">
+                                                    <th class="text-left py-3 text-sm font-medium">Exercise</th>
+                                                    <th class="text-left py-3 text-sm font-medium">Number Of License
+                                                    </th>
+                                                    <th class="text-left py-3 text-sm font-medium">Start Date</th>
+                                                    <th class="text-left py-3 text-sm font-medium">End Date</th>
+                                                    <th class="text-left py-3 text-sm font-medium">Certification</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="border-b border-gray-100">
+                                                    <td class="py-4 px-2 text-sm text-gray-700">KRAV Restaurang (Regler
+                                                        2025)</td>
+                                                    <td class="py-4 px-2">
+                                                        <input type="number" value="0"
+                                                            class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                                    </td>
+                                                    <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
+                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
+                                                    <td class="py-4 px-2">
+                                                        <button class="btn btn-sm btn-success">
+                                                            Update
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden p-7 space-y-5" id="Users">
+                                <div class="flex justify-between items-center">
+                                    <h1 class="text-xl font-semibold text-primary">User - (Companys)</h1>
+                                    <span class="text-gray-500 text-sm">(5) Students</span>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
+                                        <div class="flex justify-center">
+                                            <img src="assets/media/avatars/blank.png" alt="Profile"
+                                                class="w-20 h-20 rounded-xl object-cover">
+                                        </div>
+                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
+                                        <div class="flex justify-center items-center mb-4">
+                                            <span class="text-gray-600  mr-1">5.0</span>
+                                            <i class="ki-filled ki-star bg-yellow-400 text-yellow-400 text-sm mr-2"></i>
+                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 justify-center">
+                                            <button class="btn btn-sm btn-primary">
+                                                Company Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondarys">
+                                                Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondary">
+                                                Students
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
+                                        <div class="flex justify-center">
+                                            <img src="assets/media/avatars/blank.png" alt="Profile"
+                                                class="w-20 h-20 rounded-xl object-cover">
+                                        </div>
+                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
+                                        <div class="flex justify-center items-center mb-4">
+                                            <span class="text-gray-600  mr-1">5.0</span>
+                                            <i class="ki-filled ki-star bg-yellow-400 text-yellow-400 text-sm mr-2"></i>
+                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 justify-center">
+                                            <button class="btn btn-sm btn-primary">
+                                                Company Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondarys">
+                                                Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondary">
+                                                Students
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
+                                        <div class="flex justify-center">
+                                            <img src="assets/media/avatars/blank.png" alt="Profile"
+                                                class="w-20 h-20 rounded-xl object-cover">
+                                        </div>
+                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
+                                        <div class="flex justify-center items-center mb-4">
+                                            <span class="text-gray-600  mr-1">5.0</span>
+                                            <i class="ki-filled ki-star bg-yellow-400 text-yellow-400 text-sm mr-2"></i>
+                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 justify-center">
+                                            <button class="btn btn-sm btn-primary">
+                                                Company Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondarys">
+                                                Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondary">
+                                                Students
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
+                                        <div class="flex justify-center">
+                                            <img src="assets/media/avatars/blank.png" alt="Profile"
+                                                class="w-20 h-20 rounded-xl object-cover">
+                                        </div>
+                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
+                                        <div class="flex justify-center items-center mb-4">
+                                            <span class="text-gray-600  mr-1">5.0</span>
+                                            <i class="ki-filled ki-star bg-yellow-400 text-yellow-400 text-sm mr-2"></i>
+                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 justify-center">
+                                            <button class="btn btn-sm btn-primary">
+                                                Company Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondarys">
+                                                Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondary">
+                                                Students
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
+                                        <div class="flex justify-center">
+                                            <img src="assets/media/avatars/blank.png" alt="Profile"
+                                                class="w-20 h-20 rounded-xl object-cover">
+                                        </div>
+                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
+                                        <div class="flex justify-center items-center mb-4">
+                                            <span class="text-gray-600  mr-1">5.0</span>
+                                            <i class="ki-filled ki-star bg-yellow-400 text-yellow-400 text-sm mr-2"></i>
+                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 justify-center">
+                                            <button class="btn btn-sm btn-primary">
+                                                Company Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondarys">
+                                                Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondary">
+                                                Students
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
+                                        <div class="flex justify-center">
+                                            <img src="assets/media/avatars/blank.png" alt="Profile"
+                                                class="w-20 h-20 rounded-xl object-cover">
+                                        </div>
+                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
+                                        <div class="flex justify-center items-center mb-4">
+                                            <span class="text-gray-600  mr-1">5.0</span>
+                                            <i class="ki-filled ki-star bg-yellow-400 text-yellow-400 text-sm mr-2"></i>
+                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 justify-center">
+                                            <button class="btn btn-sm btn-primary">
+                                                Company Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondarys">
+                                                Admin
+                                            </button>
+                                            <button class="btn btn-sm btn-secondary">
+                                                Students
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -2108,63 +2072,174 @@
 
 
 
+
+    <div class="modal modal-center" data-modal="true" id="ExportUser">
+        <div class="modal-content max-w-[500px]">
+            <div class="modal-header bg-primary-light rounded-xl pr-2.5">
+                Export Customers
+                <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
+                    <i class="ki-filled ki-cross">
+                    </i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="form p-3">
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">Select Export Format :</label>
+                        <div class="form-control">
+                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
+                                <option value="1">
+                                    Status
+                                </option>
+                                <option value="2">
+                                    Status1
+                                </option>
+                                <option value="3">
+                                    Status2
+                                </option>
+                                <option selected="" value="4">
+                                    Status3
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">Select Date Range :</label>
+                        <div class="form-control">
+                            <input type="date" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                placeholder="Select Date Range" />
+                        </div>
+                    </div>
+                    <div class="flex justify-end items-center mt-3 gap-4">
+                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#ExportUser">
+                            Discard</button>
+                        <button class="btn btn-sm btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" data-modal="true" id="AddUser">
+        <div class="modal-content max-w-[560px]  top-[7%]">
+            <div class="modal-header bg-primary-light rounded-xl pr-2.5">
+                Add a User
+                <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
+                    <i class="ki-filled ki-cross">
+                    </i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">Name <span class="text-danger">*</span></label>
+                        <div class="form-control">
+                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Full name"
+                                required />
+                        </div>
+                    </div>
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">Phone <span class="text-danger">*</span></label>
+                        <div class="form-control">
+                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Phone number"
+                                required />
+                        </div>
+                    </div>
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">Account Type <span class="text-danger">*</span></label>
+                        <div class="form-control">
+                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
+                                <option value="1">
+                                    Status
+                                </option>
+                                <option value="2">
+                                    Status1
+                                </option>
+                                <option value="3">
+                                    Status2
+                                </option>
+                                <option value="4">
+                                    Status3
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">Company Type<span class="text-danger">*</span></label>
+                        <div class="form-control">
+                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
+                                <option value="1">
+                                    Status
+                                </option>
+                                <option value="2">
+                                    Status1
+                                </option>
+                                <option value="3">
+                                    Status2
+                                </option>
+                                <option value="4">
+                                    Status3
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">Email <span class="text-danger">*</span></label>
+                        <div class="form-control">
+                            <input type="email" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                placeholder="info@gmail.com" required />
+                        </div>
+                    </div>
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">User Status <span class="text-danger">*</span></label>
+                        <div class="form-control">
+                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
+                                <option value="1">
+                                    Status
+                                </option>
+                                <option value="2">
+                                    Status1
+                                </option>
+                                <option value="3">
+                                    Status2
+                                </option>
+                                <option value="4">
+                                    Status3
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">Password <span class="text-danger">*</span></label>
+                        <div class="form-control">
+                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password"
+                                required />
+                        </div>
+                    </div>
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">Repeat Password * <span class="text-danger">*</span></label>
+                        <div class="form-control">
+                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password"
+                                required />
+                        </div>
+                    </div>
+                    <div></div>
+                    <div class="flex justify-end items-center mt-3 gap-4">
+                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#AddUser">
+                            Discard</button>
+                        <button class="btn btn-sm btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
     <script src="assets/js/core.bundle.js"></script>
     <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
     <script src="assets/js/widgets/general.js"></script>
     <script src="assets/js/layouts/demo1.js"></script>
-
-
-
-    <script>
-        // إعداد المخطط
-        const ctx = document.getElementById('studentChart').getContext('2d');
-        const chart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
-                datasets: [{
-                    data: [38000, 41000, 39000, 43000, 42000, 45000, 43322],
-                    borderColor: 'white',
-                    backgroundColor: 'transparent',
-                    borderWidth: 2,
-                    pointRadius: 0,
-                    pointHoverRadius: 0,
-                    tension: 0.4
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: {
-                        display: false
-                    },
-                    tooltip: {
-                        enabled: false
-                    }
-                },
-                scales: {
-                    x: {
-                        display: false,
-                        grid: {
-                            display: false
-                        }
-                    },
-                    y: {
-                        display: false,
-                        grid: {
-                            display: false
-                        }
-                    }
-                },
-                elements: {
-                    point: {
-                        radius: 0
-                    }
-                }
-            }
-        });
-    </script>
 
 </body>
 
