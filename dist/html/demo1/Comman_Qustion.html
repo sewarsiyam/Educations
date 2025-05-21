@@ -597,361 +597,148 @@
                 </div>
             </header>
             <main class="grow content pt-5" id="content" role="content">
+
                 <div class="container-fixed">
                     <div class="grid gap-5 lg:gap-7.5">
-                        <div class="card card-grid h-full min-w-full" id="editeUser">
-                            <div class="card-header bg-primary-light rounded-t-xl pr-2.5">
-                                <div class="tabs tabs-line" data-tabs="true">
-                                    <button class="tab-toggle btn active" data-tab-toggle="#AccountInformation"> Account
-                                        Information</button>
-                                    <button class="tab-toggle btn" data-tab-toggle="#CompanyEducations">Company
-                                        Educations</button>
-                                    <button class="tab-toggle btn" data-tab-toggle="#Users">Users</button>
+                        <div class="card card-grid h-full min-w-full">
+                            <div class="card-header">
+                                Frequently Question
+
+                                <div class="flex gap-3">
+                                    <a class="btn btn-sm btn-primary" data-modal-toggle="#AddFaq">
+                                        Add Faq
+                                    </a>
                                 </div>
-                                <a class="btn bg-indigo-100 gap-1 text-primary" href="html/demo1/edite_users.html"><i
-                                        class="ki-filled ki-arrow-left"></i> Back</a>
-                            </div>
-
-
-                            <div class="p-10 pt-5 space-y-3" id="AccountInformation">
-                                <p class="">Edit Companys</p>
-                                <hr>
-                                <form class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                                    <div class="form-item mb-3">
-                                        <label class="form-label mb-1">Company Name <span
-                                                class="text-danger">*</span></label>
-                                        <div class="form-control">
-                                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                placeholder="Full name" required />
-                                        </div>
-                                    </div>
-                                    <div class="form-item mb-3">
-                                        <label class="form-label mb-1">Company Phone <span
-                                                class="text-danger">*</span></label>
-                                        <div class="form-control">
-                                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                placeholder="Phone number" required />
-                                        </div>
-                                    </div>
-                                    <div class="col-span-2">
-                                        <div class=" grid grid-cols-1 lg:grid-cols-3 gap-4">
-                                            <div class="form-item mb-3">
-                                                <label class="form-label mb-1">Address <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-control">
-                                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                        placeholder="Address" required />
-                                                </div>
-                                            </div>
-                                            <div class="form-item mb-3">
-                                                <label class="form-label mb-1">City <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-control">
-                                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                        placeholder="City " required />
-                                                </div>
-                                            </div>
-                                            <div class="form-item mb-3">
-                                                <label class="form-label mb-1">Zip Code <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-control">
-                                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                        placeholder="Zip" required />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-item mb-3">
-                                        <label class="form-label mb-1">Company Code <span
-                                                class="text-danger">*</span></label>
-                                        <div class="form-control">
-                                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                placeholder="Ex:Krg145122" required />
-                                        </div>
-                                    </div>
-                                    <div class="form-item mb-3">
-                                        <label class="form-label mb-1">Company Status <span
-                                                class="text-danger">*</span></label>
-                                        <div class="form-control">
-                                            <select class="select bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                                <option value="1">
-                                                    Status
-                                                </option>
-                                                <option value="2">
-                                                    Status1
-                                                </option>
-                                                <option value="3">
-                                                    Status2
-                                                </option>
-                                                <option value="4">
-                                                    Status3
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div></div>
-                                    <div class="flex justify-end items-center mt-3 gap-4">
-                                        <button class="btn btn-success">Save Editing</button>
-                                    </div>
-                                </form>
 
                             </div>
-                            <div class="hidden p-7 space-y-5" id="CompanyEducations">
-                                <div>
-                                    <h2 class="text-lg font-semibold text-primary mb-2">Completed Training</h2>
-                                    <hr />
-                                    <div class="overflow-x-auto">
-                                        <table class="w-full">
+                            <div class="card-body">
+                                <div data-datatable="true" data-datatable-page-size="5">
+                                    <div class="scrollable-x-auto">
+                                        <table class="table" data-datatable-table="true">
                                             <thead>
-                                                <tr class="border-b border-gray-200">
-                                                    <th class="text-left py-3 text-sm font-medium">Exercise</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Number Of License
+                                                <tr>
+                                                    <th>
+                                                        <span class="sort asc">
+                                                            <span class="sort-label">
+                                                                id
+                                                            </span>
+                                                            <span class="sort-icon">
+                                                            </span>
+                                                        </span>
                                                     </th>
-                                                    <th class="text-left py-3 text-sm font-medium">Start Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">End Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Certification</th>
+                                                    <th>
+                                                        <span class="sort asc">
+                                                            <span class="sort-label">
+                                                                Question
+                                                            </span>
+                                                            <span class="sort-icon">
+                                                            </span>
+                                                        </span>
+                                                    </th>
+                                                    <th>
+                                                        <span class="sort">
+                                                            <span class="sort-label">
+                                                                Created at
+                                                            </span>
+                                                            <span class="sort-icon">
+                                                            </span>
+                                                        </span>
+                                                    </th>
+                                                    <th>
+                                                        <span class="sort">
+                                                            <span class="sort-label">
+                                                                Update at
+                                                            </span>
+                                                            <span class="sort-icon">
+                                                            </span>
+                                                        </span>
+                                                    </th>
+                                                    <th>
+                                                        <span class="sort">
+                                                            <span class="sort-label">
+                                                                Action
+                                                            </span>
+                                                        </span>
+                                                    </th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="border-b border-gray-100">
-                                                    <td class="py-4 px-2 text-sm text-gray-700">KRAV Restaurang (Regler
-                                                        2025)</td>
-                                                    <td class="py-4 px-2">
-                                                        <input type="number" value="0"
-                                                            class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                                <tr>
+                                                    <td>#1</td>
+                                                    <td>Can i log of the training without haveingto ..</td>
+                                                    <td>
+                                                        15/05/2025
                                                     </td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
-                                                    <td class="py-4 px-2">
-                                                        <button class="btn btn-sm btn-success">
-                                                            Update
-                                                        </button>
+                                                    <td>
+                                                        15/05/2025
+                                                    </td>
+                                                    <td>
+                                                        <div class="flex gap-2">
+                                                            <button data-modal-toggle="#editFaq"
+                                                                class="rounded-lg bg-[#2A3F9D] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
+                                                                <i class="ki-filled ki-notepad-edit"></i>
+                                                            </button>
+                                                            <button
+                                                                class="rounded-lg bg-[#F60057] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
+                                                                <i class="ki-filled ki-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#1</td>
+                                                    <td>Can i log of the training without haveingto ..</td>
+                                                    <td>
+                                                        15/05/2025
+                                                    </td>
+                                                    <td>
+                                                        15/05/2025
+                                                    </td>
+                                                    <td>
+                                                        <div class="flex gap-2">
+                                                            <button data-modal-toggle="#editFaq"
+                                                                class="rounded-lg bg-[#2A3F9D] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
+                                                                <i class="ki-filled ki-notepad-edit"></i>
+                                                            </button>
+                                                            <button
+                                                                class="rounded-lg bg-[#F60057] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
+                                                                <i class="ki-filled ki-trash"></i>
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#1</td>
+                                                    <td>Can i log of the training without haveingto ..</td>
+                                                    <td>
+                                                        15/05/2025
+                                                    </td>
+                                                    <td>
+                                                        15/05/2025
+                                                    </td>
+                                                    <td>
+                                                        <div class="flex gap-2">
+                                                            <button data-modal-toggle="#editFaq"
+                                                                class="rounded-lg bg-[#2A3F9D] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
+                                                                <i class="ki-filled ki-notepad-edit"></i>
+                                                            </button>
+                                                            <button
+                                                                class="rounded-lg bg-[#F60057] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
+                                                                <i class="ki-filled ki-trash"></i>
+                                                            </button>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                </div>
-                                <div>
-                                    <h2 class="text-lg font-semibold text-primary mb-2">Prchased/ awarded educations
-                                    </h2>
-                                    <hr />
-                                    <div class="overflow-x-auto">
-                                        <table class="w-full">
-                                            <thead>
-                                                <tr class="border-b border-gray-200">
-                                                    <th class="text-left py-3 text-sm font-medium">Exercise</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Number Of License
-                                                    </th>
-                                                    <th class="text-left py-3 text-sm font-medium">Start Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">End Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Certification</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-b border-gray-100">
-                                                    <td class="py-4 px-2 text-sm text-gray-700">KRAV Restaurang (Regler
-                                                        2025)</td>
-                                                    <td class="py-4 px-2">
-                                                        <input type="number" value="0"
-                                                            class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                                    </td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
-                                                    <td class="py-4 px-2">
-                                                        <button class="btn btn-sm btn-success">
-                                                            Update
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h2 class="text-lg font-semibold text-primary mb-2">Other Educations</h2>
-                                    <hr />
-                                    <div class="overflow-x-auto">
-                                        <table class="w-full">
-                                            <thead>
-                                                <tr class="border-b border-gray-200">
-                                                    <th class="text-left py-3 text-sm font-medium">Exercise</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Number Of License
-                                                    </th>
-                                                    <th class="text-left py-3 text-sm font-medium">Start Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">End Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Certification</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-b border-gray-100">
-                                                    <td class="py-4 px-2 text-sm text-gray-700">KRAV Restaurang (Regler
-                                                        2025)</td>
-                                                    <td class="py-4 px-2">
-                                                        <input type="number" value="0"
-                                                            class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                                    </td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
-                                                    <td class="py-4 px-2">
-                                                        <button class="btn btn-sm btn-success">
-                                                            Update
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="hidden p-7 space-y-5" id="Users">
-                                <div class="flex justify-between items-center">
-                                    <h1 class="text-xl font-semibold text-primary">User - (Companys)</h1>
-                                    <span class="text-gray-500 text-sm">(5) Students</span>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
-                                        </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-solid ki-star  text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
-                                        </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-solid ki-star  text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
-                                        </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-solid ki-star  text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
-                                        </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-filled ki-star bg-yellow-400 text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
-                                        </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-solid ki-star  text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
-                                        </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-solid ki-star  text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
+                                    <div
+                                        class="card-footer justify-center md:justify-between flex-col md:flex-row gap-5 text-gray-600 text-2sm font-medium w-full">
+                                        <div class="flex items-center gap-4 justify-between w-full">
+                                            <span data-datatable-info="true">
+                                            </span>
+                                            <div class="pagination" data-datatable-pagination="true">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2069,163 +1856,34 @@
     </div>
 
 
-
-
-
-
-    <div class="modal modal-center" data-modal="true" id="ExportUser">
-        <div class="modal-content max-w-[500px]">
-            <div class="modal-header bg-primary-light rounded-xl pr-2.5">
-                Export Customers
-                <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
-                    <i class="ki-filled ki-cross">
-                    </i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="form p-3">
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Select Export Format :</label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option selected="" value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Select Date Range :</label>
-                        <div class="form-control">
-                            <input type="date" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                placeholder="Select Date Range" />
-                        </div>
-                    </div>
-                    <div class="flex justify-end items-center mt-3 gap-4">
-                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#ExportUser">
-                            Discard</button>
-                        <button class="btn btn-sm btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" data-modal="true" id="AddUser">
+    <div class="modal" data-modal="true" id="AddFaq">
         <div class="modal-content max-w-[560px]  top-[7%]">
             <div class="modal-header bg-primary-light rounded-xl pr-2.5">
-                Add a User
+                Add Question And Response
                 <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
                     <i class="ki-filled ki-cross">
                     </i>
                 </button>
             </div>
             <div class="modal-body">
-                <form class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                <form class="grid grid-cols-1 gap-4">
                     <div class="form-item mb-3">
-                        <label class="form-label mb-1">Name <span class="text-danger">*</span></label>
+                        <label class="form-label mb-1">Add Question <span class="text-danger">*</span></label>
                         <div class="form-control">
-                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Full name"
+                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Add Question"
                                 required />
                         </div>
                     </div>
                     <div class="form-item mb-3">
-                        <label class="form-label mb-1">Phone <span class="text-danger">*</span></label>
+                        <label class="form-label mb-1">Add Response <span class="text-danger">*</span></label>
                         <div class="form-control">
-                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Phone number"
-                                required />
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Account Type <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Company Type<span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Email <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="email" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                placeholder="info@gmail.com" required />
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">User Status <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Password <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password"
-                                required />
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Repeat Password * <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password"
+                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Add Response"
                                 required />
                         </div>
                     </div>
                     <div></div>
                     <div class="flex justify-end items-center mt-3 gap-4">
-                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#AddUser">
+                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#AddFaq">
                             Discard</button>
                         <button class="btn btn-sm btn-primary">Submit</button>
                     </div>
@@ -2233,6 +1891,43 @@
             </div>
         </div>
     </div>
+
+    <div class="modal" data-modal="true" id="editFaq">
+        <div class="modal-content max-w-[560px]  top-[7%]">
+            <div class="modal-header bg-primary-light rounded-xl pr-2.5">
+                Add Question And Response
+                <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
+                    <i class="ki-filled ki-cross">
+                    </i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="grid grid-cols-1 gap-4">
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">Add Question <span class="text-danger">*</span></label>
+                        <div class="form-control">
+                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Add Question"
+                                required />
+                        </div>
+                    </div>
+                    <div class="form-item mb-3">
+                        <label class="form-label mb-1">Add Response <span class="text-danger">*</span></label>
+                        <div class="form-control">
+                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Add Response"
+                                required />
+                        </div>
+                    </div>
+                    <div></div>
+                    <div class="flex justify-end items-center mt-3 gap-4">
+                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#AddFaq">
+                            Discard</button>
+                        <button class="btn btn-sm btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
 
 

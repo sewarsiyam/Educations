@@ -597,361 +597,121 @@
                 </div>
             </header>
             <main class="grow content pt-5" id="content" role="content">
+
                 <div class="container-fixed">
                     <div class="grid gap-5 lg:gap-7.5">
-                        <div class="card card-grid h-full min-w-full" id="editeUser">
-                            <div class="card-header bg-primary-light rounded-t-xl pr-2.5">
-                                <div class="tabs tabs-line" data-tabs="true">
-                                    <button class="tab-toggle btn active" data-tab-toggle="#AccountInformation"> Account
-                                        Information</button>
-                                    <button class="tab-toggle btn" data-tab-toggle="#CompanyEducations">Company
-                                        Educations</button>
-                                    <button class="tab-toggle btn" data-tab-toggle="#Users">Users</button>
-                                </div>
-                                <a class="btn bg-indigo-100 gap-1 text-primary" href="html/demo1/edite_users.html"><i
-                                        class="ki-filled ki-arrow-left"></i> Back</a>
-                            </div>
-
-
-                            <div class="p-10 pt-5 space-y-3" id="AccountInformation">
-                                <p class="">Edit Companys</p>
-                                <hr>
-                                <form class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                                    <div class="form-item mb-3">
-                                        <label class="form-label mb-1">Company Name <span
-                                                class="text-danger">*</span></label>
-                                        <div class="form-control">
-                                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                placeholder="Full name" required />
+                        <div class="card rounded-3xl border-3 border-primary p-10 ">
+                            <div class="card-body p-0">
+                                <div class="flex flex-col-reverse lg:flex-row gap-4 items-start justify-between">
+                                    <div class="flex items-stretch space-x-4 mb-4 md:mb-0 bg-indigo-50 p-4 rounded-lg">
+                                        <img src="assets/media/avatars/300-1.png" alt="Profile Photo"
+                                            class="w-20 object-cover rounded-xl">
+                                        <div class="text-gray-800">
+                                            <p class="text-primary">Hello, Thomson :</p>
+                                            <p class="mt-1 text-sm">Please Find Below A Com/Breakdown For The<br>
+                                                Recent Work Completed. Please Make Payment At<br>
+                                                Your Earliest Convenience And Do Not Hesitate<br>
+                                                To Contact Me With Any Questions.</p>
                                         </div>
                                     </div>
-                                    <div class="form-item mb-3">
-                                        <label class="form-label mb-1">Company Phone <span
-                                                class="text-danger">*</span></label>
-                                        <div class="form-control">
-                                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                placeholder="Phone number" required />
-                                        </div>
-                                    </div>
-                                    <div class="col-span-2">
-                                        <div class=" grid grid-cols-1 lg:grid-cols-3 gap-4">
-                                            <div class="form-item mb-3">
-                                                <label class="form-label mb-1">Address <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-control">
-                                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                        placeholder="Address" required />
-                                                </div>
-                                            </div>
-                                            <div class="form-item mb-3">
-                                                <label class="form-label mb-1">City <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-control">
-                                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                        placeholder="City " required />
-                                                </div>
-                                            </div>
-                                            <div class="form-item mb-3">
-                                                <label class="form-label mb-1">Zip Code <span
-                                                        class="text-danger">*</span></label>
-                                                <div class="form-control">
-                                                    <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                        placeholder="Zip" required />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-item mb-3">
-                                        <label class="form-label mb-1">Company Code <span
-                                                class="text-danger">*</span></label>
-                                        <div class="form-control">
-                                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                placeholder="Ex:Krg145122" required />
-                                        </div>
-                                    </div>
-                                    <div class="form-item mb-3">
-                                        <label class="form-label mb-1">Company Status <span
-                                                class="text-danger">*</span></label>
-                                        <div class="form-control">
-                                            <select class="select bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                                <option value="1">
-                                                    Status
-                                                </option>
-                                                <option value="2">
-                                                    Status1
-                                                </option>
-                                                <option value="3">
-                                                    Status2
-                                                </option>
-                                                <option value="4">
-                                                    Status3
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div></div>
-                                    <div class="flex justify-end items-center mt-3 gap-4">
-                                        <button class="btn btn-success">Save Editing</button>
-                                    </div>
-                                </form>
-
-                            </div>
-                            <div class="hidden p-7 space-y-5" id="CompanyEducations">
-                                <div>
-                                    <h2 class="text-lg font-semibold text-primary mb-2">Completed Training</h2>
-                                    <hr />
-                                    <div class="overflow-x-auto">
-                                        <table class="w-full">
-                                            <thead>
-                                                <tr class="border-b border-gray-200">
-                                                    <th class="text-left py-3 text-sm font-medium">Exercise</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Number Of License
-                                                    </th>
-                                                    <th class="text-left py-3 text-sm font-medium">Start Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">End Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Certification</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-b border-gray-100">
-                                                    <td class="py-4 px-2 text-sm text-gray-700">KRAV Restaurang (Regler
-                                                        2025)</td>
-                                                    <td class="py-4 px-2">
-                                                        <input type="number" value="0"
-                                                            class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                                    </td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
-                                                    <td class="py-4 px-2">
-                                                        <button class="btn btn-sm btn-success">
-                                                            Update
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <div class="text-sm bg-indigo-50 p-4 rounded-lg">
+                                        <p class="flex justify-between"><span class="text-primary mr-2">Order
+                                                Date:</span> 14/12/20</p>
+                                        <p class="flex justify-between"><span class="text-primary mr-2">Order
+                                                Status:</span> Paid</p>
+                                        <p class="flex justify-between"><span class="text-primary mr-2">Order ID:</span>
+                                            #123456</p>
                                     </div>
                                 </div>
-                                <div>
-                                    <h2 class="text-lg font-semibold text-primary mb-2">Prchased/ awarded educations
-                                    </h2>
-                                    <hr />
-                                    <div class="overflow-x-auto">
-                                        <table class="w-full">
-                                            <thead>
-                                                <tr class="border-b border-gray-200">
-                                                    <th class="text-left py-3 text-sm font-medium">Exercise</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Number Of License
-                                                    </th>
-                                                    <th class="text-left py-3 text-sm font-medium">Start Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">End Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Certification</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-b border-gray-100">
-                                                    <td class="py-4 px-2 text-sm text-gray-700">KRAV Restaurang (Regler
-                                                        2025)</td>
-                                                    <td class="py-4 px-2">
-                                                        <input type="number" value="0"
-                                                            class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                                    </td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
-                                                    <td class="py-4 px-2">
-                                                        <button class="btn btn-sm btn-success">
-                                                            Update
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                <div class="flex flex-col md:flex-row gap-4 my-5">
+                                    <div class="bg-indigo-50 py-4 px-6 rounded-lg">
+                                        <h3 class="font-semibold text-primary mb-2">Billing Address :</h3>
+                                        <div class="text-sm">
+                                            <p>Lynne K.Higby</p>
+                                            <p>795 Folsom Ave, Suite 600</p>
+                                            <p>San Francisco, CA 94107</p>
+                                            <p>P:(123) 456-7890</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-indigo-50 py-4 px-6 rounded-lg">
+                                        <h3 class="font-semibold text-primary mb-2 ">Shopping Address :</h3>
+                                        <div class="text-sm">
+                                            <p>Amy Dickson</p>
+                                            <p>795 Folsom Ave, Suite 600</p>
+                                            <p>San Francisco, CA 94107</p>
+                                            <p>P:(123) 456-7890</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <h2 class="text-lg font-semibold text-primary mb-2">Other Educations</h2>
-                                    <hr />
-                                    <div class="overflow-x-auto">
-                                        <table class="w-full">
-                                            <thead>
-                                                <tr class="border-b border-gray-200">
-                                                    <th class="text-left py-3 text-sm font-medium">Exercise</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Number Of License
-                                                    </th>
-                                                    <th class="text-left py-3 text-sm font-medium">Start Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">End Date</th>
-                                                    <th class="text-left py-3 text-sm font-medium">Certification</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="border-b border-gray-100">
-                                                    <td class="py-4 px-2 text-sm text-gray-700">KRAV Restaurang (Regler
-                                                        2025)</td>
-                                                    <td class="py-4 px-2">
-                                                        <input type="number" value="0"
-                                                            class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                                    </td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
-                                                    <td class="py-4 px-2">
-                                                        <button class="btn btn-sm btn-success">
-                                                            Update
-                                                        </button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                <div class="overflow-x-auto  mb-4">
+                                    <table class="w-full text-center rounded-xl overflow-hidden">
+                                        <thead>
+                                            <tr class="bg-indigo-50 h-12 font-normal text-sm">
+                                                <th class="px-4 py-3">#</th>
+                                                <th class="px-4 py-3">Item</th>
+                                                <th class="px-4 py-3">Quantity</th>
+                                                <th class="px-4 py-3">Unit Cost</th>
+                                                <th class="px-4 py-3">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border">
+                                                <td class="px-4 py-4 text-sm">1</td>
+                                                <td class="px-4 py-4 text-left">
+                                                    <div class="font-medium">Laptop</div>
+                                                    <div class="text-sm text-gray-500">Brand Model VGN-TXN27N /B 11.1" Notebook PC</div>
+                                                </td>
+                                                <td class="px-4 py-4 text-sm">1</td>
+                                                <td class="px-4 py-4 text-sm">$1799.00</td>
+                                                <td class="px-4 py-4 text-sm">$1799.00</td>
+                                            </tr>
+                                            <tr class="border">
+                                                <td class="px-4 py-4 text-sm">2</td>
+                                                <td class="px-4 py-4 text-left">
+                                                    <div class="font-medium">Warranty</div>
+                                                    <div class="text-sm text-gray-500">Two Year Extended Warranty -  Parts And Labor</div>
+                                                </td>
+                                                <td class="px-4 py-4 text-sm">2</td>
+                                                <td class="px-4 py-4 text-sm">$1799.00</td>
+                                                <td class="px-4 py-4 text-sm">$1799.00</td>
+                                            </tr>
+                                            <tr class="border rounded-b-xl ">
+                                                <td class="px-4 py-4 text-sm">3</td>
+                                                <td class="px-4 py-4 text-left">
+                                                    <div class="font-medium">LED</div>
+                                                    <div class="text-sm text-gray-500">80cm (32) HD Ready LED TV</div>
+                                                </td>
+                                                <td class="px-4 py-4 text-sm">3</td>
+                                                <td class="px-4 py-4 text-sm">$1799.00</td>
+                                                <td class="px-4 py-4 text-sm">$1799.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                            </div>
-                            <div class="hidden p-7 space-y-5" id="Users">
-                                <div class="flex justify-between items-center">
-                                    <h1 class="text-xl font-semibold text-primary">User - (Companys)</h1>
-                                    <span class="text-gray-500 text-sm">(5) Students</span>
-                                </div>
-
-                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
-                                        </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-solid ki-star  text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
-                                        </div>
+                                <div class="flex flex-wrap-reverse md:flex-nowrap justify-between gap-4">
+                                    <div class="w-full md:w-6/12 bg-indigo-50 py-4 px-6 rounded-lg">
+                                        <h3 class="font-semibold text-primary mb-2">Notes :</h3>
+                                        <p class="text-sm">
+                                            All Accounts Are To Be Paid Within 7 Days From Receipt Of Invoice. To Be
+                                            Paid
+                                            By Cheque Or Credit Card Or Direct Payment Online. If Account Is Not Paid
+                                            Within 7 Days The Credits Details Supplied As Confirmation Of Work
+                                            Undertaken
+                                            Will Be Charged The Agreed Quoted Fee Noted Above.
+                                        </p>
                                     </div>
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
+                                    <div class="w-full md:w-4/12 bg-indigo-50 py-4 px-6 rounded-lg">
+                                        <div class="flex justify-between pb-2 text-sm">
+                                            <span class="font-semibold text-primary">Sub-Total:</span>
+                                            <span>$4320.00</span>
                                         </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-solid ki-star  text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
+                                        <div class="flex justify-between pb-2 text-sm border-b border-gray-200">
+                                            <span class="font-semibold text-primary">VAT (12.5%):</span>
+                                            <span>$515.00</span>
                                         </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
-                                        </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-solid ki-star  text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
-                                        </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-filled ki-star bg-yellow-400 text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
-                                        </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-solid ki-star  text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    <div class="bg-indigo-50 rounded-2xl p-3 space-y-3">
-                                        <div class="flex justify-center">
-                                            <img src="assets/media/avatars/blank.png" alt="Profile"
-                                                class="w-20 h-20 rounded-xl object-cover">
-                                        </div>
-                                        <h3 class="text-center text-gray-800 font-medium ">Mohammed Ali</h3>
-                                        <div class="flex justify-center items-center mb-4">
-                                            <span class="text-gray-600  mr-1">5.0</span>
-                                            <i class="ki-solid ki-star  text-yellow-400 text-sm mr-2"></i>
-                                            <span class="text-gray-600 text-sm">| Review (1K)</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-2 justify-center">
-                                            <button class="btn btn-sm btn-primary">
-                                                Company Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondarys">
-                                                Admin
-                                            </button>
-                                            <button class="btn btn-sm btn-secondary">
-                                                Students
-                                            </button>
+                                        <div class="text-center pt-2 text-lg font-bold text-blue-600">
+                                            <span>$4635.00 USD</span>
                                         </div>
                                     </div>
                                 </div>
@@ -2064,172 +1824,6 @@
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-    <div class="modal modal-center" data-modal="true" id="ExportUser">
-        <div class="modal-content max-w-[500px]">
-            <div class="modal-header bg-primary-light rounded-xl pr-2.5">
-                Export Customers
-                <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
-                    <i class="ki-filled ki-cross">
-                    </i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="form p-3">
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Select Export Format :</label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option selected="" value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Select Date Range :</label>
-                        <div class="form-control">
-                            <input type="date" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                placeholder="Select Date Range" />
-                        </div>
-                    </div>
-                    <div class="flex justify-end items-center mt-3 gap-4">
-                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#ExportUser">
-                            Discard</button>
-                        <button class="btn btn-sm btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" data-modal="true" id="AddUser">
-        <div class="modal-content max-w-[560px]  top-[7%]">
-            <div class="modal-header bg-primary-light rounded-xl pr-2.5">
-                Add a User
-                <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
-                    <i class="ki-filled ki-cross">
-                    </i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Name <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Full name"
-                                required />
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Phone <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Phone number"
-                                required />
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Account Type <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Company Type<span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Email <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="email" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                placeholder="info@gmail.com" required />
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">User Status <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Password <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password"
-                                required />
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Repeat Password * <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password"
-                                required />
-                        </div>
-                    </div>
-                    <div></div>
-                    <div class="flex justify-end items-center mt-3 gap-4">
-                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#AddUser">
-                            Discard</button>
-                        <button class="btn btn-sm btn-primary">Submit</button>
-                    </div>
-                </form>
             </div>
         </div>
     </div>

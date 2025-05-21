@@ -596,31 +596,24 @@
                             <div class="space-y-3 text-sm p-4 max-h-[80vh] overflow-y-auto">
                                 <div class="flex flex-col space-y-3 mb-5" data-tabs="true">
                                     <a href="#" class="lesson-item bg-gray-200 rounded-lg text-dark py-3 px-4 active"
-                                        data-tab-toggle="#tab_Video">
+                                        data-tab-toggle="#tab_Question1">
                                         <div class="flex items-center gap-2">
                                             <i class="ki-filled ki-youtube"></i>
-                                            <span>Video 1</span>
+                                            <span>Question 1</span>
                                         </div>
                                     </a>
                                     <a href="#" class="lesson-item bg-gray-200 rounded-lg text-dark py-3 px-4"
-                                        data-tab-toggle="#tab_Quiz">
+                                        data-tab-toggle="#tab_Question2">
                                         <div class="flex items-center gap-2">
                                             <i class="ki-filled ki-tablet"></i>
-                                            <span>Quiz 1</span>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="lesson-item bg-gray-200 rounded-lg text-dark py-3 px-4"
-                                        data-tab-toggle="#tab_Exam">
-                                        <div class="flex items-center gap-2">
-                                            <i class="ki-filled ki-tablet-text-down"></i>
-                                            <span>Final Exam 1</span>
+                                            <span>Question 2</span>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="text-end">
                                     <a href=""
                                         class="rounded-lg bg-primary gap-2 w-full text-center text-sm py-2 px-4 text-white hover:bg-blue-900 transition-colors">
-                                        Add Course/Exam
+                                        Add New Question
                                     </a>
                                 </div>
                             </div>
@@ -629,37 +622,15 @@
                         <div
                             class="lesson-content bg-white dark:bg-coal-300 rounded-lg flex-1 overflow-hidden shadow-md">
                             <div>
-                                <div class="flex space-x-6 bg-indigo-50 dark:bg-coal-300 p-4 mb-5" data-tabs="true">
-                                    <a href="#" class="active" data-tab-toggle="#tab_Video">
-                                        <div class="flex items-center gap-2">
-                                            <i class="ki-filled ki-youtube"></i>
-                                            <span>Video 1</span>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="" data-tab-toggle="#tab_Quiz">
-                                        <div class="flex items-center gap-2">
-                                            <i class="ki-filled ki-tablet"></i>
-                                            <span>Quiz 1</span>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="" data-tab-toggle="#tab_Exam">
-                                        <div class="flex items-center gap-2">
-                                            <i class="ki-filled ki-tablet-text-down"></i>
-                                            <span>Final Exam 1</span>
-                                        </div>
-                                    </a>
-                                </div>
-
-
                                 <!-- Tab 1 Content -->
-                                <div class=" p-5 relative" id="tab_Video">
+                                <div class=" p-5 relative" id="tab_Question1">
                                     <form class="">
                                         <div class="form-item mb-5">
-                                            <label class="form-label mb-1">Name Of Video <span
+                                            <label class="form-label mb-1">Name Of qusetion <span
                                                     class="text-danger">*</span></label>
                                             <div class="form-control">
                                                 <input type="text" class="input border-0 bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                    placeholder="Full name" required />
+                                                    placeholder="qusetion" required />
                                             </div>
                                         </div>
                                         <div class="grid lg:grid-cols-2 gap-4 mb-3">
@@ -690,33 +661,58 @@
                                                 </video>
                                             </div>
                                         </div>
-                                        <div class="flex items-center justify-end gap-2">
-                                            <button type="submit"
-                                                class="btn btn-primary rounded-lg px-4 py-2 text-sm font-semibold">Publish</button>
-                                            <button type="reset"
-                                                class="btn btn-danger rounded-lg px-4 py-2 text-sm font-semibold">Delete
-                                                Course Section</button>
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <!-- Tab 2 Content -->
-                                <div class="hidden p-5 space-y-5 text-dark dark:text-white" id="tab_Quiz">
-                                    <form>
                                         <div class="form-item mb-5">
-                                            <label class="form-label mb-1">Name <span
+                                            <label class="form-label mb-1">Enter The Answer : <span
                                                     class="text-danger">*</span></label>
                                             <div class="form-control">
                                                 <input type="text" class="input border-0 bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                    placeholder="Full name" required />
+                                                    placeholder="Answer" required />
                                             </div>
                                         </div>
-                                        <div class="form-item mb-5">
-                                            <label class="form-label mb-1">Response <span
-                                                    class="text-danger">*</span></label>
-                                            <div class="form-control">
-                                                <input type="text" class="input border-0 bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                    placeholder="Full name" required />
+                                        <button
+                                            class="btn btn-primary w-full rounded-lg px-4 py-2 text-sm justify-center font-semibold mb-4">save
+                                            Answer</button>
+
+                                        <div class="flex flex-col space-y-2 mb-5">
+                                            <div class="flex items-center gap-3">
+                                                <label
+                                                    class="flex items-center w-full bg-[#EDF0F9] dark:bg-[#0d0e12] py-2 px-4 rounded-lg">
+                                                    <input type="radio" name="showAnswers"
+                                                        class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                                                        checked />
+                                                    <span class="ml-2">How are you ?</span>
+                                                </label>
+                                                <a class="btn btn-danger"><i class="ki-filled ki-trash"></i></a>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <label
+                                                    class="flex items-center w-full bg-[#EDF0F9] dark:bg-[#0d0e12] py-2 px-4 rounded-lg">
+                                                    <input type="radio" name="showAnswers"
+                                                        class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                                                        checked />
+                                                    <span class="ml-2">Are you good !</span>
+                                                </label>
+                                                <a class="btn btn-danger"><i class="ki-filled ki-trash"></i></a>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <label
+                                                    class="flex items-center w-full bg-[#EDF0F9] dark:bg-[#0d0e12] py-2 px-4 rounded-lg">
+                                                    <input type="radio" name="showAnswers"
+                                                        class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                                                        checked />
+                                                    <span class="ml-2">What are you studying?</span>
+                                                </label>
+                                                <a class="btn btn-danger"><i class="ki-filled ki-trash"></i></a>
+                                            </div>
+                                            <div class="flex items-center gap-3">
+                                                <label
+                                                    class="flex items-center w-full bg-[#EDF0F9] dark:bg-[#0d0e12] py-2 px-4 rounded-lg">
+                                                    <input type="radio" name="showAnswers"
+                                                        class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                                                        checked />
+                                                    <span class="ml-2">Where are you from ?</span>
+                                                </label>
+                                                <a class="btn btn-danger"><i class="ki-filled ki-trash"></i></a>
                                             </div>
                                         </div>
                                         <div class="flex items-center justify-end gap-2">
@@ -730,101 +726,90 @@
                                                 Course Section</button>
                                         </div>
                                     </form>
-
                                 </div>
 
-                                <!-- Tab 3 Content-->
-                                <div class="hidden p-5 space-y-5 text-dark dark:text-white" id="tab_Exam">
-                                    <form class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                                        <div class="form-item mb-3">
-                                            <label class="form-label mb-1">Name <span
+                                <!-- Tab 2 Content -->
+                                <div class="hidden p-5 relative" id="tab_Question2">
+                                    <form class="">
+                                        <div class="form-item mb-5">
+                                            <label class="form-label mb-1">Name Of qusetion <span
                                                     class="text-danger">*</span></label>
                                             <div class="form-control">
-                                                <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                    placeholder="Full name" required />
+                                                <input type="text" class="input border-0 bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                                    placeholder="qusetion" required />
                                             </div>
                                         </div>
-                                        <div class="form-item mb-3">
-                                            <label class="form-label mb-1">Type Of Exam <span
-                                                    class="text-danger">*</span></label>
-                                            <div class="form-control">
-                                                <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                    placeholder="Phone number" required />
-                                            </div>
-                                        </div>
-                                        <div class="col-span-2">
-                                            <div class=" grid grid-cols-1 lg:grid-cols-3 gap-4">
-                                                <div class="form-item mb-3">
-                                                    <label class="form-label mb-1">Quiz <span
-                                                            class="text-danger">*</span></label>
-                                                    <div class="form-control">
-                                                        <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                            placeholder="Quiz" required />
-                                                    </div>
-                                                </div>
-                                                <div class="form-item mb-3">
-                                                    <label class="form-label mb-1">Total Question <span
-                                                            class="text-danger">*</span></label>
-                                                    <div class="form-control">
-                                                        <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                            placeholder="Total Question" required />
-                                                    </div>
-                                                </div>
-                                                <div class="form-item mb-3">
-                                                    <label class="form-label mb-1">Correct Answer<span
-                                                            class="text-danger">*</span></label>
-                                                    <div class="form-control">
-                                                        <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                            placeholder="Answer " required />
-                                                    </div>
-                                                </div>
-                                                <div class="form-item mb-3">
-                                                    <label class="form-label mb-1">Total Question <span
-                                                            class="text-danger">*</span></label>
-                                                    <div class="form-control">
-                                                        <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                            placeholder="Total Question" required />
-                                                    </div>
-                                                </div>
-                                                <div class="form-item mb-3">
-                                                    <label class="form-label mb-1">Total Question <span
-                                                            class="text-danger">*</span></label>
-                                                    <div class="form-control">
-                                                        <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                            placeholder="Total Question" required />
-                                                    </div>
-                                                </div>
-                                                <div class="form-item mb-3">
-                                                    <label class="form-label mb-1">Correct Answer<span
-                                                            class="text-danger">*</span></label>
-                                                    <div class="form-control">
-                                                        <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                                            placeholder="Answer " required />
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <label class="form-label mb-1">
-                                                        Show Answers After Test <span class="text-danger">*</span>
+                                        <div class="grid lg:grid-cols-2 gap-4 mb-3">
+                                            <div>
+                                                <label class="form-label mb-1">Add Media <span
+                                                        class="text-danger">*</span></label>
+                                                <div
+                                                    class="border-2 border-dashed border-blue-500 rounded-3xl p-6 text-center bg-blue-50 dark:bg-[#0d0e12] mb-10">
+                                                    <label
+                                                        class="flex flex-col items-center justify-center gap-5 cursor-pointer">
+                                                        <i class="ki-duotone ki-file-up text-4xl text-blue-600"></i>
+                                                        <div class="text-center text-dark dark:text-white">
+                                                            <p class="font-medium">Drop files here or click to upload.
+                                                            </p>
+                                                            <span class="text-gray-500 text-sm">Upload up to 10
+                                                                files</span>
+                                                        </div>
+                                                        <input type="file" class="hidden" multiple />
                                                     </label>
-                                                    <div class="flex space-x-4">
-                                                        <label class="flex items-center bg-[#EDF0F9] dark:bg-[#0d0e12] py-2 px-4 rounded-lg">
-                                                            <input type="radio" name="showAnswers"
-                                                                class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
-                                                                checked />
-                                                            <span class="ml-2">Yes</span>
-                                                        </label>
-                                                        <label class="flex items-center bg-[#EDF0F9] dark:bg-[#0d0e12] py-2 px-4 rounded-lg">
-                                                            <input type="radio" name="showAnswers"
-                                                                class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500" />
-                                                            <span class="ml-2">No</span>
-                                                        </label>
-                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="mt-5">
+                                                <video class="w-full h-40 rounded-xl" controls
+                                                    poster="assets/media/images/600x600/14.jpg">
+                                                    <source src="movie.mp4" type="video/mp4">
+                                                    <source src="movie.ogg" type="video/ogg">
+                                                    Your browser does not support the video tag.
+                                                </video>
+                                            </div>
                                         </div>
+                                        <div class="form-item mb-5">
+                                            <label class="form-label mb-1">Enter The Answer : <span
+                                                    class="text-danger">*</span></label>
+                                            <div class="form-control">
+                                                <input type="text" class="input border-0 bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                                    placeholder="Answer" required />
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="btn btn-primary w-full rounded-lg px-4 py-2 text-sm justify-center font-semibold mb-4">save
+                                            Answer</button>
 
-                                        <div></div>
+                                        <div class="flex flex-col space-y-2 mb-5">
+                                            <label
+                                                class="flex items-center bg-[#EDF0F9] dark:bg-[#0d0e12] py-2 px-4 rounded-lg">
+                                                <input type="radio" name="showAnswers"
+                                                    class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500"
+                                                    checked />
+                                                <span class="ml-2">How are you ?</span>
+                                            </label>
+                                            <label
+                                                class="flex items-center bg-[#EDF0F9] dark:bg-[#0d0e12] py-2 px-4 rounded-lg">
+                                                <input type="radio" name="showAnswers"
+                                                    class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500" />
+                                                <span class="ml-2">Are you good !</span>
+                                            </label>
+                                            <label
+                                                class="flex items-center bg-[#EDF0F9] dark:bg-[#0d0e12] py-2 px-4 rounded-lg">
+                                                <input type="radio" name="showAnswers"
+                                                    class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500" />
+                                                <span class="ml-2">What are you studying?</span>
+                                            </label>
+                                            <label
+                                                class="flex items-center bg-[#EDF0F9] dark:bg-[#0d0e12] py-2 px-4 rounded-lg">
+                                                <input type="radio" name="showAnswers"
+                                                    class="w-4 h-4 text-blue-600 border-gray-300 focus:ring-blue-500" />
+                                                <span class="ml-2">Where are you from ?</span>
+                                            </label>
+                                        </div>
                                         <div class="flex items-center justify-end gap-2">
+                                            <a href="html/demo1/AddQuestion.html"
+                                                class="btn btn-success rounded-lg px-4 py-2 text-sm font-semibold">Add
+                                                Question</a>
                                             <button type="submit"
                                                 class="btn btn-primary rounded-lg px-4 py-2 text-sm font-semibold">Publish</button>
                                             <button type="reset"
@@ -833,7 +818,6 @@
                                         </div>
                                     </form>
                                 </div>
-
 
                             </div>
                         </div>
