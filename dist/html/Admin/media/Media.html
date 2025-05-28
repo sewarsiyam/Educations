@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html class="h-full" data-theme="true" data-theme-mode="light" lang="en">
+
+<head>
+    <base href="../../">
+    <title>
+        Educational Dashboard
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<body class="flex h-full demo1 sidebar-fixed header-fixed bg-[#f0f0f0] dark:bg-coal-500">
+    <script>
+        const defaultThemeMode = 'light';
+        let themeMode;
+
+        if (document.documentElement) {
+            if (localStorage.getItem('theme')) {
+                themeMode = localStorage.getItem('theme');
+            } else if (document.documentElement.hasAttribute('data-theme-mode')) {
+                themeMode = document.documentElement.getAttribute('data-theme-mode');
+            } else {
+                themeMode = defaultThemeMode;
+            }
+
+            if (themeMode === 'system') {
+                themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            document.documentElement.classList.add(themeMode);
+        }
+    </script>
+
+
+    <div class="flex grow">
+        <div class="sidebar dark:bg-primary bg-primary fixed top-0 bottom-0 z-20 hidden lg:flex flex-col items-stretch shrink-0 rounded-r-3xl"
+            data-drawer="true" data-drawer-class="drawer drawer-start top-0 bottom-0" data-drawer-enable="true|lg:false"
+            id="sidebar">
+            <div class="sidebar-header hidden lg:flex items-center relative justify-between px-3 lg:px-6 shrink-0"
+                id="sidebar_header">
+                <a class="dark:hidden" href="html/demo1.html">
+                    <img class="default-logo min-h-[22px] max-w-none" src="assets/media/app/default-logo-dark.svg" />
+                    <img class="small-logo min-h-[22px] max-w-none" src="assets/media/app/mini-logo.svg" />
+                </a>
+                <a class="hidden dark:block" href="html/demo1.html">
+                    <img class="default-logo min-h-[22px] max-w-none" src="assets/media/app/default-logo-dark.svg" />
+                    <img class="small-logo min-h-[22px] max-w-none" src="assets/media/app/mini-logo.svg" />
+                </a>
+            </div>
+            <div class="sidebar-content flex grow shrink-0 py-5 pr-2" id="sidebar_content">
+                <div class="scrollable-y-hover grow shrink-0 flex pl-2 lg:pl-5 pr-1 lg:pr-3" data-scrollable="true"
+                    data-scrollable-dependencies="#sidebar_header" data-scrollable-height="auto"
+                    data-scrollable-offset="0px" data-scrollable-wrappers="#sidebar_content" id="sidebar_scrollable">
+                    <div class="menu flex flex-col grow gap-1" data-menu="true" data-menu-accordion-expand-all="false"
+                        id="sidebar_menu">
+                        <div class="menu-item">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary dark:text-gray-400 w-[20px]">
+                                    <i class="ki-filled ki-category text-lg"></i>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Dashboards
+                                </span>
+                            </div>
+                        </div>
+                        <div class="menu-item show" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_outline_teacher" data-name="vuesax/outline/teacher"
+                                            transform="translate(-172 -252)">
+                                            <g id="teacher">
+                                                <path id="Vector"
+                                                    d="M10.19,15.751a4.475,4.475,0,0,1-2.38-.65l-6.02-3.93a3.937,3.937,0,0,1,0-6.6L7.82.651a4.644,4.644,0,0,1,4.76.01l5.99,3.93a3.93,3.93,0,0,1,0,6.58L12.58,15.1A4.4,4.4,0,0,1,10.19,15.751Zm0-14.25a2.8,2.8,0,0,0-1.55.41L2.62,5.831a2.43,2.43,0,0,0,0,4.08l6.02,3.93a3.207,3.207,0,0,0,3.12,0l5.99-3.93a2.442,2.442,0,0,0,0-4.08L11.76,1.9A3.052,3.052,0,0,0,10.19,1.5Z"
+                                                    transform="translate(173.82 253.249)" fill="currentColor" />
+                                                <path id="Vector-2" data-name="Vector"
+                                                    d="M7.13,10.42a4.1,4.1,0,0,1-1.25-.18L2.69,9.18A4.133,4.133,0,0,1,0,5.44L.01.75A.755.755,0,0,1,.76,0a.755.755,0,0,1,.75.75L1.5,5.44A2.69,2.69,0,0,0,3.17,7.76L6.36,8.82a3.089,3.089,0,0,0,1.54,0l3.19-1.06a2.688,2.688,0,0,0,1.67-2.31V.81a.75.75,0,0,1,1.5,0V5.45a4.159,4.159,0,0,1-2.69,3.74L8.38,10.25A4.445,4.445,0,0,1,7.13,10.42Z"
+                                                    transform="translate(176.87 264.33)" fill="currentColor" />
+                                                <path id="Vector-3" data-name="Vector"
+                                                    d="M.75,7.5A.755.755,0,0,1,0,6.75v-6A.755.755,0,0,1,.75,0,.755.755,0,0,1,1.5.75v6A.755.755,0,0,1,.75,7.5Z"
+                                                    transform="translate(192.65 260.25)" fill="currentColor" />
+                                                <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                    transform="translate(172 252)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Educations
+                                </span>
+                                <span
+                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                                    </i>
+                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                                    </i>
+                                </span>
+                            </div>
+                            <div
+                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/courses.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            courses
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item active">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/create-courses.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            Create courses
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="profile-2user" transform="translate(-172 -252)">
+                                            <path id="Vector"
+                                                d="M5.35,10.37H5.27a.543.543,0,0,0-.18,0,5.145,5.145,0,1,1,.29,0ZM5.19,1.5a3.686,3.686,0,0,0-.14,7.37,1.665,1.665,0,0,1,.32,0A3.687,3.687,0,0,0,5.19,1.5Z"
+                                                transform="translate(175.81 253.25)" fill="currentColor" />
+                                            <path id="Vector-2" data-name="Vector"
+                                                d="M.964,8.5a.277.277,0,0,1-.09-.01A.792.792,0,0,1,0,7.83.729.729,0,0,1,.624,7c.12-.01.25-.01.36-.01a2.752,2.752,0,0,0-.15-5.5A.741.741,0,0,1,.084.75.755.755,0,0,1,.834,0a4.259,4.259,0,0,1,4.25,4.25A4.241,4.241,0,0,1,.994,8.5Z"
+                                                transform="translate(187.576 255.25)" fill="currentColor" />
+                                            <path id="Vector-3" data-name="Vector"
+                                                d="M7.57,10.112a9.878,9.878,0,0,1-5.42-1.5A4.291,4.291,0,0,1,0,5.062a4.336,4.336,0,0,1,2.15-3.57,10.588,10.588,0,0,1,10.84,0,4.314,4.314,0,0,1,2.15,3.55,4.336,4.336,0,0,1-2.15,3.57A9.9,9.9,0,0,1,7.57,10.112ZM2.98,2.752A2.876,2.876,0,0,0,1.5,5.072a2.869,2.869,0,0,0,1.48,2.3,9.037,9.037,0,0,0,9.18,0,2.876,2.876,0,0,0,1.48-2.32,2.869,2.869,0,0,0-1.48-2.3A9.084,9.084,0,0,0,2.98,2.752Z"
+                                                transform="translate(173.6 264.438)" fill="currentColor" />
+                                            <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                transform="translate(172 252)" fill="none" opacity="0" />
+                                            <path id="Vector-5" data-name="Vector"
+                                                d="M.744,7.508a.738.738,0,0,1-.73-.6.76.76,0,0,1,.58-.89,4.05,4.05,0,0,0,1.66-.73,1.956,1.956,0,0,0,.88-1.54,1.94,1.94,0,0,0-.87-1.53,4.187,4.187,0,0,0-1.64-.73A.753.753,0,1,1,.954.018a5.581,5.581,0,0,1,2.22,1,3.439,3.439,0,0,1,1.46,2.73,3.483,3.483,0,0,1-1.47,2.74,5.416,5.416,0,0,1-2.26,1A.468.468,0,0,1,.744,7.508Z"
+                                                transform="translate(189.596 265.242)" fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Users
+                                </span>
+                                <span
+                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                                    </i>
+                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                                    </i>
+                                </span>
+                            </div>
+                            <div
+                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/network.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            one
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/activity.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            tow
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="profile-2user" transform="translate(-172 -252)">
+                                            <path id="Vector"
+                                                d="M5.35,10.37H5.27a.543.543,0,0,0-.18,0,5.145,5.145,0,1,1,.29,0ZM5.19,1.5a3.686,3.686,0,0,0-.14,7.37,1.665,1.665,0,0,1,.32,0A3.687,3.687,0,0,0,5.19,1.5Z"
+                                                transform="translate(175.81 253.25)" fill="currentColor" />
+                                            <path id="Vector-2" data-name="Vector"
+                                                d="M.964,8.5a.277.277,0,0,1-.09-.01A.792.792,0,0,1,0,7.83.729.729,0,0,1,.624,7c.12-.01.25-.01.36-.01a2.752,2.752,0,0,0-.15-5.5A.741.741,0,0,1,.084.75.755.755,0,0,1,.834,0a4.259,4.259,0,0,1,4.25,4.25A4.241,4.241,0,0,1,.994,8.5Z"
+                                                transform="translate(187.576 255.25)" fill="currentColor" />
+                                            <path id="Vector-3" data-name="Vector"
+                                                d="M7.57,10.112a9.878,9.878,0,0,1-5.42-1.5A4.291,4.291,0,0,1,0,5.062a4.336,4.336,0,0,1,2.15-3.57,10.588,10.588,0,0,1,10.84,0,4.314,4.314,0,0,1,2.15,3.55,4.336,4.336,0,0,1-2.15,3.57A9.9,9.9,0,0,1,7.57,10.112ZM2.98,2.752A2.876,2.876,0,0,0,1.5,5.072a2.869,2.869,0,0,0,1.48,2.3,9.037,9.037,0,0,0,9.18,0,2.876,2.876,0,0,0,1.48-2.32,2.869,2.869,0,0,0-1.48-2.3A9.084,9.084,0,0,0,2.98,2.752Z"
+                                                transform="translate(173.6 264.438)" fill="currentColor" />
+                                            <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                transform="translate(172 252)" fill="none" opacity="0" />
+                                            <path id="Vector-5" data-name="Vector"
+                                                d="M.744,7.508a.738.738,0,0,1-.73-.6.76.76,0,0,1,.58-.89,4.05,4.05,0,0,0,1.66-.73,1.956,1.956,0,0,0,.88-1.54,1.94,1.94,0,0,0-.87-1.53,4.187,4.187,0,0,0-1.64-.73A.753.753,0,1,1,.954.018a5.581,5.581,0,0,1,2.22,1,3.439,3.439,0,0,1,1.46,2.73,3.483,3.483,0,0,1-1.47,2.74,5.416,5.416,0,0,1-2.26,1A.468.468,0,0,1,.744,7.508Z"
+                                                transform="translate(189.596 265.242)" fill="currentColor" />
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Companys
+                                </span>
+                                <span
+                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                                    </i>
+                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                                    </i>
+                                </span>
+                            </div>
+                            <div
+                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/network.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            one
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/activity.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            tow
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path id="chart_donut_icon_136803"
+                                            d="M15.2,2.05V5.7a8.408,8.408,0,0,1,7.2,8.325,8.109,8.109,0,0,1-.6,3.056l3.144,1.841A12,12,0,0,0,15.2,2.05M14,22.441A8.417,8.417,0,0,1,12.8,5.7V2.05A12.028,12.028,0,1,0,23.66,21.13l-3.12-1.841A8.261,8.261,0,0,1,14,22.441Z"
+                                            transform="translate(-2 -2.05)" fill="currentColor" />
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Statistics
+                                </span>
+                                <span
+                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                                    </i>
+                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                                    </i>
+                                </span>
+                            </div>
+                            <div
+                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/network.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            one
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/activity.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            tow
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_outline_shop" data-name="vuesax/outline/shop"
+                                            transform="translate(-172 -252)">
+                                            <g id="shop">
+                                                <path id="Vector"
+                                                    d="M12.44,12.28H7.04C2.1,12.28,0,10.17,0,5.24V.75A.755.755,0,0,1,.75,0,.755.755,0,0,1,1.5.75V5.24c0,4.09,1.45,5.54,5.54,5.54h5.39c4.09,0,5.54-1.45,5.54-5.54V.75a.75.75,0,0,1,1.5,0V5.24C19.48,10.17,17.37,12.28,12.44,12.28Z"
+                                                    transform="translate(174.26 262.47)" fill="currentColor" />
+                                                <path id="Vector-2" data-name="Vector"
+                                                    d="M3.761,11.5A3.7,3.7,0,0,1,.021,7.36L.691.68A.758.758,0,0,1,1.441,0h4.67a.75.75,0,0,1,.75.68l.67,6.68a3.74,3.74,0,0,1-.93,2.92A3.832,3.832,0,0,1,3.761,11.5Zm-1.65-10-.6,6.01a2.236,2.236,0,0,0,.55,1.76,2.4,2.4,0,0,0,3.4,0,2.259,2.259,0,0,0,.55-1.76l-.6-6.01Z"
+                                                    transform="translate(180.239 253.25)" fill="currentColor" />
+                                                <path id="Vector-3" data-name="Vector"
+                                                    d="M4.753,11.5A4.163,4.163,0,0,1,.7,7.84L0,.83A.772.772,0,0,1,.193.25.735.735,0,0,1,.753,0H3.8c2.94,0,4.31,1.23,4.72,4.25L8.8,7.03a4.011,4.011,0,0,1-4.05,4.47Zm-3.17-10L2.2,7.69A2.658,2.658,0,0,0,4.753,10a2.5,2.5,0,0,0,2.56-2.82l-.28-2.75C6.723,2.17,5.993,1.5,3.8,1.5Z"
+                                                    transform="translate(185.557 253.25)" fill="currentColor" />
+                                                <path id="Vector-4" data-name="Vector"
+                                                    d="M4.073,11.5A4.011,4.011,0,0,1,.023,7.03l.27-2.75C.713,1.23,2.083,0,5.023,0h3.05a.767.767,0,0,1,.56.25.734.734,0,0,1,.19.58l-.7,7.01A4.163,4.163,0,0,1,4.073,11.5Zm.95-10c-2.19,0-2.92.66-3.24,2.95l-.27,2.73A2.5,2.5,0,0,0,4.073,10a2.65,2.65,0,0,0,2.55-2.31l.62-6.19Z"
+                                                    transform="translate(173.567 253.25)" fill="currentColor" />
+                                                <path id="Vector-5" data-name="Vector"
+                                                    d="M5.75,6.5h-5A.755.755,0,0,1,0,5.75V3.25A2.928,2.928,0,0,1,3.25,0,2.928,2.928,0,0,1,6.5,3.25v2.5A.755.755,0,0,1,5.75,6.5ZM1.5,5H5V3.25C5,1.99,4.51,1.5,3.25,1.5S1.5,1.99,1.5,3.25Z"
+                                                    transform="translate(180.75 268.25)" fill="currentColor" />
+                                                <path id="Vector-6" data-name="Vector" d="M0,0H24V24H0Z"
+                                                    transform="translate(172 252)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Order
+                                </span>
+                                <span
+                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                                    </i>
+                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                                    </i>
+                                </span>
+                            </div>
+                            <div
+                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/network.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            one
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/activity.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            tow
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item" data-menu-item-toggle="accordion" data-menu-item-trigger="click">
+                            <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
+                                tabindex="0">
+                                <span
+                                    class="menu-icon items-start text-white menu-item-active:text-primary menu-link-hover:!text-primary dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path id="chart_donut_icon_136803"
+                                            d="M15.2,2.05V5.7a8.408,8.408,0,0,1,7.2,8.325,8.109,8.109,0,0,1-.6,3.056l3.144,1.841A12,12,0,0,0,15.2,2.05M14,22.441A8.417,8.417,0,0,1,12.8,5.7V2.05A12.028,12.028,0,1,0,23.66,21.13l-3.12-1.841A8.261,8.261,0,0,1,14,22.441Z"
+                                            transform="translate(-2 -2.05)" fill="currentColor" />
+                                    </svg>
+                                </span>
+                                <span
+                                    class="menu-title text-sm font-semibold text-white menu-item-active:text-primary menu-link-hover:!text-primary">
+                                    Media
+                                </span>
+                                <span
+                                    class="menu-arrow text-gray-400 dark:text-gray-800 w-[20px] shrink-0 justify-end ml-1 mr-[-10px]">
+                                    <i class="ki-filled ki-right text-2xs menu-item-show:hidden">
+                                    </i>
+                                    <i class="ki-filled ki-down text-2xs hidden menu-item-show:inline-flex">
+                                    </i>
+                                </span>
+                            </div>
+                            <div
+                                class="menu-accordion gap-0.5 pl-[10px] relative before:absolute before:left-[20px] before:top-0 before:bottom-0 before:border-l before:border-gray-200">
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/network.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            one
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link border border-transparent items-center grow menu-item-active:bg-secondary-active dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-secondary-active dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[14px] pl-[10px] pr-[10px] py-[8px]"
+                                        href="html/demo1/public-profile/activity.html" tabindex="0">
+                                        <span
+                                            class="menu-bullet flex w-[6px] relative before:absolute before:top-0 before:size-[6px] before:rounded-full before:-translate-x-1/2 before:-translate-y-1/2 menu-item-active:before:bg-primary menu-item-hover:before:bg-primary">
+                                        </span>
+                                        <span
+                                            class="menu-title text-2sm font-medium text-gray-200 menu-item-active:text-primary menu-item-active:font-semibold menu-link-hover:!text-primary">
+                                            tow
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-label border border-transparent gap-[10px] pl-[10px] pr-[10px] py-[6px]"
+                                href="" tabindex="0">
+                                <span class="menu-icon items-start text-white dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_outline_info-circle" data-name="vuesax/outline/info-circle"
+                                            transform="translate(-364 -252)">
+                                            <g id="info-circle">
+                                                <path id="Vector"
+                                                    d="M10.75,21.5A10.75,10.75,0,1,1,21.5,10.75,10.759,10.759,0,0,1,10.75,21.5Zm0-20A9.25,9.25,0,1,0,20,10.75,9.261,9.261,0,0,0,10.75,1.5Z"
+                                                    transform="translate(365.25 253.25)" fill="currentColor" />
+                                                <path id="Vector-2" data-name="Vector"
+                                                    d="M.75,6.5A.755.755,0,0,1,0,5.75v-5A.755.755,0,0,1,.75,0,.755.755,0,0,1,1.5.75v5A.755.755,0,0,1,.75,6.5Z"
+                                                    transform="translate(375.25 259.25)" fill="currentColor" />
+                                                <path id="Vector-3" data-name="Vector"
+                                                    d="M1,2a1,1,0,0,1-.38-.08A1.155,1.155,0,0,1,.29,1.7a1.032,1.032,0,0,1-.21-.33A1,1,0,0,1,0,1,1,1,0,0,1,.08.615,1.155,1.155,0,0,1,.29.285,1.155,1.155,0,0,1,.62.075a1,1,0,0,1,.76,0,1.155,1.155,0,0,1,.33.21,1.155,1.155,0,0,1,.21.33A1,1,0,0,1,2,1a1,1,0,0,1-.08.38,1.032,1.032,0,0,1-.21.33,1.155,1.155,0,0,1-.33.21A1,1,0,0,1,1,2Z"
+                                                    transform="translate(375 267.005)" fill="currentColor" />
+                                                <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                    transform="translate(364 252)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span class="menu-title text-sm font-semibold text-white">
+                                    Faq
+                                </span>
+                            </div>
+                        </div>
+                        <div class="menu-item">
+                            <div class="menu-label border border-transparent gap-[10px] pl-[10px] pr-[10px] py-[6px]"
+                                href="" tabindex="0">
+                                <span class="menu-icon items-start text-white dark:text-gray-900 w-[20px]">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <g id="vuesax_outline_login" data-name="vuesax/outline/login"
+                                            transform="translate(-684 -444)">
+                                            <g id="login">
+                                                <path id="Vector"
+                                                    d="M7.092,20.54h-.13c-4.44,0-6.58-1.75-6.95-5.67a.753.753,0,1,1,1.5-.14c.29,3.14,1.77,4.31,5.46,4.31H7.1c4.07,0,5.51-1.44,5.51-5.51V7.01c0-4.07-1.44-5.51-5.51-5.51h-.13c-3.71,0-5.19,1.19-5.46,4.39a.753.753,0,0,1-.82.68A.751.751,0,0,1,0,5.76C.342,1.78,2.492,0,6.962,0h.13C12,0,14.1,2.1,14.1,7.01v6.52C14.1,18.44,12,20.54,7.092,20.54Z"
+                                                    transform="translate(692.148 445.73)" fill="currentColor" />
+                                                <path id="Vector-2" data-name="Vector"
+                                                    d="M13.63,1.5H.75A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0H13.63a.75.75,0,0,1,0,1.5Z"
+                                                    transform="translate(685.25 455.25)" fill="currentColor" />
+                                                <path id="Vector-3" data-name="Vector"
+                                                    d="M.747,8.2a.742.742,0,0,1-.53-.22.754.754,0,0,1,0-1.06L3.037,4.1.218,1.278A.75.75,0,0,1,1.278.218l3.35,3.35a.754.754,0,0,1,0,1.06l-3.35,3.35A.742.742,0,0,1,.747,8.2Z"
+                                                    transform="translate(695.903 451.902)" fill="currentColor" />
+                                                <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                    transform="translate(684 444)" fill="none" opacity="0" />
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </span>
+                                <span class="menu-title text-sm font-semibold text-white">
+                                    Log Out
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper flex grow flex-col">
+            <header
+                class="header bg-[#f0f0f0]  dark:bg-coal-500 fixed top-0 z-10 left-0 right-0 flex items-stretch shrink-0 justify-center lg:mr-16 border-b border-b-gray-300"
+                data-sticky="true" data-sticky-class="shadow-sm dark:border-b dark:border-b-coal-100"
+                data-sticky-name="header" id="header">
+                <div class="container-fixed flex justify-between items-stretch lg:gap-4" id="header_container">
+                    <div class="flex gap-1 lg:hidden items-center -ml-1">
+                        <a class="shrink-0" href="html/demo1.html">
+                            <img class="max-h-[25px] w-full" src="assets/media/app/mini-logo.svg" />
+                        </a>
+                        <div class="flex items-center">
+                            <button class="btn btn-icon btn-light btn-clear btn-sm" data-drawer-toggle="#sidebar">
+                                <i class="ki-filled ki-menu">
+                                </i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-stretch" id="megamenu_container">
+                        <div class="flex items-stretch" data-reparent="true" data-reparent-mode="prepend|lg:prepend"
+                            data-reparent-target="body|lg:#megamenu_container">
+                            <div class="hidden lg:flex lg:items-stretch" data-drawer="true"
+                                data-drawer-class="drawer drawer-start fixed z-10 top-0 bottom-0 w-full mr-5 max-w-[250px] p-5 lg:p-0 overflow-auto"
+                                data-drawer-enable="true|lg:false" id="megamenu_wrapper">
+                                <div class="menu flex-col lg:flex-row items-center gap-3" data-menu="true"
+                                    id="megamenu">
+                                    <button
+                                        class="btn btn-icon btn-icon-md size-[30px] text-black dark:text-white toggle "
+                                        data-toggle="body" data-toggle-class="sidebar-collapse" id="sidebar_toggle">
+                                        <i
+                                            class="ki-filled ki-burger-menu-6 toggle-active:rotate-180 transition-all duration-300"></i>
+                                    </button>
+                                    <div class="menu-item active">
+                                        <a class="menu-link text-nowrap text-sm text-gray-700 font-medium menu-item-hover:text-primary menu-item-active:text-gray-900 menu-item-active:font-semibold"
+                                            href="html/demo1/layout.html">
+                                            <span class="menu-title font-bold text-lg text-nowrap">
+                                                Create Courses
+                                            </span>
+                                        </a>
+                                        <span class="text-sm text-gray-600">Educations - Create Courses</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 lg:gap-3.5">
+                        <div>
+                            <input data-element="theme-toggle" data-theme-toggle="true" data-theme-state="dark"
+                                style="display: none;" id="theme-toggle-hidden" />
+                            <button class="btn btn-icon btn-outline dark:hidden text-gray-900 dark:text-gray-800"
+                                onclick="document.getElementById('theme-toggle-hidden').click()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-sun">
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <path d="M12 2v2"></path>
+                                    <path d="M12 20v2"></path>
+                                    <path d="m4.93 4.93 1.41 1.41"></path>
+                                    <path d="m17.66 17.66 1.41 1.41"></path>
+                                    <path d="M2 12h2"></path>
+                                    <path d="M20 12h2"></path>
+                                    <path d="m6.34 17.66-1.41 1.41"></path>
+                                    <path d="m19.07 4.93-1.41 1.41"></path>
+                                </svg>
+                            </button>
+                            <button
+                                class="btn btn-icon btn-outline hidden dark:inline-flex text-gray-900 dark:text-gray-800"
+                                onclick="document.getElementById('theme-toggle-hidden').click()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-moon">
+                                    <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="flex items-center rounded-lg px-3 bg-white">
+                            <i class="ki-filled ki-magnifier text-gray-700 text-xl">
+                            </i>
+                            <input class="input px-0 border-none bg-transparent shadow-none ml-2.5" name="query"
+                                placeholder="Search here..." type="text" value="" />
+                        </div>
+
+                        <div class="flex lg:hidden items-center ">
+                            <button class="btn btn-icon btn-light btn-clear btn-sm" data-drawer-toggle="#menu-right">
+                                <i class="ki-filled ki-burger-menu-6">
+                                </i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="grow content pt-5 lg:mr-16" id="content" role="content">
+                <div class="container-fixed">
+                    <div class="flex items-start gap-4">
+
+                        <div
+                            class="border-2 border-dashed border-blue-500 rounded-3xl p-6 text-center bg-blue-50 dark:bg-[#0d0e12] mb-10">
+                            <label class="flex flex-col items-center justify-center gap-5 cursor-pointer">
+                                <i class="ki-duotone ki-file-up text-4xl text-blue-600"></i>
+                                <div class="text-center text-dark dark:text-white">
+                                    <p class="font-medium">Drop files here or click to upload.
+                                    </p>
+                                    <span class="text-gray-500 text-sm">Upload up to 10
+                                        files</span>
+                                </div>
+                                <input type="file" class="hidden" multiple />
+                            </label>
+                        </div>
+
+                        <div
+                            class="lesson-content bg-white dark:bg-coal-300 rounded-lg flex-1 overflow-hidden shadow-md">
+                            <div>
+                                <div class="flex space-x-6 bg-indigo-50 dark:bg-coal-300 p-4 mb-5 CourseList"
+                                    data-tabs="true">
+                                    <a href="#" class="px-3 py-2 rounded-xl bg-gray-100 active"
+                                        data-tab-toggle="#tab_AllMedia">
+                                        <div class="flex items-center gap-2">
+                                            <i class="ki-filled ki-home-3"></i>
+                                            <span>All Media</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="px-3 py-2 rounded-xl bg-gray-100" data-tab-toggle="#tab_Videos">
+                                        <div class="flex items-center gap-2">
+                                            <i class="ki-filled ki-youtube"></i>
+                                            <span>Videos</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="px-3 py-2 rounded-xl bg-gray-100"
+                                        data-tab-toggle="#tab_Pictures">
+                                        <div class="flex items-center gap-2">
+                                            <svg id="gallery" xmlns="http://www.w3.org/2000/svg" width="15.771"
+                                                height="15.82" viewBox="0 0 15.771 15.82">
+                                                <g id="Vector" transform="translate(1.25 1.25)" fill="currentColor">
+                                                    <path
+                                                        d="M8.487,13.32h-3.7C1.432,13.32,0,11.882,0,8.518V4.8C0,1.437,1.432,0,4.784,0h3.7c3.352,0,4.784,1.437,4.784,4.8V8.518C13.271,11.882,11.839,13.32,8.487,13.32ZM4.784.929C1.938.929.926,1.945.926,4.8V8.518c0,2.856,1.012,3.872,3.858,3.872h3.7c2.845,0,3.858-1.016,3.858-3.872V4.8c0-2.856-1.012-3.872-3.858-3.872Z"
+                                                        stroke="none" />
+                                                    <path
+                                                        d="M 8.486953735351562 13.31957912445068 L 4.783553600311279 13.31957912445068 C 1.431983470916748 13.31957912445068 3.429412799960119e-06 11.88229942321777 3.429412799960119e-06 8.518339157104492 L 3.429412799960119e-06 4.801239490509033 C 3.429412799960119e-06 1.437279582023621 1.431983470916748 -4.37774644979072e-07 4.783553600311279 -4.37774644979072e-07 L 8.486953735351562 -4.37774644979072e-07 C 11.83852386474609 -4.37774644979072e-07 13.27050304412842 1.437279582023621 13.27050304412842 4.801239490509033 L 13.27050304412842 8.518339157104492 C 13.27050304412842 11.88229942321777 11.83852386474609 13.31957912445068 8.486953735351562 13.31957912445068 Z M 4.783553600311279 0.929269552230835 C 1.938113451004028 0.929269552230835 0.925853431224823 1.945279598236084 0.925853431224823 4.801239490509033 L 0.925853431224823 8.518339157104492 C 0.925853431224823 11.37430000305176 1.938113451004028 12.39030933380127 4.783553600311279 12.39030933380127 L 8.486953735351562 12.39030933380127 C 11.33239364624023 12.39030933380127 12.34466361999512 11.37430000305176 12.34466361999512 8.518339157104492 L 12.34466361999512 4.801239490509033 C 12.34466361999512 1.945279598236084 11.33239364624023 0.929269552230835 8.486953735351562 0.929269552230835 L 4.783553600311279 0.929269552230835 Z"
+                                                        stroke="none" fill="currentColor" />
+                                                </g>
+                                                <g id="Vector-2" data-name="Vector" transform="translate(3.412 4.033)"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M1.572,3.1A1.56,1.56,0,0,1,0,1.55,1.56,1.56,0,0,1,1.572,0,1.56,1.56,0,0,1,3.144,1.55,1.56,1.56,0,0,1,1.572,3.1Zm0-2.254a.7.7,0,1,0,.714.7A.71.71,0,0,0,1.572.845Z"
+                                                        stroke="none" />
+                                                    <path
+                                                        d="M 1.57177734375 3.099856853485107 C 0.7030173540115356 3.099856853485107 -2.6562499897409e-06 2.406616687774658 -2.6562499897409e-06 1.5499267578125 C -2.6562499897409e-06 0.693236768245697 0.7030173540115356 -3.2421874038846e-06 1.57177734375 -3.2421874038846e-06 C 2.440537452697754 -3.2421874038846e-06 3.14355731010437 0.693236768245697 3.14355731010437 1.5499267578125 C 3.14355731010437 2.406616687774658 2.440537452697754 3.099856853485107 1.57177734375 3.099856853485107 Z M 1.57177734375 0.845416784286499 C 1.177407383918762 0.845416784286499 0.8573373556137085 1.161036729812622 0.8573373556137085 1.5499267578125 C 0.8573373556137085 1.938816785812378 1.177407383918762 2.254436731338501 1.57177734375 2.254436731338501 C 1.966147303581238 2.254436731338501 2.286217451095581 1.938816785812378 2.286217451095581 1.5499267578125 C 2.286217451095581 1.161036729812622 1.966147303581238 0.845416784286499 1.57177734375 0.845416784286499 Z"
+                                                        stroke="none" fill="currentColor" />
+                                                </g>
+                                                <g id="Vector-3" data-name="Vector" transform="translate(1.983 7.666)"
+                                                    fill="currentColor">
+                                                    <path
+                                                        d="M.449,5.057a.453.453,0,0,1-.373-.2A.445.445,0,0,1,.2,4.238l2.967-1.98a1.806,1.806,0,0,1,2.136.114l.2.174a.891.891,0,0,0,1.107,0L9.114.408a1.8,1.8,0,0,1,2.287,0l.981.838a.451.451,0,0,1,.048.634.457.457,0,0,1-.638.048l-.981-.838a.9.9,0,0,0-1.113,0l-2.5,2.136a1.8,1.8,0,0,1-2.287,0l-.2-.174a.9.9,0,0,0-1.041-.048L.7,4.986A.491.491,0,0,1,.449,5.057Z"
+                                                        stroke="none" />
+                                                    <path
+                                                        d="M 0.4494405686855316 5.057376384735107 C 0.3050305545330048 5.057376384735107 0.160610556602478 4.985576629638672 0.07637055963277817 4.859926700592041 C -0.06202943995594978 4.656496524810791 -0.007869439199566841 4.375276565551758 0.2027305662631989 4.237666606903076 L 3.169260501861572 2.257196664810181 C 3.819130420684814 1.82041609287262 4.715710639953613 1.874266743659973 5.305400371551514 2.370876550674438 L 5.503970623016357 2.544396638870239 C 5.804841041564941 2.801676750183105 6.316310405731201 2.801676273345947 6.611150741577148 2.544396638870239 L 9.114350318908691 0.4083566069602966 C 9.752182006835938 -0.1361240297555923 10.75707149505615 -0.1361227482557297 11.40092086791992 0.4083566069602966 L 12.38174057006836 1.246016621589661 C 12.56828022003174 1.407566547393799 12.59235095977783 1.688786625862122 12.42988014221191 1.880246639251709 C 12.26741027832031 2.065726280212402 11.98460006713867 2.089666843414307 11.7920503616333 1.9281165599823 L 10.81123065948486 1.090456604957581 C 10.5103588104248 0.8331759572029114 9.998888969421387 0.8331772685050964 9.698030471801758 1.090456604957581 L 7.194830417633057 3.226486682891846 C 6.557001113891602 3.770966291427612 5.552111148834229 3.770966768264771 4.908260345458984 3.226486682891846 L 4.709690570831299 3.052976608276367 C 4.432890892028809 2.819626569747925 3.975580930709839 2.795686483383179 3.668700456619263 3.005106687545776 L 0.7021705508232117 4.985576629638672 C 0.6239505410194397 5.03343677520752 0.5336905717849731 5.057376384735107 0.4494405686855316 5.057376384735107 Z"
+                                                        stroke="none" fill="currentColor" />
+                                                </g>
+                                                <g id="Vector-4" data-name="Vector" fill="none" opacity="0">
+                                                    <path d="M0,0H15.771V15.82H0Z" stroke="none" />
+                                                    <path
+                                                        d="M 1.000003814697266 1 L 1.000003814697266 14.819580078125 L 14.77050399780273 14.819580078125 L 14.77050399780273 1 L 1.000003814697266 1 M 3.814697265625e-06 0 L 15.77050399780273 0 L 15.77050399780273 15.819580078125 L 3.814697265625e-06 15.819580078125 L 3.814697265625e-06 0 Z"
+                                                        stroke="none" fill="currentColor" />
+                                                </g>
+                                            </svg>
+                                            <span>Pictures</span>
+                                        </div>
+                                    </a>
+                                </div>
+
+
+                                <div class=" p-5 relative" id="tab_AllMedia">
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                        <div class="bg-indigo-50 dark:bg-coal-300 rounded-xl p-4">
+                                            <video class="w-full h-40 rounded-xl" controls
+                                                poster="assets/media/images/600x600/14.jpg">
+                                                <source src="movie.mp4" type="video/mp4">
+                                                <source src="movie.ogg" type="video/ogg">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                            <div class="flex items-center justify-between mt-3">
+                                                <p>name media</p>
+                                                <div class="flex items-center gap-2">
+                                                    <button class="btn btn-icon btn-danger btn-sm">
+                                                        <i class="ki-filled ki-trash"></i>
+                                                    </button>
+                                                    <button class="btn btn-icon btn-primary btn-sm">
+                                                        <i class="ki-filled ki-notepad-edit"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-indigo-50 dark:bg-coal-300 rounded-xl p-4">
+                                            <img src="assets/media/images/600x600/14.jpg" alt="Image"
+                                                class="w-full h-40 rounded-xl object-cover" />
+                                            <div class="flex items-center justify-between mt-3">
+                                                <p>name media</p>
+                                                <div class="flex items-center gap-2">
+                                                    <button class="btn btn-icon btn-danger btn-sm">
+                                                        <i class="ki-filled ki-trash"></i>
+                                                    </button>
+                                                    <button class="btn btn-icon btn-primary btn-sm">
+                                                        <i class="ki-filled ki-notepad-edit"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-indigo-50 dark:bg-coal-300 rounded-xl p-4">
+                                            <img src="assets/media/images/600x400/14.jpg" alt="Image"
+                                                class="w-full h-40 rounded-xl object-cover" />
+                                            <div class="flex items-center justify-between mt-3">
+                                                <p>name media</p>
+                                                <div class="flex items-center gap-2">
+                                                    <button class="btn btn-icon btn-danger btn-sm">
+                                                        <i class="ki-filled ki-trash"></i>
+                                                    </button>
+                                                    <button class="btn btn-icon btn-primary btn-sm">
+                                                        <i class="ki-filled ki-notepad-edit"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-indigo-50 dark:bg-coal-300 rounded-xl p-4">
+                                            <img src="assets/media/images/600x600/30.jpg" alt="Image"
+                                                class="w-full h-40 rounded-xl object-cover" />
+                                            <div class="flex items-center justify-between mt-3">
+                                                <p>name media</p>
+                                                <div class="flex items-center gap-2">
+                                                    <button class="btn btn-icon btn-danger btn-sm">
+                                                        <i class="ki-filled ki-trash"></i>
+                                                    </button>
+                                                    <button class="btn btn-icon btn-primary btn-sm">
+                                                        <i class="ki-filled ki-notepad-edit"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class=" hidden p-5 relative" id="tab_Videos">
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                        <div class="bg-indigo-50 dark:bg-coal-300 rounded-xl p-4">
+                                            <video class="w-full h-40 rounded-xl" controls
+                                                poster="assets/media/images/600x600/14.jpg">
+                                                <source src="movie.mp4" type="video/mp4">
+                                                <source src="movie.ogg" type="video/ogg">
+                                                Your browser does not support the video tag.
+                                            </video>
+                                            <div class="flex items-center justify-between mt-3">
+                                                <p>name media</p>
+                                                <div class="flex items-center gap-2">
+                                                    <button class="btn btn-icon btn-danger btn-sm">
+                                                        <i class="ki-filled ki-trash"></i>
+                                                    </button>
+                                                    <button class="btn btn-icon btn-primary btn-sm">
+                                                        <i class="ki-filled ki-notepad-edit"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class=" hidden p-5 relative" id="tab_Pictures">
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                        <div class="bg-indigo-50 dark:bg-coal-300 rounded-xl p-4">
+                                            <img src="assets/media/images/600x600/14.jpg" alt="Image"
+                                                class="w-full h-40 rounded-xl object-fit" />
+                                            <div class="flex items-center justify-between mt-3">
+                                                <p>name media</p>
+                                                <div class="flex items-center gap-2">
+                                                    <button class="btn btn-icon btn-danger btn-sm">
+                                                        <i class="ki-filled ki-trash"></i>
+                                                    </button>
+                                                    <button class="btn btn-icon btn-primary btn-sm">
+                                                        <i class="ki-filled ki-notepad-edit"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-indigo-50 dark:bg-coal-300 rounded-xl p-4">
+                                            <img src="assets/media/images/600x400/14.jpg" alt="Image"
+                                                class="w-full h-40 rounded-xl object-fit" />
+                                            <div class="flex items-center justify-between mt-3">
+                                                <p>name media</p>
+                                                <div class="flex items-center gap-2">
+                                                    <button class="btn btn-icon btn-danger btn-sm">
+                                                        <i class="ki-filled ki-trash"></i>
+                                                    </button>
+                                                    <button class="btn btn-icon btn-primary btn-sm">
+                                                        <i class="ki-filled ki-notepad-edit"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-indigo-50 dark:bg-coal-300 rounded-xl p-4">
+                                            <img src="assets/media/images/600x600/30.jpg" alt="Image"
+                                                class="w-full h-40 rounded-xl object-fit" />
+                                            <div class="flex items-center justify-between mt-3">
+                                                <p>name media</p>
+                                                <div class="flex items-center gap-2">
+                                                    <button class="btn btn-icon btn-danger btn-sm">
+                                                        <i class="ki-filled ki-trash"></i>
+                                                    </button>
+                                                    <button class="btn btn-icon btn-primary btn-sm">
+                                                        <i class="ki-filled ki-notepad-edit"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </main>
+        </div>
+
+
+        <div class="fixed right-0 h-[95%] z-20 bg-primary w-16 mt-5 rounded-l-3xl " id="menu-right" data-drawer="true"
+            data-drawer-class="drawer drawer-end top-0 bottom-0" data-drawer-enable="true|lg:false">
+            <div class="flex flex-col h-full items-center py-5 justify-between">
+                <div class="menu" data-menu="true">
+                    <div class="menu-item" data-menu-item-offset="-90px, 0px" data-menu-item-placement="bottom-start"
+                        data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+                        <div class="menu-toggle btn btn-icon rounded-full">
+                            <img alt="" class="size-9 rounded-md border-2 border-success shrink-0"
+                                src="assets/media/avatars/300-2.png">
+                            </img>
+                        </div>
+                        <div class="menu-dropdown menu-default light:border-gray-300 w-full max-w-[180px]">
+                            <div class="flex flex-col" data-menu-dismiss="true">
+                                <div class="menu-item">
+                                    <a class="menu-link" href="html/demo1/public-profile/profiles/default.html">
+                                        <span class="menu-icon">
+                                            <i class="ki-outline ki-user"></i>
+                                        </span>
+                                        <span class="menu-title">
+                                            My Profile
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link" href="html/demo1/account/home/user-profile.html">
+                                        <span class="menu-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21.617" height="20.319"
+                                                viewBox="0 0 21.617 20.319">
+                                                <g id="vuesax_outline_sms" data-name="vuesax/outline/sms"
+                                                    transform="translate(-556 -252)">
+                                                    <g id="sms" transform="translate(556 252)">
+                                                        <path id="Vector"
+                                                            d="M14,14.819H5.113C1.867,14.819,0,13.137,0,10.213V4.606C0,1.682,1.867,0,5.113,0H14c3.245,0,5.113,1.682,5.113,4.606v5.607C19.117,13.137,17.25,14.819,14,14.819ZM5.113,1.2c-2.543,0-3.779,1.113-3.779,3.4v5.607c0,2.291,1.236,3.4,3.779,3.4H14c2.543,0,3.779-1.113,3.779-3.4V4.606c0-2.291-1.236-3.4-3.779-3.4Z"
+                                                            transform="translate(1.25 2.75)" fill="currentColor" />
+                                                        <path id="Vector-2" data-name="Vector"
+                                                            d="M4.555,4.245A2.693,2.693,0,0,1,2.7,3.52L.224,1.226a.763.763,0,0,1-.1-.964A.539.539,0,0,1,.96.152L3.439,2.447a1.684,1.684,0,0,0,2.225,0L8.142.152a.533.533,0,0,1,.831.11.752.752,0,0,1-.1.964L6.4,3.52A2.661,2.661,0,0,1,4.555,4.245Z"
+                                                            transform="translate(6.256 7.078)" fill="currentColor" />
+                                                        <path id="Vector-3" data-name="Vector" d="M0,0H21.617V20.319H0Z"
+                                                            fill="none" opacity="0" />
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <span class="menu-title">
+                                            Inbox
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link" href="html/demo1/account/home/user-profile.html">
+                                        <span class="menu-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <g id="vuesax_outline_login" data-name="vuesax/outline/login"
+                                                    transform="translate(-684 -444)">
+                                                    <g id="login">
+                                                        <path id="Vector"
+                                                            d="M7.092,20.54h-.13c-4.44,0-6.58-1.75-6.95-5.67a.753.753,0,1,1,1.5-.14c.29,3.14,1.77,4.31,5.46,4.31H7.1c4.07,0,5.51-1.44,5.51-5.51V7.01c0-4.07-1.44-5.51-5.51-5.51h-.13c-3.71,0-5.19,1.19-5.46,4.39a.753.753,0,0,1-.82.68A.751.751,0,0,1,0,5.76C.342,1.78,2.492,0,6.962,0h.13C12,0,14.1,2.1,14.1,7.01v6.52C14.1,18.44,12,20.54,7.092,20.54Z"
+                                                            transform="translate(692.148 445.73)" fill="currentColor">
+                                                        </path>
+                                                        <path id="Vector-2" data-name="Vector"
+                                                            d="M13.63,1.5H.75A.755.755,0,0,1,0,.75.755.755,0,0,1,.75,0H13.63a.75.75,0,0,1,0,1.5Z"
+                                                            transform="translate(685.25 455.25)" fill="currentColor">
+                                                        </path>
+                                                        <path id="Vector-3" data-name="Vector"
+                                                            d="M.747,8.2a.742.742,0,0,1-.53-.22.754.754,0,0,1,0-1.06L3.037,4.1.218,1.278A.75.75,0,0,1,1.278.218l3.35,3.35a.754.754,0,0,1,0,1.06l-3.35,3.35A.742.742,0,0,1,.747,8.2Z"
+                                                            transform="translate(695.903 451.902)" fill="currentColor">
+                                                        </path>
+                                                        <path id="Vector-4" data-name="Vector" d="M0,0H24V24H0Z"
+                                                            transform="translate(684 444)" fill="none" opacity="0">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <span class="menu-title">
+                                            Logout
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-2 items-center justify-center">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-black text-primary text-lg cursor-pointer hover:bg-gray-100"
+                        data-drawer-toggle="#settings">
+                        <i class="ki-filled ki-setting-2"></i>
+                    </div>
+                    <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-black text-primary text-lg cursor-pointer hover:bg-gray-100"
+                        data-drawer-toggle="#email">
+                        <i class="ki-filled ki-sms"></i>
+                    </div>
+                    <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-white dark:bg-black text-primary text-lg cursor-pointer hover:bg-gray-100"
+                        data-drawer-toggle="#notification">
+                        <i class="ki-filled ki-notification-on"></i>
+                    </div>
+                </div>
+
+                <div class="menu" data-menu="true">
+                    <div class="menu-item" data-menu-item-offset="20px, 10px" data-menu-item-placement="bottom-end"
+                        data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+                        <div class="menu-toggle btn btn-icon rounded-full flex-col-reverse gap-1">
+                            <span class="text-white text-lg">Eng</span>
+                            <img alt="" class="inline-block size-4 rounded-full"
+                                src="assets/media/flags/united-states.svg" />
+                        </div>
+                        <div class="menu-dropdown menu-default light:border-gray-300 w-full max-w-[150px]">
+                            <div class="menu-item active">
+                                <a class="menu-link h-10" href="#">
+                                    <span class="menu-icon">
+                                        <img alt="" class="inline-block size-4 rounded-full"
+                                            src="assets/media/flags/united-states.svg" />
+                                    </span>
+                                    <span class="menu-title">
+                                        English
+                                    </span>
+                                    <span class="menu-badge">
+                                        <i class="ki-solid ki-check-circle text-success text-base">
+                                        </i>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a class="menu-link h-10" href="html/demo1/layout.html">
+                                    <span class="menu-icon">
+                                        <img alt="" class="inline-block size-4 rounded-full"
+                                            src="assets/media/flags/saudi-arabia.svg" />
+                                    </span>
+                                    <span class="menu-title">
+                                        العربية
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="settings">
+        <div class="drawer-header">
+            <h3 class="drawer-title">settings</h3>
+            <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x" aria-hidden="true">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="drawer-content scrollable">Drawer content</div>
+    </div>
+
+    <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="email">
+        <div class="drawer-header">
+            <h3 class="drawer-title">email</h3>
+            <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x" aria-hidden="true">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="drawer-content scrollable">Drawer content</div>
+    </div>
+
+    <div class="drawer drawer-end hidden w-56" data-drawer="true" data-drawer-backdrop="false" id="notification">
+        <div class="drawer-header">
+            <h3 class="drawer-title">notification</h3>
+            <button class="drawer-close" aria-label="Close drawer" data-drawer-dismiss="#alert">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x" aria-hidden="true">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="drawer-content scrollable">Drawer content</div>
+    </div>
+
+
+
+
+    <script src="assets/js/core.bundle.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/js/widgets/general.js"></script>
+    <script src="assets/js/layouts/demo1.js"></script>
+    <script>
+        document.querySelectorAll('input[name="discount_type"]').forEach(radio => {
+            radio.addEventListener('change', function () {
+                document.getElementById('percentageInput').classList.add('hidden');
+                document.getElementById('fixedPriceInput').classList.add('hidden');
+                if (this.value === 'percentage') {
+                    document.getElementById('percentageInput').classList.remove('hidden');
+                } else if (this.value === 'fixed_price') {
+                    document.getElementById('fixedPriceInput').classList.remove('hidden');
+                }
+            });
+        });
+        document.getElementById('discountRange').addEventListener('input', function () {
+            document.getElementById('discountValue').textContent = this.value + '%';
+        });
+    </script>
+
+    <script>
+        class MediaUploader {
+            constructor() {
+                this.uploadedFiles = [];
+                this.currentTab = 'all';
+                this.init();
+            }
+
+            init() {
+                this.setupFileInput();
+                this.setupDragAndDrop();
+                this.setupTabs();
+            }
+
+            setupFileInput() {
+                const fileInput = document.querySelector('input[type="file"]');
+                if (fileInput) {
+                    fileInput.addEventListener('change', (e) => {
+                        this.handleFiles(e.target.files);
+                    });
+                }
+            }
+
+            setupDragAndDrop() {
+                const dropZone = document.querySelector('.border-dashed');
+                if (dropZone) {
+                    dropZone.addEventListener('dragover', (e) => {
+                        e.preventDefault();
+                        dropZone.style.backgroundColor = '#e0f2fe';
+                        dropZone.style.transform = 'scale(1.02)';
+                    });
+
+                    dropZone.addEventListener('dragleave', (e) => {
+                        e.preventDefault();
+                        dropZone.style.backgroundColor = '';
+                        dropZone.style.transform = '';
+                    });
+
+                    dropZone.addEventListener('drop', (e) => {
+                        e.preventDefault();
+                        dropZone.style.backgroundColor = '';
+                        dropZone.style.transform = '';
+                        this.handleFiles(e.dataTransfer.files);
+                    });
+                }
+            }
+
+            setupTabs() {
+                const tabButtons = document.querySelectorAll('[data-tab-toggle]');
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = button.getAttribute('data-tab-toggle');
+                        this.switchTab(target);
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                    });
+                });
+            }
+
+            switchTab(tabId) {
+                document.querySelectorAll('[id^="tab_"]').forEach(tab => {
+                    tab.classList.add('hidden');
+                });
+
+                const activeTab = document.querySelector(tabId);
+                if (activeTab) {
+                    activeTab.classList.remove('hidden');
+                }
+                this.updateTabContent(tabId);
+            }
+
+            handleFiles(files) {
+                Array.from(files).forEach(file => {
+                    if (file.type.startsWith('image/') || file.type.startsWith('video/')) {
+                        const fileObj = {
+                            id: Date.now() + Math.random(),
+                            file: file,
+                            name: file.name,
+                            type: file.type.startsWith('image/') ? 'image' : 'video',
+                            url: URL.createObjectURL(file),
+                            size: this.formatFileSize(file.size)
+                        };
+
+                        this.uploadedFiles.push(fileObj);
+                    }
+                });
+
+                this.updateAllTabs();
+            }
+
+            formatFileSize(bytes) {
+                if (bytes === 0) return '0 Bytes';
+                const k = 1024;
+                const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            }
+
+            updateAllTabs() {
+                this.updateTabContent('#tab_AllMedia');
+                this.updateTabContent('#tab_Videos');
+                this.updateTabContent('#tab_Pictures');
+            }
+
+            updateTabContent(tabId) {
+                const tab = document.querySelector(tabId);
+                if (!tab) return;
+
+                let filesToShow = [];
+
+                switch (tabId) {
+                    case '#tab_AllMedia':
+                        filesToShow = this.uploadedFiles;
+                        break;
+                    case '#tab_Videos':
+                        filesToShow = this.uploadedFiles.filter(file => file.type === 'video');
+                        break;
+                    case '#tab_Pictures':
+                        filesToShow = this.uploadedFiles.filter(file => file.type === 'image');
+                        break;
+                }
+
+                const grid = tab.querySelector('.grid');
+                if (grid) {
+                    const existingItems = grid.querySelectorAll('.user-uploaded');
+
+                    filesToShow.forEach(fileObj => {
+                        if (!grid.querySelector(`[data-file-id="${fileObj.id}"]`)) {
+                            const mediaElement = this.createMediaElement(fileObj);
+                            grid.appendChild(mediaElement);
+                        }
+                    });
+                }
+            }
+
+            createMediaElement(fileObj) {
+                const div = document.createElement('div');
+                div.className = 'bg-indigo-50 dark:bg-coal-300 rounded-xl p-4 user-uploaded';
+                div.setAttribute('data-file-id', fileObj.id);
+                div.style.animation = 'fadeIn 0.5s ease-in';
+
+                let mediaHTML;
+                if (fileObj.type === 'video') {
+                    mediaHTML = `
+                <video class="w-full h-40 rounded-xl" controls>
+                    <source src="${fileObj.url}" type="${fileObj.file.type}">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+                } else {
+                    mediaHTML = `
+                <img src="${fileObj.url}" alt="${fileObj.name}" 
+                     class="w-full h-40 rounded-xl object-cover cursor-pointer"
+                     onclick="mediaUploader.previewImage('${fileObj.url}', '${fileObj.name}')" />
+            `;
+                }
+
+                div.innerHTML = `
+            ${mediaHTML}
+            <div class="flex items-center justify-between mt-3">
+                <div class="flex-1 min-w-0">
+                    <p class="font-medium text-gray-800 dark:text-white truncate" title="${fileObj.name}">
+                        ${fileObj.name}
+                    </p>
+                    <p class="text-sm text-gray-500">${fileObj.size}</p>
+                </div>
+                <div class="flex items-center gap-2 ml-2">
+                    <button class="btn btn-icon btn-danger btn-sm" 
+                            onclick="mediaUploader.deleteFile('${fileObj.id}')"
+                            title="حذف">
+                        <i class="ki-filled ki-trash"></i>
+                    </button>
+                    <button class="btn btn-icon btn-primary btn-sm"
+                            onclick="mediaUploader.editFileName('${fileObj.id}')"
+                            title="تعديل">
+                        <i class="ki-filled ki-notepad-edit"></i>
+                    </button>
+                </div>
+            </div>
+        `;
+
+                return div;
+            }
+
+            deleteFile(fileId) {
+                if (confirm('هل أنت متأكد من حذف هذا الملف؟')) {
+                    const fileIndex = this.uploadedFiles.findIndex(file => file.id == fileId);
+                    if (fileIndex > -1) {
+                        URL.revokeObjectURL(this.uploadedFiles[fileIndex].url);
+                        this.uploadedFiles.splice(fileIndex, 1);
+                        document.querySelectorAll(`[data-file-id="${fileId}"]`).forEach(el => {
+                            el.remove();
+                        });
+                    }
+                }
+            }
+
+            editFileName(fileId) {
+                const file = this.uploadedFiles.find(f => f.id == fileId);
+                if (file) {
+                    const newName = prompt('أدخل الاسم الجديد:', file.name);
+                    if (newName && newName.trim()) {
+                        file.name = newName.trim();
+                        document.querySelectorAll(`[data-file-id="${fileId}"] p`).forEach(p => {
+                            if (p.title === file.name || p.textContent.includes(file.name)) {
+                                p.textContent = newName.trim();
+                                p.title = newName.trim();
+                            }
+                        });
+                    }
+                }
+            }
+
+            previewImage(url, name) {
+                const modal = document.createElement('div');
+                modal.className = 'fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50';
+                modal.style.zIndex = '9999';
+                modal.innerHTML = `
+            <div class="max-w-4xl max-h-screen p-4 relative">
+                <button onclick="this.parentElement.parentElement.remove()" 
+                        class="absolute top-2 right-2 text-white text-2xl bg-black bg-opacity-50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-opacity-75">
+                    ×
+                </button>
+                <img src="${url}" alt="${name}" class="max-w-full max-h-full object-contain rounded-lg">
+                <p class="text-white text-center mt-2 font-medium">${name}</p>
+            </div>
+        `;
+
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        modal.remove();
+                    }
+                });
+            }
+        }
+
+        const style = document.createElement('style');
+        style.textContent = `
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .user-uploaded {
+        transition: all 0.3s ease;
+    }
+    
+    .user-uploaded:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+`;
+        document.head.appendChild(style);
+        const mediaUploader = new MediaUploader();
+    </script>
+</body>
+
+</html>

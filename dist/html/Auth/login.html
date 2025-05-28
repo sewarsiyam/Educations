@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="h-full" data-theme="true" data-theme-mode="light" lang="en">
+
+<head>
+    <base href="../../../">
+    <title>
+        login
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+
+
+    <style>
+        .right_side_drawer .drawer-end {
+            top: 24px;
+            bottom: 23px;
+            right: 68px;
+            left: auto;
+            border-radius: 25px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="flex h-full dark:bg-coal-500">
+    <script>
+        const defaultThemeMode = 'light';
+        let themeMode;
+
+        if (document.documentElement) {
+            if (localStorage.getItem('theme')) {
+                themeMode = localStorage.getItem('theme');
+            } else if (document.documentElement.hasAttribute('data-theme-mode')) {
+                themeMode = document.documentElement.getAttribute('data-theme-mode');
+            } else {
+                themeMode = defaultThemeMode;
+            }
+
+            if (themeMode === 'system') {
+                themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            document.documentElement.classList.add(themeMode);
+        }
+    </script>
+
+    <div class="grid lg:grid-cols-2 grow">
+        <div class="hidden lg:block bg-primary ">
+            <div class="flex flex-col h-full gap-28 p-8 ">
+                <div class="flex justify-between">
+                    <a href="html/demo1.html">
+                        <img class="h-[28px] max-w-none" src="assets/media/app/mini-logo.svg" />
+                    </a>
+                    <div>
+                        <div class="menu bg-white rounded-lg px-5" data-menu="true">
+                            <div class="menu-item" data-menu-item-offset="20px, 10px"
+                                data-menu-item-placement="bottom-end" data-menu-item-toggle="dropdown"
+                                data-menu-item-trigger="click|lg:click">
+                                <div class="menu-toggle btn btn-icon rounded-full flex gap-2">
+                                    <span class="">English</span>
+                                    <img alt="" class="inline-block size-4 rounded-full"
+                                        src="assets/media/flags/united-states.svg" />
+                                </div>
+                                <div class="menu-dropdown menu-default light:border-gray-300 w-full max-w-[150px]">
+                                    <div class="menu-item active">
+                                        <a class="menu-link h-10" href="#">
+                                            <span class="menu-icon">
+                                                <img alt="" class="inline-block size-4 rounded-full"
+                                                    src="assets/media/flags/united-states.svg" />
+                                            </span>
+                                            <span class="menu-title">
+                                                English
+                                            </span>
+                                            <span class="menu-badge">
+                                                <i class="ki-solid ki-check-circle text-success text-base">
+                                                </i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a class="menu-link h-10" href="html/demo1/layout.html">
+                                            <span class="menu-icon">
+                                                <img alt="" class="inline-block size-4 rounded-full"
+                                                    src="assets/media/flags/saudi-arabia.svg" />
+                                            </span>
+                                            <span class="menu-title">
+                                                العربية
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col items-center gap-3">
+                    <img src="assets/media/images/login.png" class="w-96" />
+
+                    <h3 class="text-2xl font-semibold text-white">
+                        Connect with every application.
+                    </h3>
+                    <div class="text-sm  text-gray-300">
+                        Everything you need in an easily customizable dashboard.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col  items-center p-8 lg:p-10">
+
+
+            <div class="flex w-full justify-between lg:hidden">
+                <a href="html/demo1.html">
+                    <img class="h-[28px] max-w-none" src="assets/media/app/mini-logo.svg" />
+                </a>
+                <div>
+                    <div class="menu bg-white rounded-lg px-5" data-menu="true">
+                        <div class="menu-item" data-menu-item-offset="20px, 10px" data-menu-item-placement="bottom-end"
+                            data-menu-item-toggle="dropdown" data-menu-item-trigger="click|lg:click">
+                            <div class="menu-toggle btn btn-icon rounded-full flex gap-2">
+                                <span class="">English</span>
+                                <img alt="" class="inline-block size-4 rounded-full"
+                                    src="assets/media/flags/united-states.svg" />
+                            </div>
+                            <div class="menu-dropdown menu-default light:border-gray-300 w-full max-w-[150px]">
+                                <div class="menu-item active">
+                                    <a class="menu-link h-10" href="#">
+                                        <span class="menu-icon">
+                                            <img alt="" class="inline-block size-4 rounded-full"
+                                                src="assets/media/flags/united-states.svg" />
+                                        </span>
+                                        <span class="menu-title">
+                                            English
+                                        </span>
+                                        <span class="menu-badge">
+                                            <i class="ki-solid ki-check-circle text-success text-base">
+                                            </i>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="menu-item">
+                                    <a class="menu-link h-10" href="html/demo1/layout.html">
+                                        <span class="menu-icon">
+                                            <img alt="" class="inline-block size-4 rounded-full"
+                                                src="assets/media/flags/saudi-arabia.svg" />
+                                        </span>
+                                        <span class="menu-title">
+                                            العربية
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="max-w-[500px] w-full h-full flex items-center justify-center">
+
+                <form action="#" class="flex flex-col gap-5 max-w-[500px] w-full" id="sign_in_form" method="get">
+                    <h1 class="text-2xl font-semibold text-gray-800 mb-1">Log in to your Account</h1>
+                    <p class="text-gray-500 text-sm">Welcome back! select method to log in.</p>
+
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <a class="btn btn-light justify-center" href="#">
+                            <img alt="" class="size-3.5 shrink-0" src="assets/media/brand-logos/google.svg" />
+                            Google
+                        </a>
+                        <a class="btn btn-light justify-center" href="#">
+                            <img alt="" class="size-3.5 shrink-0 dark:hidden"
+                                src="assets/media/brand-logos/facebook.svg" />
+                            <img alt="" class="size-3.5 shrink-0 light:hidden"
+                                src="assets/media/brand-logos/facebook.svg" />
+                            Facebook
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="border-t border-gray-200 w-full">
+                        </span>
+                        <span class="text-2xs text-gray-500 font-medium uppercase whitespace-nowrap">
+                            or continue with email
+                        </span>
+                        <span class="border-t border-gray-200 w-full">
+                        </span>
+                    </div>
+
+
+                    <div class="space-y-1">
+                        <!-- <label class="form-label ">Email</label> -->
+                        <div class="input">
+                            <i class="ki-filled ki-sms"></i>
+                            <input type="email" class="" placeholder="email@email.com" />
+                        </div>
+                    </div>
+
+
+                    <div class="space-y-3">
+                        <!-- <label class="form-label ">Password</label> -->
+                        <div class="input" data-toggle-password="true">
+                            <i class="ki-filled ki-lock"></i>
+                            <input name="user_password" placeholder="Enter Password" type="password" value="" />
+                            <a class="btn btn-icon" data-toggle-password-trigger="true">
+                                <i class="ki-filled ki-eye text-gray-500 toggle-password-active:hidden">
+                                </i>
+                                <i class="ki-filled ki-eye-slash text-gray-500 hidden toggle-password-active:block">
+                                </i>
+                            </a>
+                        </div>
+
+
+                        <div class="flex items-center justify-between gap-1 ">
+                            <label class="checkbox-group">
+                                <input class="checkbox checkbox-sm" name="check" type="checkbox" value="1" />
+                                <span class="checkbox-label text-sm text-gray-500">
+                                    Remember me
+                                </span>
+                            </label>
+                            <a class="text-2sm link shrink-0 text-primary" href="html/demo1/auth/forgot-password.html">
+                                Forgot Password?
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <button class="btn btn-primary hover:bg-primary flex justify-center grow">
+                        Sign In
+                    </button>
+                    <div class="text-center">
+                        <p class="text-gray-600 text-sm">
+                            Don't have an account? <a href="html/demo1/auth/register.html"
+                                class="font-medium text-primary">Sign up</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/core.bundle.js"></script>
+    <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/js/widgets/general.js"></script>
+    <script src="assets/js/layouts/demo1.js"></script>
+</body>
+
+</html>

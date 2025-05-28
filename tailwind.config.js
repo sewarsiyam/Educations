@@ -57,7 +57,7 @@ module.exports = {
 							},
 							primary: {
 								default: '#303F9F',
-								active: '#056EE9',
+								active: '#303F9F',
 								light: '#EFF6FF',
 								clarity: 'rgba(27, 132, 255, 0.20)',
 								inverse: '#ffffff'
