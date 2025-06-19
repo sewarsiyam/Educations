@@ -35,7 +35,7 @@ module.exports = {
 							900: '#071437',
 						},
 						dark: {
-							100: '#1B1C22',
+							100: '#585858',
 							200: '#26272F',
 							300: '#363843',
 							400: '#464852',
@@ -283,9 +283,9 @@ module.exports = {
 				coal: {
 					100: '#15171C',
 					200: '#13141A',
-					300: '#111217',
+					300: '#585858',
 					400: '#0F1014',
-					500: '#0D0E12',
+					500: '#414141',
 					600: '#0B0C10',
 					black: '#000000',
 					clarity: 'rgba(24, 25, 31, 0.50)',
@@ -401,7 +401,7 @@ module.exports = {
 							drawer: theme('colors.coal')['600'],
 							dropdown: theme('colors.coal')['600'],
 							backdrop: 'rgba(0, 0, 0, 0.80)',
-							tableHead: theme('colors.coal')['200'],
+							tableHead: theme('colors.coal')['300'],
 						},
 					},
 					borders: {
