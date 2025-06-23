@@ -523,7 +523,17 @@
                                                             class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                                                     </td>
                                                     <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
+                                                    <td class="py-4 px-2 text-sm text-gray-700">
+                                                        <div class="w-fit relative">
+                                                            <input type="text" id="basic-datepicker"
+                                                                placeholder="29-03-2025" class="input w-fit" />
+                                                            <div
+                                                                class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                                                                <i class="ki-filled ki-calendar">
+                                                                </i>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                     <td class="py-4 px-2">
                                                         <button class="btn btn-sm btn-success">
                                                             Update
@@ -559,7 +569,17 @@
                                                             class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                                                     </td>
                                                     <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
+                                                    <td class="py-4 px-2 text-sm text-gray-700">
+                                                        <div class="w-fit relative">
+                                                            <input type="text" id="basic-datepicker"
+                                                                placeholder="29-03-2025" class="input w-fit" />
+                                                            <div
+                                                                class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                                                                <i class="ki-filled ki-calendar">
+                                                                </i>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                     <td class="py-4 px-2">
                                                         <button class="btn btn-sm btn-success">
                                                             Update
@@ -594,7 +614,17 @@
                                                             class="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                                                     </td>
                                                     <td class="py-4 px-2 text-sm text-gray-700">01-03-2025</td>
-                                                    <td class="py-4 px-2 text-sm text-gray-700">29-03-2025</td>
+                                                    <td class="py-4 px-2 text-sm text-gray-700">
+                                                        <div class="w-fit relative">
+                                                            <input type="text" id="basic-datepicker"
+                                                                placeholder="29-03-2025" class="input w-fit" />
+                                                            <div
+                                                                class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                                                                <i class="ki-filled ki-calendar">
+                                                                </i>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                     <td class="py-4 px-2">
                                                         <button class="btn btn-sm btn-success">
                                                             Update
@@ -1875,173 +1905,19 @@
 
 
 
-    <div class="modal modal-center" data-modal="true" id="ExportUser">
-        <div class="modal-content max-w-[500px]">
-            <div class="modal-header bg-primary-light rounded-xl pr-2.5">
-                Export Customers
-                <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
-                    <i class="ki-filled ki-cross">
-                    </i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="form p-3">
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Select Export Format :</label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option selected="" value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Select Date Range :</label>
-                        <div class="form-control">
-                            <input type="date" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                placeholder="Select Date Range" />
-                        </div>
-                    </div>
-                    <div class="flex justify-end items-center mt-3 gap-4">
-                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#ExportUser">
-                            Discard</button>
-                        <button class="btn btn-sm btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal" data-modal="true" id="AddUser">
-        <div class="modal-content max-w-[560px]  top-[7%]">
-            <div class="modal-header bg-primary-light rounded-xl pr-2.5">
-                Add a User
-                <button class="btn btn-sm btn-icon btn-light btn-clear shrink-0" data-modal-dismiss="true">
-                    <i class="ki-filled ki-cross">
-                    </i>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Name <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Full name"
-                                required />
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Phone <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Phone number"
-                                required />
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Account Type <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Company Type<span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Email <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="email" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                placeholder="info@gmail.com" required />
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">User Status <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
-                                <option value="1">
-                                    Status
-                                </option>
-                                <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option value="4">
-                                    Status3
-                                </option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Password <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password"
-                                required />
-                        </div>
-                    </div>
-                    <div class="form-item mb-3">
-                        <label class="form-label mb-1">Repeat Password * <span class="text-danger">*</span></label>
-                        <div class="form-control">
-                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password"
-                                required />
-                        </div>
-                    </div>
-                    <div></div>
-                    <div class="flex justify-end items-center mt-3 gap-4">
-                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#AddUser">
-                            Discard</button>
-                        <button class="btn btn-sm btn-primary">Submit</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-
     <script src="assets/js/core.bundle.js"></script>
     <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
     <script src="assets/js/widgets/general.js"></script>
     <script src="assets/js/layouts/demo1.js"></script>
+    <script>
+        flatpickr("#basic-datepicker", {
+            dateFormat: "Y-m-d",
+            allowInput: true,
+            clickOpens: true
+        });
+
+    </script>
+
 
 </body>
 

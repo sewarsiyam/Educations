@@ -180,19 +180,51 @@
 	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-.btn-primary:hover{
+.btn-primary:hover {
 	background-color: var(--tw-primary) !important;
 }
 
-.table thead td, .table thead th, .table tfoot td, .table tfoot th {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.625rem;
-    padding-bottom: 0.625rem;
-    background-color: var(--tw-table-head-background-color);
-    color: var(--tw-gray-900);
-    font-weight: 500;
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    vertical-align: middle;
+.table thead td,
+.table thead th,
+.table tfoot td,
+.table tfoot th {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	padding-top: 0.625rem;
+	padding-bottom: 0.625rem;
+	background-color: var(--tw-table-head-background-color);
+	color: var(--tw-gray-900);
+	font-weight: 500;
+	font-size: 0.8125rem;
+	line-height: 1.125rem;
+	vertical-align: middle;
+}
+
+.lesson-content .tabs.tabs-line .tab-toggle.active {
+	border-bottom: 1px solid var(--tw-primary) !important;
+	color: var(--tw-primary) !important;
+	padding: 7px 0px;
+}
+
+
+.lesson-content .lesson-item.active {
+	border-bottom: 1px solid var(--tw-primary) !important;
+	color: var(--tw-primary) !important;
+}
+
+
+.medal-ribbon::after {
+	content: '';
+	position: absolute;
+	top: -20px;
+	left: -6px;
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 15px solid #ff9800;
+}
+
+.bg-certificate {
+	background: radial-gradient(circle, rgba(255, 255, 255, 1) 15%, rgba(216, 245, 251, 1) 100%);
 }

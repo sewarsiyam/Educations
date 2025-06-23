@@ -10,45 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="assets/vendors/keenicons/styles.bundle.css" rel="stylesheet" />
     <link href="assets/css/styles.css" rel="stylesheet" />
-
-
-    <style>
-        .right_side_drawer .drawer-end {
-            top: 24px;
-            bottom: 23px;
-            right: 68px;
-            left: auto;
-            border-radius: 25px;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
-        }
-    </style>
 </head>
 
 <body class="flex h-full demo1 sidebar-fixed header-fixed bg-[#f0f0f0] dark:bg-coal-500">
-    <script>
-        const defaultThemeMode = 'light';
-        let themeMode;
-
-        if (document.documentElement) {
-            if (localStorage.getItem('theme')) {
-                themeMode = localStorage.getItem('theme');
-            } else if (document.documentElement.hasAttribute('data-theme-mode')) {
-                themeMode = document.documentElement.getAttribute('data-theme-mode');
-            } else {
-                themeMode = defaultThemeMode;
-            }
-
-            if (themeMode === 'system') {
-                themeMode = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            }
-
-            document.documentElement.classList.add(themeMode);
-        }
-    </script>
-
 
     <div class="flex grow">
-         <div class="sidebar dark:bg-primary bg-primary fixed top-0 bottom-0 z-20 hidden lg:flex flex-col items-stretch shrink-0 rounded-r-3xl"
+        <div class="sidebar dark:bg-primary bg-primary fixed top-0 bottom-0 z-20 hidden lg:flex flex-col items-stretch shrink-0 rounded-r-3xl"
             data-drawer="true" data-drawer-class="drawer drawer-start top-0 bottom-0" data-drawer-enable="true|lg:false"
             id="sidebar">
             <div class="sidebar-header hidden lg:flex items-center relative justify-between px-3 lg:px-6 shrink-0"
@@ -68,7 +35,7 @@
                     data-scrollable-offset="0px" data-scrollable-wrappers="#sidebar_content" id="sidebar_scrollable">
                     <div class="menu flex flex-col grow gap-1" data-menu="true" data-menu-accordion-expand-all="false"
                         id="sidebar_menu">
-                        <a href="html/demo1/Users/index-users.html" class="menu-item ">
+                        <a href="Users/index-users.html" class="menu-item ">
                             <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
                                 tabindex="0">
                                 <span
@@ -81,7 +48,7 @@
                                 </span>
                             </div>
                         </a>
-                        <a href="html/demo1/Users/MyEducations.html" class="menu-item active">
+                        <a href="Users/MyEducations.html" class="menu-item active">
                             <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
                                 tabindex="0">
                                 <span
@@ -112,7 +79,7 @@
                             </div>
                         </a>
 
-                        <a href="html/demo1/Users/wish-list.html" class="menu-item ">
+                        <a href="Users/wish-list.html" class="menu-item ">
                             <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
                                 tabindex="0">
                                 <span
@@ -149,7 +116,7 @@
                         </a>
 
 
-                        <a href="html/demo1/Users/complete-educations.html" class="menu-item ">
+                        <a href="Users/complete-educations.html" class="menu-item ">
                             <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
                                 tabindex="0">
                                 <span
@@ -179,7 +146,7 @@
                         </a>
 
 
-                        <a href="html/demo1/Users/contactus.html" class="menu-item ">
+                        <a href="Users/contactus.html" class="menu-item ">
                             <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
                                 tabindex="0">
                                 <span
@@ -207,7 +174,7 @@
                             </div>
                         </a>
 
-                        <a href="html/demo1/Users/faq.html" class="menu-item ">
+                        <a href="Users/faq.html" class="menu-item ">
                             <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
                                 tabindex="0">
                                 <span
@@ -238,7 +205,7 @@
                             </div>
                         </a>
 
-                        <a href="html/demo1/login.html" class="menu-item ">
+                        <a href="login.html" class="menu-item ">
                             <div class="menu-link flex items-center grow cursor-pointer border border-transparent pl-[10px] pr-[10px] py-[6px] menu-item-active:bg-white dark:menu-item-active:bg-coal-300 dark:menu-item-active:border-gray-100 menu-item-active:rounded-lg hover:bg-white dark:hover:bg-coal-300 dark:hover:border-gray-100 hover:rounded-lg gap-[5px]"
                                 tabindex="0">
                                 <span
@@ -306,7 +273,7 @@
                                     </button>
                                     <div class="menu-item active">
                                         <a class="menu-link text-nowrap text-sm text-gray-700 font-medium menu-item-hover:text-primary menu-item-active:text-gray-900 menu-item-active:font-semibold"
-                                            href="html/demo1/layout.html">
+                                            href="layout.html">
                                             <span class="menu-title font-bold text-lg text-nowrap">
                                                 My Educations
                                             </span>
@@ -365,42 +332,21 @@
             </header>
             <main class="grow content pt-5 lg:mr-16" id="content" role="content">
                 <div class="container-fixed">
-                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 gap-5">
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                         <div class="card relative">
-                            <button
-                                class="absolute top-4 left-4 bg-primary shadow-sm text-white text-xs p-1 px-1.5 rounded-lg hover:bg-blue-900 transition-colors">
-                                <i class="ki-solid ki-arrow-left"></i>
-                            </button>
-                            <div class="card-body grid gap-4 py-3 px-2">
+                            <div class="card-body grid gap-2 py-4 px-4">
                                 <div class="grid place-items-center gap-2">
-                                    <img src="assets/media/avatars/300-1.png" alt=""
-                                        class="rounded-3xl w-full aspect-square object-cover" />
+                                    <img src="assets/media/images/course1.png" alt=""
+                                        class="rounded-2xl w-full h-60 aspect-square object-cover" />
                                 </div>
                                 <div class="flex items-center justify-between flex-wrap gap-2">
                                     <span
-                                        class="text-lg font-semibold text-primary  dark:text-white hover:text-primary-active">Hasan-Arnar</span>
-                                    <div class="rating flex gap-1">
-                                        <div class="rating-label checked">
-                                            <i
-                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
-                                        </div>
-                                        <div class="rating-label checked">
-                                            <i
-                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
-                                        </div>
-                                        <div class="rating-label checked">
-                                            <i
-                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
-                                        </div>
-                                        <div class="rating-label checked">
-                                            <i
-                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
-                                        </div>
+                                        class="text-lg font-semibold text-primary hover:text-primary-active">Hasan-Arnar</span>
+                                    <div class="text-sm font-medium text-gray-600 uppercase">
+                                        500 SEK
                                     </div>
                                 </div>
-                                <span class="text-sm font-medium text-gray-600  dark:text-gray-800 uppercase">Price: 500
-                                    SEK</span>
-                                <div class="flex justify-between text-gray-600  dark:text-gray-800  flex-wrap gap-2">
+                                <div class="flex justify-start text-gray-600 flex-wrap gap-4">
                                     <div class="flex items-center gap-1">
                                         <i class="ki-filled ki-eye text-base"></i>
                                         <span class="text-sm">5 Videos</span>
@@ -414,48 +360,28 @@
                                         <span class="text-sm">1 Day</span>
                                     </div>
                                 </div>
-                                <div class="card-footer flex justify-center items-center gap-2 pt-2 px-0 pb-0">
-                                    <a href="html/demo1/Users/course-start.html" class="rounded-lg bg-blue-500 w-full text-center text-sm py-1.5 px-3 text-white hover:bg-blue-900 transition-colors">
+                                <div class="card-footer flex justify-center items-center gap-2 p-0 pt-2">
+                                    <a
+                                        class="flex-1 rounded-lg  text-center bg-blue-500 text-sm py-1.5 px-1 text-white hover:bg-blue-900 transition-colors">
                                         Comlete Training
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="card relative">
-                            <button
-                                class="absolute top-4 left-4 bg-primary shadow-sm text-white text-xs p-1 px-1.5 rounded-lg hover:bg-blue-900 transition-colors">
-                                <i class="ki-solid ki-arrow-left"></i>
-                            </button>
-                            <div class="card-body grid gap-4 py-3 px-2">
+                            <div class="card-body grid gap-2 py-4 px-4">
                                 <div class="grid place-items-center gap-2">
-                                    <img src="assets/media/avatars/300-1.png" alt=""
-                                        class="rounded-3xl w-full aspect-square object-cover" />
+                                    <img src="assets/media/images/course1.png" alt=""
+                                        class="rounded-2xl w-full h-60 aspect-square object-cover" />
                                 </div>
                                 <div class="flex items-center justify-between flex-wrap gap-2">
                                     <span
-                                        class="text-lg font-semibold text-primary  dark:text-white hover:text-primary-active">Hasan-Arnar</span>
-                                    <div class="rating flex gap-1">
-                                        <div class="rating-label checked">
-                                            <i
-                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
-                                        </div>
-                                        <div class="rating-label checked">
-                                            <i
-                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
-                                        </div>
-                                        <div class="rating-label checked">
-                                            <i
-                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
-                                        </div>
-                                        <div class="rating-label checked">
-                                            <i
-                                                class="rating-on ki-solid ki-star text-base leading-none text-yellow-400"></i>
-                                        </div>
+                                        class="text-lg font-semibold text-primary hover:text-primary-active">Hasan-Arnar</span>
+                                    <div class="text-sm font-medium text-gray-600 uppercase">
+                                        500 SEK
                                     </div>
                                 </div>
-                                <span class="text-sm font-medium text-gray-600  dark:text-gray-800 uppercase">Price: 500
-                                    SEK</span>
-                                <div class="flex justify-between text-gray-600  dark:text-gray-800  flex-wrap gap-2">
+                                <div class="flex justify-start text-gray-600 flex-wrap gap-4">
                                     <div class="flex items-center gap-1">
                                         <i class="ki-filled ki-eye text-base"></i>
                                         <span class="text-sm">5 Videos</span>
@@ -469,8 +395,9 @@
                                         <span class="text-sm">1 Day</span>
                                     </div>
                                 </div>
-                                <div class="card-footer flex justify-center items-center gap-2 pt-2 px-0 pb-0">
-                                    <a href="" class="rounded-lg bg-pink-600 w-full text-center text-sm py-1.5 px-3 text-white hover:bg-blue-900 transition-colors">
+                                <div class="card-footer flex justify-center items-center gap-2 p-0 pt-2">
+                                    <a
+                                        class="flex-1 rounded-lg  text-center bg-pink-600 text-sm py-1.5 px-1 text-white hover:bg-blue-900 transition-colors">
                                         Extend (1000.00 Sek)
                                     </a>
                                 </div>
@@ -495,7 +422,7 @@
                         <div class="menu-dropdown menu-default light:border-gray-300 w-full max-w-[180px]">
                             <div class="flex flex-col" data-menu-dismiss="true">
                                 <div class="menu-item">
-                                    <a class="menu-link" href="html/demo1/public-profile/profiles/default.html">
+                                    <a class="menu-link" href="public-profile/profiles/default.html">
                                         <span class="menu-icon">
                                             <i class="ki-outline ki-user"></i>
                                         </span>
@@ -505,7 +432,7 @@
                                     </a>
                                 </div>
                                 <div class="menu-item">
-                                    <a class="menu-link" href="html/demo1/account/home/user-profile.html">
+                                    <a class="menu-link" href="account/home/user-profile.html">
                                         <span class="menu-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="21.617" height="20.319"
                                                 viewBox="0 0 21.617 20.319">
@@ -530,7 +457,7 @@
                                     </a>
                                 </div>
                                 <div class="menu-item">
-                                    <a class="menu-link" href="html/demo1/account/home/user-profile.html">
+                                    <a class="menu-link" href="account/home/user-profile.html">
                                         <span class="menu-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 viewBox="0 0 24 24">
@@ -606,7 +533,7 @@
                                 </a>
                             </div>
                             <div class="menu-item">
-                                <a class="menu-link h-10" href="html/demo1/layout.html">
+                                <a class="menu-link h-10" href="layout.html">
                                     <span class="menu-icon">
                                         <img alt="" class="inline-block size-4 rounded-full"
                                             src="assets/media/flags/saudi-arabia.svg" />
@@ -763,7 +690,9 @@
                                 </div>
                             </div>
                             <div class="mt-4 text-end">
-                                <button class="rounded-lg bg-primary text-base py-1.5 px-4 text-white hover:bg-blue-900 transition-colors"><i class="ki-solid ki-plus"></i> Add</button>
+                                <button
+                                    class="rounded-lg bg-primary text-base py-1.5 px-4 text-white hover:bg-blue-900 transition-colors"><i
+                                        class="ki-solid ki-plus"></i> Add</button>
                             </div>
                         </div>
                     </div>

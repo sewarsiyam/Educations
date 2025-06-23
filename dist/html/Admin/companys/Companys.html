@@ -495,9 +495,9 @@
                                                             <div class="flex items-center grow gap-1 px-2">
                                                                 <img alt="" class="rounded size-7 shrink-0"
                                                                     src="assets/media/avatars/300-3.png">
-                                                                <div class="text-primary text-sm gap-1">
+                                                                <a href="Admin/companys/edite_Company.html" class="text-primary text-sm gap-1">
                                                                     Mohammed Ali
-                                                                </div>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -531,9 +531,9 @@
                                                             <div class="flex items-center grow gap-1 px-2">
                                                                 <img alt="" class="rounded size-7 shrink-0"
                                                                     src="assets/media/avatars/300-3.png">
-                                                                <div class="text-primary text-sm gap-1">
+                                                                <a a href="Admin/companys/edite_Company.html" class="text-primary text-sm gap-1">
                                                                     Mohammed Ali
-                                                                </div>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -567,9 +567,9 @@
                                                             <div class="flex items-center grow gap-1 px-2">
                                                                 <img alt="" class="rounded size-7 shrink-0"
                                                                     src="assets/media/avatars/300-3.png">
-                                                                <div class="text-primary text-sm gap-1">
+                                                                <a href="Admin/companys/edite_Company.html" class="text-primary text-sm gap-1">
                                                                     Mohammed Ali
-                                                                </div>
+                                                                </a>
                                                             </div>
                                                         </div>
                                                     </td>
@@ -1735,36 +1735,35 @@
                     </i>
                 </button>
             </div>
-            <div class="modal-body">
+          <div class="modal-body">
                 <form class="form p-3">
                     <div class="form-item mb-3">
                         <label class="form-label mb-1">Select Export Format :</label>
                         <div class="form-control">
-                            <select class="select select-sm border-0 bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
+                            <select class="select  bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
                                 <option value="1">
-                                    Status
+                                    Excel
                                 </option>
                                 <option value="2">
-                                    Status1
-                                </option>
-                                <option value="3">
-                                    Status2
-                                </option>
-                                <option selected="" value="4">
-                                    Status3
+                                    word
                                 </option>
                             </select>
                         </div>
                     </div>
                     <div class="form-item mb-3">
-                        <label class="form-label mb-1">Select Date Range :</label>
-                        <div class="form-control">
-                            <input type="date" class="input border-0 bg-[#EDF0F9] dark:bg-[#0d0e12]"
-                                placeholder="Select Date Range" />
+                        <div class="date-input-group relative">
+                            <label class="form-label mb-1">Select Date Range :</label>
+                            <div class="relative">
+                                <input type="text" id="range-date" placeholder="from - to" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" />
+                                  <div class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                                <i class="ki-filled ki-calendar">
+                                </i>
+                            </div>
+                            </div>
                         </div>
                     </div>
                     <div class="flex justify-end items-center mt-3 gap-4">
-                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#ExportCompanys">
+                        <button class="btn btn-sm  text-primary bg-[#D9DDF7]" data-modal-dismiss="#ExportUser">
                             Discard</button>
                         <button class="btn btn-sm btn-primary">Submit</button>
                     </div>
@@ -1866,6 +1865,16 @@
     <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
     <script src="assets/js/widgets/general.js"></script>
     <script src="assets/js/layouts/demo1.js"></script>
+    <script>
+          flatpickr("#range-date", {
+            mode: "range",
+            dateFormat: "Y-m-d",
+            allowInput: true,
+            onChange: function(selectedDates, dateStr, instance) {
+                console.log("نطاق التواريخ:", dateStr);
+            }
+        });
+    </script>
 
 </body>
 

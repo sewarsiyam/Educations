@@ -545,10 +545,10 @@
                                                     </td>
                                                     <td>
                                                         <div class="flex gap-2">
-                                                             <a href="Admin/users/edite_users.html"
+                                                            <a href="Admin/users/edite_users.html"
                                                                 class="rounded-lg bg-[#2A3F9D] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
                                                                 <i class="ki-filled ki-notepad-edit"></i>
-                                                        </a>
+                                                            </a>
                                                             <button
                                                                 class="rounded-lg bg-[#F60057] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
                                                                 <i class="ki-filled ki-trash"></i>
@@ -588,10 +588,10 @@
                                                     </td>
                                                     <td>
                                                         <div class="flex gap-2">
-                                                             <a href="Admin/users/edite_users.html"
+                                                            <a href="Admin/users/edite_users.html"
                                                                 class="rounded-lg bg-[#2A3F9D] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
                                                                 <i class="ki-filled ki-notepad-edit"></i>
-                                                        </a>
+                                                            </a>
                                                             <button
                                                                 class="rounded-lg bg-[#F60057] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
                                                                 <i class="ki-filled ki-trash"></i>
@@ -631,10 +631,10 @@
                                                     </td>
                                                     <td>
                                                         <div class="flex gap-2">
-                                                             <a href="Admin/users/edite_users.html"
+                                                            <a href="Admin/users/edite_users.html"
                                                                 class="rounded-lg bg-[#2A3F9D] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
                                                                 <i class="ki-filled ki-notepad-edit"></i>
-                                                        </a>
+                                                            </a>
                                                             <button
                                                                 class="rounded-lg bg-[#F60057] text-base py-1 px-1.5 text-white hover:opacity-90 transition-opacity">
                                                                 <i class="ki-filled ki-trash"></i>
@@ -1787,7 +1787,7 @@
                     <div class="form-item mb-3">
                         <label class="form-label mb-1">Select Export Format :</label>
                         <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
+                            <select class="select  bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
                                 <option value="1">
                                     Excel
                                 </option>
@@ -1798,9 +1798,15 @@
                         </div>
                     </div>
                     <div class="form-item mb-3">
-                        <label class="form-label mb-1">Select Date Range :</label>
-                        <div class="form-control">
-                            <input type="date" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Select Date Range" />
+                        <div class="date-input-group relative">
+                            <label class="form-label mb-1">Select Date Range :</label>
+                            <div class="relative">
+                                <input type="text" id="range-date" placeholder="from - to" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" />
+                                  <div class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                                <i class="ki-filled ki-calendar">
+                                </i>
+                            </div>
+                            </div>
                         </div>
                     </div>
                     <div class="flex justify-end items-center mt-3 gap-4">
@@ -1827,19 +1833,21 @@
                     <div class="form-item mb-3">
                         <label class="form-label mb-1">Name <span class="text-danger">*</span></label>
                         <div class="form-control">
-                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Full name" required />
+                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Full name"
+                                required />
                         </div>
                     </div>
                     <div class="form-item mb-3">
                         <label class="form-label mb-1">Phone <span class="text-danger">*</span></label>
                         <div class="form-control">
-                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Phone number" required />
+                            <input type="text" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Phone number"
+                                required />
                         </div>
                     </div>
                     <div class="form-item mb-3">
                         <label class="form-label mb-1">Account Type <span class="text-danger">*</span></label>
                         <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
+                            <select class="select  bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
                                 <option value="1">
                                     Status
                                 </option>
@@ -1858,7 +1866,7 @@
                     <div class="form-item mb-3">
                         <label class="form-label mb-1">Company Type<span class="text-danger">*</span></label>
                         <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
+                            <select class="select  bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
                                 <option value="1">
                                     Status
                                 </option>
@@ -1877,13 +1885,14 @@
                     <div class="form-item mb-3">
                         <label class="form-label mb-1">Email <span class="text-danger">*</span></label>
                         <div class="form-control">
-                            <input type="email" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="info@gmail.com" required />
+                            <input type="email" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]"
+                                placeholder="info@gmail.com" required />
                         </div>
                     </div>
-                     <div class="form-item mb-3">
+                    <div class="form-item mb-3">
                         <label class="form-label mb-1">User Status <span class="text-danger">*</span></label>
                         <div class="form-control">
-                            <select class="select select-sm bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
+                            <select class="select  bg-[#EDF0F9] dark:bg-[#0d0e12]" name="select">
                                 <option value="1">
                                     Status
                                 </option>
@@ -1899,16 +1908,18 @@
                             </select>
                         </div>
                     </div>
-                     <div class="form-item mb-3">
+                    <div class="form-item mb-3">
                         <label class="form-label mb-1">Password <span class="text-danger">*</span></label>
                         <div class="form-control">
-                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password" required />
+                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password"
+                                required />
                         </div>
                     </div>
                     <div class="form-item mb-3">
                         <label class="form-label mb-1">Repeat Password * <span class="text-danger">*</span></label>
                         <div class="form-control">
-                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password" required />
+                            <input type="password" class="input bg-[#EDF0F9] dark:bg-[#0d0e12]" placeholder="Password"
+                                required />
                         </div>
                     </div>
                     <div></div>
@@ -1928,6 +1939,17 @@
     <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
     <script src="assets/js/widgets/general.js"></script>
     <script src="assets/js/layouts/demo1.js"></script>
+    <script>
+
+        flatpickr("#range-date", {
+            mode: "range",
+            dateFormat: "Y-m-d",
+            allowInput: true,
+            onChange: function (selectedDates, dateStr, instance) {
+                console.log("نطاق التواريخ:", dateStr);
+            }
+        });
+    </script>
 
 </body>
 

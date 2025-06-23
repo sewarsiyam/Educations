@@ -554,11 +554,11 @@
                                                     </td>
                                                     <td class="py-4 text-sm text-gray-700">29-03-2025</td>
                                                     <td class="py-4">
-                                                        <a href="الشهادة"
+                                                        <a href="Users/certificate.html"
                                                             class="flex items-center gap-2 px-3 py-1 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors">
                                                             <i class="ki-filled ki-printer"></i>
                                                             Print
-                                                    </a>
+                                                        </a>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -590,10 +590,20 @@
                                                         <a href="Admin/users/User_Education_Info.html"
                                                             class="badge badge-primary badge-outline border-0 px-3 rounded-lg">
                                                             Hasan-Amar
-                                                    </a>
+                                                        </a>
                                                     </td>
                                                     <td class="py-4 text-sm text-gray-700">29-03-2025</td>
-                                                    <td class="py-4 text-sm text-gray-700">   <input class="border" type="date" placeholder=" " /></td>
+                                                    <td class="py-4 text-sm text-gray-700 ">
+                                                        <div class="w-fit relative">
+                                                            <input type="text" id="basic-datepicker"
+                                                                placeholder="29-03-2025" class="input w-fit" />
+                                                            <div
+                                                                class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                                                                <i class="ki-filled ki-calendar">
+                                                                </i>
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                     <td class="py-4">
                                                         <span
                                                             class="badge badge-warning badge-outline border-0 px-3 rounded-xl">
@@ -1928,6 +1938,15 @@
     <script src="assets/vendors/apexcharts/apexcharts.min.js"></script>
     <script src="assets/js/widgets/general.js"></script>
     <script src="assets/js/layouts/demo1.js"></script>
+
+    <script>
+        flatpickr("#basic-datepicker", {
+            dateFormat: "Y-m-d",
+            allowInput: true,
+            clickOpens: true
+        });
+
+    </script>
 
 </body>
 
