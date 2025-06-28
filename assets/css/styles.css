@@ -3869,6 +3869,10 @@ label.rating-label {
 .right-0 {
   right: 0px;
 }
+:dir(rtl) .right-0 {
+  right: auto;
+  left: 0px;
+}
 
 .right-1 {
   right: 0.25rem;
@@ -4880,10 +4884,23 @@ label.rating-label {
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
 }
+:dir(rtl) .rounded-l-3xl {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
 
 .rounded-r-3xl {
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
+}
+
+:dir(rtl) .rounded-r-3xl {
+   border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
 }
 
 .rounded-r-xl {
@@ -6138,13 +6155,26 @@ label.rating-label {
     display: none;
   }
 
-  .demo1.sidebar-fixed .wrapper {
-    padding-left: var(--tw-sidebar-width);
-    transition: padding-left var(--tw-sidebar-transition-duration) var(--tw-sidebar-transition-timing);
-  }
+.demo1.sidebar-fixed .wrapper {
+  padding-left: var(--tw-sidebar-width);
+  transition: padding-left var(--tw-sidebar-transition-duration) var(--tw-sidebar-transition-timing);
+}
+
+:dir(rtl) .demo1.sidebar-fixed .wrapper {
+   padding-left: 0;
+  padding-right: var(--tw-sidebar-width);
+  transition: padding-right var(--tw-sidebar-transition-duration) var(--tw-sidebar-transition-timing);
+}
+
 
   .demo1.sidebar-fixed.header-fixed .header {
     left: var(--tw-sidebar-width);
+    transition: left var(--tw-sidebar-transition-duration) var(--tw-sidebar-transition-timing);
+  }
+
+  :dir(rtl) .demo1.sidebar-fixed.header-fixed .header {
+    left: 0px;
+    right: var(--tw-sidebar-width);
     transition: left var(--tw-sidebar-transition-duration) var(--tw-sidebar-transition-timing);
   }
 
@@ -6263,6 +6293,10 @@ label.rating-label {
   left: auto;
   border-radius: 25px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+:dir(rtl) .right_side_drawer .drawer-end {
+  right: auto;
+  left: 68px;
 }
 
 .btn-primary:hover {
@@ -7131,6 +7165,11 @@ label.rating-label {
 
   .lg\:mr-16 {
     margin-right: 4rem;
+  }
+
+  :dir(rtl) .lg\:mr-16 {
+        margin-right: 0;
+    margin-left: 4rem;
   }
 
   .lg\:mt-10 {
